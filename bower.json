@@ -1,0 +1,24 @@
+{
+  "name": "RoomMe",
+  "homepage": "https://github.com/Cem515/RoomMe",
+  "authors": [
+    "Collin McCoy <collinmccoy17@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-ui-router": "^1.0.3",
+    "angular-local-storage": "^0.6.0",
+    "font-awesome": "fontawesome#^4.7.0",
+    "bootstrap": "^3.3.7"
+  }
+}

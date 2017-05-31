@@ -1,0 +1,31 @@
+{
+  "name": "roomme",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000R\u0000o\u0000o\u0000m\u0000M\u0000e\u0000\r\u0000 \u0000",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "bower": "^1.8.0",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-inject": "^4.2.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-open": "^2.0.0",
+    "gulp-util": "^3.0.8",
+    "wiredep": "^4.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cem515/RoomMe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cem515/RoomMe/issues"
+  },
+  "homepage": "https://github.com/Cem515/RoomMe#readme"
+}
