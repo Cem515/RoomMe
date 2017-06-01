@@ -149,3 +149,6 @@ C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\bin\System.Net.Http.Formatting.xml
 C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\bin\System.Web.Http.xml
 C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\bin\System.Web.Http.WebHost.xml
 C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.changedstring.resources
+C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.changeduser.resources
+C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.addedpassword.resources
+C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.usersearch.resources
