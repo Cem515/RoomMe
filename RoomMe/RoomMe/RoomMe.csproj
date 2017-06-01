@@ -97,6 +97,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ListingsController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -112,6 +114,10 @@
     <Compile Include="Migrations\201705312206283_bookmarks.cs" />
     <Compile Include="Migrations\201705312206283_bookmarks.Designer.cs">
       <DependentUpon>201705312206283_bookmarks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706011854218_changedstring.cs" />
+    <Compile Include="Migrations\201706011854218_changedstring.Designer.cs">
+      <DependentUpon>201706011854218_changedstring.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Bookmark.cs" />
@@ -133,7 +139,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201705312102007_InitialCreate.resx">
@@ -144,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705312206283_bookmarks.resx">
       <DependentUpon>201705312206283_bookmarks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706011854218_changedstring.resx">
+      <DependentUpon>201706011854218_changedstring.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

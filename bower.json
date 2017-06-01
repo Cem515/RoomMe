@@ -14,15 +14,17 @@
     "test",
     "tests"
   ],
-  
   "dependencies": {
     "angular": "^1.6.4",
     "angular-ui-router": "^1.0.3",
     "angular-local-storage": "^0.6.0",
     "font-awesome": "fontawesome#^4.7.0",
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "angularjs-social-login": "^2.5.1",
+    "ngSweetAlert": "^1.1.2",
+    "angular-filepicker": "^1.1.4"
   },
-    "overrides": {
+  "overrides": {
     "bootstrap": {
       "main": [
         "dist/css/bootstrap.css"
