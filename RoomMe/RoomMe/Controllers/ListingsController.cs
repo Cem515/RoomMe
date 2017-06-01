@@ -7,12 +7,14 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using RoomMe.Infrastructure;
 using RoomMe.Models;
 
 namespace RoomMe.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ListingsController : ApiController
     {
         private RoomMeDataContext db = new RoomMeDataContext();
@@ -102,7 +104,33 @@ namespace RoomMe.Controllers
             return Ok(listing);
         }
 
-        protected override void Dispose(bool disposing)
+        // ListingSearch
+        [HttpGet]
+        [Route("api/Listings/ListingSearch")]
+        public IQueryable<Listing> ListingSearch([FromUri] ListingSearch search)
+        {
+            IQueryable<Listing> fl = db.Listings;
+
+           if(search.City != null)
+            {
+                fl = fl.Where(l => l.City == search.City);
+            }
+           if(search.MinPrice != null)
+            {
+                fl = fl.Where(l => l.Price >= search.MinPrice);
+            }
+           if(search.MaxPrice != null)
+            {
+                fl = fl.Where(l => l.Price <= search.MinPrice);
+            }
+           if(search.ZipCode != null)
+            {
+                fl = fl.Where(l => l.Zipcode == search.ZipCode);
+            }
+            return (fl);
+        }
+
+    protected override void Dispose(bool disposing)
         {
             if (disposing)
             {
