@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 <head>
   <meta charset="UTF-8">
   <title>RoomMe</title>
@@ -12,7 +12,17 @@
 
 <body>
 
-
+  <div id="topbar">
+    <h1 id="MainTitle"> 93' Til Brewing</h1>
+    <div class="topnav" id="myTopnav">
+      <img src="houseoutline.jpg" style="width:50px;height:50px;"/>
+      <a ui-sref="profile">Profile</a>
+      <a ui-sref="search">Listings</a>
+      <a ui-sref="register">Log In</a>
+    </div>
+  </div>
+  
+  <div class="well" ui-view></div>
 
 
 
