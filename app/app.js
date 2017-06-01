@@ -2,7 +2,7 @@
 (function() {
     'use strict';
 
-    var app = angular.module('app', ['ui.router']).value('localApi', 'http://localhost:61066/');
+    var app = angular.module('app', ['ui.router']).value('localApi', 'http://localhost:61066/api/');
     app.config(function ($stateProvider, $urlRouterProvider){
         $urlRouterProvider.otherwise('/Register');
 
@@ -32,7 +32,7 @@
                 controllerAs : "MsgCtrl"
             })
             .state('addListing', {
-                url: "/addlistings",
+                url: "/addlisting",
                 templateUrl: "app/listings/add.listings.html",
                 controller: "AddListingsController",
                 controllerAs : "AddListCtrl"
