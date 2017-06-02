@@ -24,6 +24,7 @@
         SignInCtrl.nameObject.ZipCode = 0;
         SignInCtrl.nameObject.Phone = "";
         SignInCtrl.Registration= true;
+        SignInCtrl.sObject = {};
         SignInCtrl.sObject.username='';
         SignInCtrl.sObject.password='';
 

@@ -3,10 +3,25 @@ namespace RoomMe.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class addedTables : DbMigration
+    public partial class m : DbMigration
     {
         public override void Up()
         {
+            CreateTable(
+                "dbo.Bookmarks",
+                c => new
+                    {
+                        BookmarkID = c.Int(nullable: false, identity: true),
+                        Liked = c.Boolean(nullable: false),
+                        Listing_ListingID = c.Int(),
+                        User_UserId = c.Int(),
+                    })
+                .PrimaryKey(t => t.BookmarkID)
+                .ForeignKey("dbo.Listings", t => t.Listing_ListingID)
+                .ForeignKey("dbo.Users", t => t.User_UserId)
+                .Index(t => t.Listing_ListingID)
+                .Index(t => t.User_UserId);
+            
             CreateTable(
                 "dbo.Listings",
                 c => new
@@ -17,7 +32,7 @@ namespace RoomMe.Migrations
                         Address = c.String(),
                         City = c.String(),
                         State = c.String(),
-                        Zipcode = c.String(),
+                        Zipcode = c.Int(nullable: false),
                         Picture = c.String(),
                         User_UserId = c.Int(),
                     })
@@ -30,11 +45,10 @@ namespace RoomMe.Migrations
                 c => new
                     {
                         UserId = c.Int(nullable: false, identity: true),
-                        FirstName = c.String(),
-                        LastName = c.String(),
+                        UserName = c.String(),
+                        Password = c.String(),
                         Email = c.String(),
-                        Landlord = c.Boolean(nullable: false),
-                        DateOfBirth = c.DateTime(nullable: false),
+                        DateOfBirth = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
                         ZipCode = c.Int(nullable: false),
                         Phone = c.Int(nullable: false),
                     })
@@ -75,15 +89,20 @@ namespace RoomMe.Migrations
             DropForeignKey("dbo.Messages", "Conversation_ConversationID", "dbo.Conversations");
             DropForeignKey("dbo.Conversations", "Sender_UserId", "dbo.Users");
             DropForeignKey("dbo.Conversations", "Recipient_UserId", "dbo.Users");
+            DropForeignKey("dbo.Bookmarks", "User_UserId", "dbo.Users");
+            DropForeignKey("dbo.Bookmarks", "Listing_ListingID", "dbo.Listings");
             DropForeignKey("dbo.Listings", "User_UserId", "dbo.Users");
             DropIndex("dbo.Conversations", new[] { "Sender_UserId" });
             DropIndex("dbo.Conversations", new[] { "Recipient_UserId" });
             DropIndex("dbo.Messages", new[] { "Conversation_ConversationID" });
             DropIndex("dbo.Listings", new[] { "User_UserId" });
+            DropIndex("dbo.Bookmarks", new[] { "User_UserId" });
+            DropIndex("dbo.Bookmarks", new[] { "Listing_ListingID" });
             DropTable("dbo.Conversations");
             DropTable("dbo.Messages");
             DropTable("dbo.Users");
             DropTable("dbo.Listings");
+            DropTable("dbo.Bookmarks");
         }
     }
 }
