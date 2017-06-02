@@ -23,7 +23,7 @@
         SignInCtrl.nameObject.Landlord = false;
         SignInCtrl.nameObject.ZipCode = 0;
         SignInCtrl.nameObject.Phone = "";
-        SigninCtrl.Registration= true;
+        SignInCtrl.Registration= true;
         SignInCtrl.sObject.username='';
         SignInCtrl.sObject.password='';
 
@@ -49,7 +49,7 @@
             });
         }
 
-        SigninCtrl.signIn = function(log) {
+        SignInCtrl.signIn = function(log) {
             UserFactory
             .findUsers(log) 
             .then(function (signin){

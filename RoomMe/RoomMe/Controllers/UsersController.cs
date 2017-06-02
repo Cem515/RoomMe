@@ -7,12 +7,14 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using RoomMe.Infrastructure;
 using RoomMe.Models;
 
 namespace RoomMe.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class UsersController : ApiController
     {
         private RoomMeDataContext db = new RoomMeDataContext();
@@ -100,6 +102,19 @@ namespace RoomMe.Controllers
             db.SaveChanges();
 
             return Ok(user);
+        }
+
+        // UserSearch
+        [HttpGet]
+        [Route("api/Users/UserSearch")]
+        public IQueryable<User> UserSearch([FromUri] UserSearch creds)
+        {
+            IQueryable<User> used = db.Users;
+
+            used = used.Where(u => u.UserName == creds.Username);
+            used = used.Where(u => u.Password == creds.Password);
+
+            return (used);
         }
 
         protected override void Dispose(bool disposing)
