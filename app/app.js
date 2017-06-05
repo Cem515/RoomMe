@@ -1,10 +1,15 @@
 (function () {
     'use strict';
 
+<<<<<<< HEAD
     var app = angular.module('app', ['ui.router', 'LocalStorageModule']).value('localApi', 'http://localhost:61066/');
     app.config(function ($stateProvider, $urlRouterProvider, localStorageServiceProvider) {
 
         localStorageServiceProvider.setPrefix('app').setStorageType('sessionStorage').setNotify(true, true);
+=======
+    var app = angular.module('app', ['ui.router','socialLogin']).value('localApi', 'http://localhost:61066/api/');
+    app.config(function ($stateProvider, $urlRouterProvider, socialProvider){
+>>>>>>> listings
         $urlRouterProvider.otherwise('/Register');
 
         $stateProvider
@@ -33,7 +38,7 @@
                 controllerAs: "MsgCtrl"
             })
             .state('addListing', {
-                url: "/addlistings",
+                url: "/addlisting",
                 templateUrl: "app/listings/add.listings.html",
                 controller: "AddListingsController",
                 controllerAs: "AddListCtrl"
@@ -44,5 +49,7 @@
                 controller: "OwnListingsController",
                 controllerAs: "OwnListCtrl"
             })
+                   socialProvider.setFbKey({appId: "129989007575185", apiVersion: "v2.9"});
+
     })
 })();

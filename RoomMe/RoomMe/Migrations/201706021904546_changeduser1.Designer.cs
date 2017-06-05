@@ -7,13 +7,13 @@ namespace RoomMe.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class bookmarks : IMigrationMetadata
+    public sealed partial class changeduser1 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(bookmarks));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(changeduser1));
         
         string IMigrationMetadata.Id
         {
-            get { return "201705312206283_bookmarks"; }
+            get { return "201706021904546_changeduser1"; }
         }
         
         string IMigrationMetadata.Source

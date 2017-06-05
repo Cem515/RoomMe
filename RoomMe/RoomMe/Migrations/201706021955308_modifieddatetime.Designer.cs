@@ -7,13 +7,13 @@ namespace RoomMe.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class addedTables : IMigrationMetadata
+    public sealed partial class modifieddatetime : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addedTables));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(modifieddatetime));
         
         string IMigrationMetadata.Id
         {
-            get { return "201705312113225_addedTables"; }
+            get { return "201706021955308_modifieddatetime"; }
         }
         
         string IMigrationMetadata.Source

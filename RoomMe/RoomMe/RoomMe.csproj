@@ -103,21 +103,21 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\RoomMeDataContext.cs" />
-    <Compile Include="Migrations\201705312102007_InitialCreate.cs" />
-    <Compile Include="Migrations\201705312102007_InitialCreate.Designer.cs">
-      <DependentUpon>201705312102007_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201706022159393_m.cs" />
+    <Compile Include="Migrations\201706022159393_m.Designer.cs">
+      <DependentUpon>201706022159393_m.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201705312113225_addedTables.cs" />
-    <Compile Include="Migrations\201705312113225_addedTables.Designer.cs">
-      <DependentUpon>201705312113225_addedTables.cs</DependentUpon>
+    <Compile Include="Migrations\201706022203182_n.cs" />
+    <Compile Include="Migrations\201706022203182_n.Designer.cs">
+      <DependentUpon>201706022203182_n.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201705312206283_bookmarks.cs" />
-    <Compile Include="Migrations\201705312206283_bookmarks.Designer.cs">
-      <DependentUpon>201705312206283_bookmarks.cs</DependentUpon>
+    <Compile Include="Migrations\201706021904546_changeduser1.cs" />
+    <Compile Include="Migrations\201706021904546_changeduser1.Designer.cs">
+      <DependentUpon>201706021904546_changeduser1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201706011854218_changedstring.cs" />
-    <Compile Include="Migrations\201706011854218_changedstring.Designer.cs">
-      <DependentUpon>201706011854218_changedstring.cs</DependentUpon>
+    <Compile Include="Migrations\201706021955308_modifieddatetime.cs" />
+    <Compile Include="Migrations\201706021955308_modifieddatetime.Designer.cs">
+      <DependentUpon>201706021955308_modifieddatetime.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Bookmark.cs" />
@@ -126,6 +126,7 @@
     <Compile Include="Models\ListingSearch.cs" />
     <Compile Include="Models\Message.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserSearch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -141,17 +142,17 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201705312102007_InitialCreate.resx">
-      <DependentUpon>201705312102007_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706022159393_m.resx">
+      <DependentUpon>201706022159393_m.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705312113225_addedTables.resx">
-      <DependentUpon>201705312113225_addedTables.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706022203182_n.resx">
+      <DependentUpon>201706022203182_n.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705312206283_bookmarks.resx">
-      <DependentUpon>201705312206283_bookmarks.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706021904546_changeduser1.resx">
+      <DependentUpon>201706021904546_changeduser1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706011854218_changedstring.resx">
-      <DependentUpon>201706011854218_changedstring.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706021955308_modifieddatetime.resx">
+      <DependentUpon>201706021955308_modifieddatetime.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
