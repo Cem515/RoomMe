@@ -44,7 +44,7 @@
                 .postRegistration(nameObject)
                 .then(function (info) {
                     goProfile();
-                    localStorageService.set('user', info.userID);
+                    localStorageService.setItem('user', info.userID);
                     userID = localStorageService.get('user');
                 }, function (error) {
                     console.log(error);

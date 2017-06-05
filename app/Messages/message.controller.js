@@ -52,11 +52,11 @@
             MessagesFactory
                 .converse(convo)
                 .then(function (conID) {
-                    if (conID.array = 0) {
+                    if (conID.array == 0) {
                         MessagesFactory
                             .startCon(MsgCtrl.conObject)
                             .then(function (newcon) {
-                                localStorageService.set('conversation', convo.conversationID);
+                                localStorageService.setItem('conversation', convo.conversationID);
                                 convoID = localStorageService.get('conversation');
                             })
                     } else {
