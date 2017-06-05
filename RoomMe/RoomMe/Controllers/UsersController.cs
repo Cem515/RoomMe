@@ -25,18 +25,18 @@ namespace RoomMe.Controllers
             return db.Users;
         }
 
-        // GET: api/Users/5
-        [ResponseType(typeof(User))]
-        public IHttpActionResult GetUser(int id)
-        {
-            User user = db.Users.Find(id);
-            if (user == null)
-            {
-                return NotFound();
-            }
+        //// GET: api/Users/5
+        //[ResponseType(typeof(User))]
+        //public IHttpActionResult GetUser(int id)
+        //{
+        //    User user = db.Users.Find(id);
+        //    if (user == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            return Ok(user);
-        }
+        //    return Ok(user);
+        //}
 
         // PUT: api/Users/5
         [ResponseType(typeof(void))]
@@ -104,6 +104,18 @@ namespace RoomMe.Controllers
             return Ok(user);
         }
 
+
+        // NameSearch
+        [HttpGet]
+        [Route("api/Users/NameSearch")]
+        public IQueryable<User> NameSearch([FromUri] string username)
+        {
+            IQueryable<User> usl = db.Users;
+            usl = usl.Where(u => u.UserName == username);
+            return (usl);
+        }
+
+
         // UserSearch
         [HttpGet]
         [Route("api/Users/UserSearch")]
@@ -114,16 +126,6 @@ namespace RoomMe.Controllers
             used = used.Where(u => u.UserName == creds.Username && u.Password == creds.Password);
 
             return (used);
-        }
-
-        // UserIdSearch
-        [HttpGet]
-        [Route("api/Users/UserIDSearch")]
-        public IQueryable<User> UserIDSearch([FromUri] string username)
-        {
-            IQueryable<User> usl = db.Users;
-            usl = usl.Where(u => u.UserName == username);
-            return (usl);
         }
 
         protected override void Dispose(bool disposing)

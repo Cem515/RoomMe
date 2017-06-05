@@ -1,4 +1,4 @@
-(function(){
+(function () {
     'use strict';
 
     angular
@@ -9,22 +9,34 @@
 
     function MessagesFactory($http, localApi) {
         var service = {
-            getRecd: getRecd
+            getRecd: getRecd,
+            converse: converse
         };
 
         return service;
 
         function getRecd(name) {
 
-            return $http ({
-                Method:'GET',
-                url: localApi+'Users/UserIDSearch',
-                data: name
-            }).then (function(response) {
+            return $http({
+                Method: 'GET',
+                url: localApi + 'Users/NameSearch?username='+name
+            }).then(function (response) {
                 return response;
-            }), function (error) {
+            }, function (error) {
                 return error;
-            }
-         }
+            })
+        }
+
+        function converse(number) {
+
+return $http ({
+Method: 'GET',
+url: localApi
+
+})
+
+        }
+
+
     }
 })();

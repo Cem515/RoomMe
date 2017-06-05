@@ -21,5 +21,7 @@ namespace RoomMe.Infrastructure
         public System.Data.Entity.DbSet<RoomMe.Models.Message> Messages { get; set; }
 
         public System.Data.Entity.DbSet<RoomMe.Models.Bookmark> Bookmarks { get; set; }
+
+        public System.Data.Entity.DbSet<RoomMe.Models.Conversation> Conversations { get; set; }
     }
 }

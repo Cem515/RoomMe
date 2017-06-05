@@ -3,7 +3,7 @@ namespace RoomMe.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class m : DbMigration
+    public partial class remake : DbMigration
     {
         public override void Up()
         {
@@ -48,9 +48,10 @@ namespace RoomMe.Migrations
                         UserName = c.String(),
                         Password = c.String(),
                         Email = c.String(),
+                        Landlord = c.Boolean(nullable: false),
                         DateOfBirth = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
                         ZipCode = c.Int(nullable: false),
-                        Phone = c.Int(nullable: false),
+                        Phone = c.String(),
                     })
                 .PrimaryKey(t => t.UserId);
             
