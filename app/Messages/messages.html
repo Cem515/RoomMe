@@ -1,0 +1,12 @@
+<input ng-model="MsgCtrl.conObject.recipient" placeholder="Recipient UserName"></input>
+<button ng-click="MsgCtrl.findRec(MsgCtrl.conObject.recipient)" type= "btn btn-primary">Find Recipient</button>
+</br>
+<label for="subject">Subject
+<input ng-model="MsgCtrl.msgObject.Subject" placeholder="Subject"></input>
+</label>
+</br>
+<label for="Body">Enter Message
+<input ng-model="MsgCtrl.msgObject.Body" placeholder="Enter Message"></input>
+</label>
+</br>
+<button ng-click="MsgCtrl.sendMsg(MsgCtrl.msgObject)">Send Message</button>

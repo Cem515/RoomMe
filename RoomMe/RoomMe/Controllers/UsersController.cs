@@ -104,6 +104,16 @@ namespace RoomMe.Controllers
             return Ok(user);
         }
 
+<<<<<<< HEAD
+        // UserIdSearch
+        [HttpGet]
+        [Route("api/Users/UserIDSearch")]
+        public IQueryable<User> UserIDSearch([FromUri] string username)
+        {
+            IQueryable<User> usl = db.Users;
+
+        }
+=======
         // UserSearch
         [HttpGet]
         [Route("api/Users/UserSearch")]
@@ -116,6 +126,7 @@ namespace RoomMe.Controllers
             return (used);
         }
 
+>>>>>>> listings
         protected override void Dispose(bool disposing)
         {
             if (disposing)
