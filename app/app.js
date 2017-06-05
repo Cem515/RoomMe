@@ -2,8 +2,8 @@
 (function() {
     'use strict';
 
-    var app = angular.module('app', ['ui.router','socialLogin']).value('localApi', 'http://localhost:61066/api/');
-    app.config(function ($stateProvider, $urlRouterProvider, socialProvider){
+    var app = angular.module('app', ['ui.router','socialLogin', 'oitozero.ngSweetAlert','LocalStorageModule']).value('localApi', 'http://localhost:61066/api/');
+    app.config(function ($stateProvider, $urlRouterProvider, socialProvider, localStorageServiceProvider){
         $urlRouterProvider.otherwise('/Register');
 
         $stateProvider
