@@ -99,6 +99,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ConversationsController.cs" />
     <Compile Include="Controllers\ListingsController.cs" />
+    <Compile Include="Controllers\MessagesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -107,6 +108,10 @@
     <Compile Include="Migrations\201706052012176_remake.cs" />
     <Compile Include="Migrations\201706052012176_remake.Designer.cs">
       <DependentUpon>201706052012176_remake.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706052230053_changedconvo.cs" />
+    <Compile Include="Migrations\201706052230053_changedconvo.Designer.cs">
+      <DependentUpon>201706052230053_changedconvo.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Bookmark.cs" />
@@ -133,6 +138,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201706052012176_remake.resx">
       <DependentUpon>201706052012176_remake.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706052230053_changedconvo.resx">
+      <DependentUpon>201706052230053_changedconvo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

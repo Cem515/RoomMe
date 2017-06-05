@@ -101,6 +101,17 @@ namespace RoomMe.Controllers
 
             return Ok(conversation);
         }
+        //ConversationSearch
+        [HttpGet]
+        [Route("api/Conversations/ConvoSearch")]
+        public IQueryable<Conversation> ConvoSearch([FromUri] Conversation check)
+        {
+            IQueryable<Conversation> cdb = db.Conversations;
+
+            cdb = cdb.Where(c => c.Recipient == check.Recipient && c.Sender == check.Sender);
+            return (cdb);
+
+        }
 
         protected override void Dispose(bool disposing)
         {

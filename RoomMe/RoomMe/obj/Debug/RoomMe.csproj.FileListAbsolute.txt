@@ -71,3 +71,4 @@ C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.pdb
 C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.csprojResolveAssemblyReference.cache
 C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.remake.resources
 C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.csproj.GenerateResource.Cache
+C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.changedconvo.resources

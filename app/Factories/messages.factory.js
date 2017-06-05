@@ -10,7 +10,9 @@
     function MessagesFactory($http, localApi) {
         var service = {
             getRecd: getRecd,
-            converse: converse
+            converse: converse,
+            startCon: startCon,
+            sendMsg: sendMsg
         };
 
         return service;
@@ -19,7 +21,7 @@
 
             return $http({
                 Method: 'GET',
-                url: localApi + 'Users/NameSearch?username='+name
+                url: localApi + 'Users/NameSearch?username=' + name
             }).then(function (response) {
                 return response;
             }, function (error) {
@@ -29,14 +31,45 @@
 
         function converse(number) {
 
-return $http ({
-Method: 'GET',
-url: localApi
-
-})
+            return $http({
+                Method: 'GET',
+                url: localApi + 'Conversations/ConvoSearch',
+                params: number
+            }).then(function (cons) {
+                return cons;
+            }, function (error) {
+                return error;
+            })
 
         }
 
+        function startCon(keys) {
+            return $http({
+                Method: 'Post',
+                url: localApi + 'Conversations',
+                params: keys
+            }).then(function (sation) {
+                return sation;
+            }, function (error) {
+                return error;
+            })
+
+        }
+
+
+        function sendMsg(mso) {
+            return $http({
+                Method: 'Post',
+                url: localApi + 'Messages',
+                params: mso
+            }).then(function (sage) {
+                    return sage;
+                }, function (error) {
+                    return error;
+                }
+
+            )
+        }
 
     }
 })();
