@@ -22,7 +22,6 @@
                 .getRecd(recipient)
                 .then(function (rec) {
                     recFound(rec.data)
-                    console.log(rec)
                 }, function (error) {
                     SweetAlert.swal("Error Searching Users");
                 })

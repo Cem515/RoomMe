@@ -18,10 +18,10 @@
 
             return $http ({
                 Method:'GET',
-                url: localApi+'Users/UserSearch',
+                url: localApi+'Users/UserIDSearch',
                 data: name
-            }).then (function(info) {
-                return info;
+            }).then (function(response) {
+                return response;
             }), function (error) {
                 return error;
             }
