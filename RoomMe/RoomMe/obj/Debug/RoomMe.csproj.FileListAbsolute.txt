@@ -231,3 +231,5 @@ C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.m.
 C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.csproj.GenerateResource.Cache
 C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.n.resources
 >>>>>>> 0b2439ed0f76acc263bb3459dea4ef119d47c9bb
+C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.m.resources
+C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.n.resources
