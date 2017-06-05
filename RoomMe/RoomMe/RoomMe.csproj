@@ -103,33 +103,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\RoomMeDataContext.cs" />
-    <Compile Include="Migrations\201705312102007_InitialCreate.cs" />
-    <Compile Include="Migrations\201705312102007_InitialCreate.Designer.cs">
-      <DependentUpon>201705312102007_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201706022159393_m.cs" />
+    <Compile Include="Migrations\201706022159393_m.Designer.cs">
+      <DependentUpon>201706022159393_m.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201705312113225_addedTables.cs" />
-    <Compile Include="Migrations\201705312113225_addedTables.Designer.cs">
-      <DependentUpon>201705312113225_addedTables.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705312206283_bookmarks.cs" />
-    <Compile Include="Migrations\201705312206283_bookmarks.Designer.cs">
-      <DependentUpon>201705312206283_bookmarks.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706011854218_changedstring.cs" />
-    <Compile Include="Migrations\201706011854218_changedstring.Designer.cs">
-      <DependentUpon>201706011854218_changedstring.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706012340099_changeduser.cs" />
-    <Compile Include="Migrations\201706012340099_changeduser.Designer.cs">
-      <DependentUpon>201706012340099_changeduser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706012342239_addedpassword.cs" />
-    <Compile Include="Migrations\201706012342239_addedpassword.Designer.cs">
-      <DependentUpon>201706012342239_addedpassword.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706012355398_usersearch.cs" />
-    <Compile Include="Migrations\201706012355398_usersearch.Designer.cs">
-      <DependentUpon>201706012355398_usersearch.cs</DependentUpon>
+    <Compile Include="Migrations\201706022203182_n.cs" />
+    <Compile Include="Migrations\201706022203182_n.Designer.cs">
+      <DependentUpon>201706022203182_n.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201706021904546_changeduser1.cs" />
     <Compile Include="Migrations\201706021904546_changeduser1.Designer.cs">
@@ -162,26 +142,11 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201705312102007_InitialCreate.resx">
-      <DependentUpon>201705312102007_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706022159393_m.resx">
+      <DependentUpon>201706022159393_m.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705312113225_addedTables.resx">
-      <DependentUpon>201705312113225_addedTables.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705312206283_bookmarks.resx">
-      <DependentUpon>201705312206283_bookmarks.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706011854218_changedstring.resx">
-      <DependentUpon>201706011854218_changedstring.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706012340099_changeduser.resx">
-      <DependentUpon>201706012340099_changeduser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706012342239_addedpassword.resx">
-      <DependentUpon>201706012342239_addedpassword.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706012355398_usersearch.resx">
-      <DependentUpon>201706012355398_usersearch.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706022203182_n.resx">
+      <DependentUpon>201706022203182_n.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706021904546_changeduser1.resx">
       <DependentUpon>201706021904546_changeduser1.cs</DependentUpon>

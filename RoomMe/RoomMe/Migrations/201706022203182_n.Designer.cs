@@ -7,13 +7,13 @@ namespace RoomMe.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class changedstring : IMigrationMetadata
+    public sealed partial class n : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(changedstring));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(n));
         
         string IMigrationMetadata.Id
         {
-            get { return "201706011854218_changedstring"; }
+            get { return "201706022203182_n"; }
         }
         
         string IMigrationMetadata.Source

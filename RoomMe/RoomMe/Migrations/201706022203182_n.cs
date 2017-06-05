@@ -3,16 +3,16 @@ namespace RoomMe.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class addedpassword : DbMigration
+    public partial class n : DbMigration
     {
         public override void Up()
         {
-            AddColumn("dbo.Users", "Password", c => c.String());
+            AlterColumn("dbo.Users", "Phone", c => c.String());
         }
         
         public override void Down()
         {
-            DropColumn("dbo.Users", "Password");
+            AlterColumn("dbo.Users", "Phone", c => c.Int(nullable: false));
         }
     }
 }

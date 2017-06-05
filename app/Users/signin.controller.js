@@ -25,10 +25,17 @@
         SignInCtrl.nameObject.Landlord = false;
         SignInCtrl.nameObject.ZipCode = 0;
         SignInCtrl.nameObject.Phone = "";
+<<<<<<< HEAD
         //Sign In
         SignInCtrl.Registration = true;
         SignInCtrl.sObject.userName = "";
         SignInCtrl.sObject.password = "";
+=======
+        SignInCtrl.Registration= true;
+        SignInCtrl.sObject = {};
+        SignInCtrl.sObject.username='';
+        SignInCtrl.sObject.password='';
+>>>>>>> 0b2439ed0f76acc263bb3459dea4ef119d47c9bb
 
         // SignInCtrl.signout = function () {socialLoginService.logout();}
 
