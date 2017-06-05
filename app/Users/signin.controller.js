@@ -60,10 +60,9 @@
         SignInCtrl.signIn = function (log) {
             UserFactory
                 .findUsers(log)
-                .then(function (signin) {
-                    console.log(signin);
-                    localStorageService.set('user', signin.userID);
-                    userID = localStorageService.get('user');
+                .then(function (response) {
+                    console.log(response);
+                    response.data.userID = localStorage.getItem("user");
                     goProfile();
                     SweetAlert.swal("Successfully Signed In","Welcome","success")
                 }, function (error) {
