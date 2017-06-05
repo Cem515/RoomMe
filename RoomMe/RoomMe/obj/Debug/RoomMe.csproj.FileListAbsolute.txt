@@ -152,3 +152,5 @@ C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.change
 C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.changeduser.resources
 C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.addedpassword.resources
 C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.usersearch.resources
+C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.changeduser1.resources
+C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.modifieddatetime.resources

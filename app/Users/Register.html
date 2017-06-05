@@ -38,9 +38,9 @@
                 </div>
                 <!-- Birth Date -->
                 <div class="form-group">
-                    <label for="validate-text">Birth Date</label>
-                    <div class="input-group" data-validate="text">
-                        <input id="date" type="date"><br>
+                    <label>Birth Date</label>
+                    <div class="input-group">
+                        <input id="date" type="date" ng-model="SignInCtrl.nameObject.birthdate"><br>
                     </div>
                 </div>
                 <!-- Landlord -->
@@ -61,7 +61,7 @@
                         <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
                     </div>
                 </div>
-                <button ng-click="SignInCtrl.register(SignInCtrl.nameObject)" type="submit" class="btn btn-primary col-xs-12" disabled>Submit</button>
+                <button ng-click="SignInCtrl.register(SignInCtrl.nameObject)" type="submit" class="btn btn-primary col-xs-12">Submit</button>
                 <button id="fbButton" class="btn btn-primary btn-sm" fb-login type="button">LOG IN WITH FACEBOOK</button>
             </form>
         </div>
@@ -69,7 +69,7 @@
 </div>
 </div>
 
-            <button ng-click="SigninCtrl.signIn(SignInCtrl.sObject)">Past User? Log In</button>
+            <button ng-click="SignInCtrl.Switch()">Past User? Log In</button>
             <div ng-show="SignInCtrl.login">
               <div class="col-md-4">
                 <div class="form-group">
@@ -79,7 +79,7 @@
                   <input type="password" class="form-control" ng-model="SignInCtrl.sObject.password" placeholder="Password" required=""/>
                 </div>
               <div class="form-group">
-                <button type="submit" class="btn btn-success" ng-click="SignInCtrl.getUser(SignInCtrl.sObject)">Login</button>
+                <button type="submit" class="btn btn-success" ng-click="SignInCtrl.signIn(SignInCtrl.sObject)">Login</button>
                 <span class="text-danger">{{error}}</span>
               </div>
               </div>

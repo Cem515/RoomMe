@@ -111,8 +111,7 @@ namespace RoomMe.Controllers
         {
             IQueryable<User> used = db.Users;
 
-            used = used.Where(u => u.UserName == creds.Username);
-            used = used.Where(u => u.Password == creds.Password);
+            used = used.Where(u => u.UserName == creds.Username && u.Password == creds.Password);
 
             return (used);
         }
