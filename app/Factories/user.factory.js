@@ -18,7 +18,7 @@
         function postRegistration(registration) {
             return $http({
                 method: 'POST',
-                url: localAPi + '/users',
+                url: localApi + '/users',
                 dataType: "json",
                 data: registration,
                 headers: {
@@ -29,8 +29,29 @@
             }, function (error) {
                 return error;
             })
-
          }
+
+         function getUser(UserId) {
+            return $http({
+                method: 'GET',
+                url: localApi + '/users' + UserId,
+
+            }).then(function (response){
+                console.log(response);
+
+                if (typeof response.data !== null) {
+
+                    return response;
+                } else {
+
+                    return 'no data!';
+                }
+            }, function (error) {
+                return error;
+            })
+         }
+
+
 
          function findUsers(login) {
             return $http({

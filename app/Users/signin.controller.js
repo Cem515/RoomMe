@@ -5,9 +5,9 @@
         .module('app')
         .controller('SignInController', SignInController)
 
-    SignInController.$inject = ['$state', '$rootScope', 'socialLoginService', 'userFactory'];
+    SignInController.$inject = ['$state', '$rootScope', 'socialLoginService', 'userFactory', 'localStorageFactory'];
 
-    function SignInController($state, $rootScope) {
+    function SignInController($state, $rootScope, socialLoginService, userFactory, localStorageFactory) {
 
         var SignInCtrl = this; // Not using SignInCtrl
         //facebook details
@@ -28,39 +28,40 @@
         SignInCtrl.sObject.username='';
         SignInCtrl.sObject.password='';
 
-        // SignInCtrl.signout = function () {socialLoginService.logout();}
-
-
         SignInCtrl.register = function (nameObject) {
             console.log(nameObject);
-            UserFactory
-                .postRegistration(nameObject)
+            userFactory
+                .postRegistration(nameObject) 
                 .then(function (info) {
-                    console.log(info);
+                    console.log(info)
+                    var returnedUser = info.data.userId;
+            localStorageFactory
+                .setLocalStorage('userId', returnedUser);
+
+            var storedVariable = localStorageFactory.getLocalStorage('userId');
+                console.log(storedVariable);
                 }, function (error) {
                     console.log(error);
-
                 })
+        }
 
             // What happens after succesful log in
             $rootScope.$on('event:social-sign-in-success', function (event, userDetails) {
                 console.log(userDetails);
-
-
             });
-        }
+         
 
         SignInCtrl.signIn = function(log) {
-            UserFactory
+            userFactory
             .findUsers(log) 
             .then(function (signin){
-                console.log(info);
+                console.log(signin);
             }, function (error) {
                 console.log(error);
             })
-
-
         }
+
+        
     }
 
 })();

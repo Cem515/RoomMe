@@ -2,7 +2,7 @@
 (function() {
     'use strict';
 
-    var app = angular.module('app', ['ui.router','socialLogin']).value('localApi', 'http://localhost:61066/api/');
+    var app = angular.module('app', ['ui.router','socialLogin','LocalStorageModule']).value('localApi', 'http://localhost:61066/api/');
     app.config(function ($stateProvider, $urlRouterProvider, socialProvider){
         $urlRouterProvider.otherwise('/Register');
 
@@ -43,7 +43,8 @@
                 controller: "OwnListingsController",
                 controllerAs : "OwnListCtrl"
             })
-                   socialProvider.setFbKey({appId: "129989007575185", apiVersion: "v2.9"});
+            
+            socialProvider.setFbKey({appId: "129989007575185", apiVersion: "v2.9"});
 
     })
 })();
