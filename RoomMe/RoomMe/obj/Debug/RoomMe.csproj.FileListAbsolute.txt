@@ -152,6 +152,10 @@ C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.change
 C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.changeduser.resources
 C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.addedpassword.resources
 C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.usersearch.resources
+<<<<<<< HEAD
+C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.changeduser1.resources
+C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.modifieddatetime.resources
+=======
 C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\csc.exe
 C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\csc.exe.config
 C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\csc.rsp
@@ -226,6 +230,7 @@ C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.pdb
 C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.m.resources
 C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.csproj.GenerateResource.Cache
 C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.n.resources
+<<<<<<< HEAD
 C:\Projects\RoomMe\RoomMe\RoomMe\bin\roslyn\csc.exe
 C:\Projects\RoomMe\RoomMe\RoomMe\bin\roslyn\csc.exe.config
 C:\Projects\RoomMe\RoomMe\RoomMe\bin\roslyn\csc.rsp
@@ -300,3 +305,6 @@ C:\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.pdb
 C:\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.Init1.resources
 C:\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.csproj.GenerateResource.Cache
 C:\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.Init2.resources
+=======
+>>>>>>> 0b2439ed0f76acc263bb3459dea4ef119d47c9bb
+>>>>>>> 7b9dae229114228a35ae8cf21fce67cb5940c70b

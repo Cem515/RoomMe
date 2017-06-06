@@ -5,9 +5,9 @@
         .module('app')
         .controller('SignInController', SignInController)
 
-    SignInController.$inject = ['$state', '$rootScope', 'socialLoginService', 'userFactory'];
+    SignInController.$inject = ['$state', '$rootScope', 'socialLoginService', 'userFactory', 'localStorageFactory'];
 
-    function SignInController($state, $rootScope) {
+    function SignInController($state, $rootScope, socialLoginService, userFactory, localStorageFactory) {
 
         var SignInCtrl = this; // Not using SignInCtrl
         //facebook details
@@ -17,9 +17,11 @@
 
         // Regular Register no Facebook
         SignInCtrl.nameObject = {};
+        SignInCtrl.sObject={};
         SignInCtrl.nameObject.UserName = "";
         SignInCtrl.nameObject.Password = "";
         SignInCtrl.nameObject.Email = "";
+        // SignInCtrl.nameObject.birthdate = '0000 0, 0'
         SignInCtrl.nameObject.Landlord = false;
         SignInCtrl.nameObject.ZipCode = 0;
         SignInCtrl.nameObject.Phone = "";
@@ -28,39 +30,49 @@
         SignInCtrl.sObject.username='';
         SignInCtrl.sObject.password='';
 
-        // SignInCtrl.signout = function () {socialLoginService.logout();}
-
-
         SignInCtrl.register = function (nameObject) {
+
             console.log(nameObject);
             UserFactory
-                .postRegistration(nameObject)
+                .postRegistration(nameObject) 
                 .then(function (info) {
-                    console.log(info);
+                    console.log(info)
+                    var returnedUser = info.data.userId;
+                    goProfile();
+            localStorageFactory
+                .setLocalStorage('userId', returnedUser);
+
+            var storedVariable = localStorageFactory.getLocalStorage('userId');
+                console.log(storedVariable);
                 }, function (error) {
                     console.log(error);
-
                 })
+        }
 
             // What happens after succesful log in
             $rootScope.$on('event:social-sign-in-success', function (event, userDetails) {
                 console.log(userDetails);
-
-
             });
-        }
 
-        SignInCtrl.signIn = function(log) {
+        SignInCtrl.signIn = function (log) {
             UserFactory
-            .findUsers(log) 
-            .then(function (signin){
-                console.log(info);
-            }, function (error) {
-                console.log(error);
-            })
-
-
+                .findUsers(log)
+                .then(function (signin) {
+                    console.log(info);
+                }, function (error) {
+                    console.log(error);
+                })
         }
+        function goProfile() {
+            $state.go('profile');
+        }
+
+        SignInCtrl.Switch = function() {
+            SignInCtrl.login = !SignInCtrl.login;
+            SignInCtrl.Registration = !SignInCtrl.Registration;
+        }
+
+        
     }
 
 })();

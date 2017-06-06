@@ -3,11 +3,11 @@
 
     angular
         .module('app')
-        .factory('userFactory', userFactory)
+        .factory('UserFactory', UserFactory)
 
-    userFactory.$inject = ['$http', 'localApi'];
+    UserFactory.$inject = ['$http', 'localApi'];
 
-    function userFactory($http, localApi) {
+    function UserFactory($http, localApi) {
         var service = {
             postRegistration: postRegistration,
             findUsers: findUsers
@@ -16,9 +16,10 @@
         return service;
 
         function postRegistration(registration) {
+
             return $http({
                 method: 'POST',
-                url: localAPi + '/users',
+                url: localApi + '/users',
                 dataType: "json",
                 data: registration,
                 headers: {
@@ -29,14 +30,35 @@
             }, function (error) {
                 return error;
             })
-
          }
+
+         function getUser(UserId) {
+            return $http({
+                method: 'GET',
+                url: localApi + '/users' + UserId,
+
+            }).then(function (response){
+                console.log(response);
+
+                if (typeof response.data !== null) {
+
+                    return response;
+                } else {
+
+                    return 'no data!';
+                }
+            }, function (error) {
+                return error;
+            })
+         }
+
+
 
          function findUsers(login) {
             return $http({
                 method: 'GET',
-                url: localApi + 'Users/UserSearch',
-                data: login
+                url: localApi +'Users/UserSearch',
+                params: login
             }).then (function(rerun){
                 return rerun;
             }, function (error){
