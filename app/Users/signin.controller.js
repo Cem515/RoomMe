@@ -41,10 +41,7 @@
                 .setLocalStorage('userId', returnedUser);
             var storedVariable = localStorageFactory.getLocalStorage('userId');
                 goProfile();
-<<<<<<< HEAD
                 console.log(storedVariable);
-=======
->>>>>>> 5acce5c6ab98fcf3e2fdc640145567642e7e090c
                 }, function (error) {
                     console.log(error);
                 })
