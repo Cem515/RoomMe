@@ -18,13 +18,19 @@
         MsgCtrl.recipient = "";
 
         //Conversation ID Variables
-        MsgCtrl.conObject.sender = localStorageService.get('user');
-        MsgCtrl.conObject.receiver = recID;
+        MsgCtrl.conObject.Sender_UserID = localStorageService.get('userId')
+        MsgCtrl.conObject.Receiver_UserID = recID;
         //Message Object
         MsgCtrl.msgObject.Subject = "";
         MsgCtrl.msgObject.Body = "";
         MsgCtrl.msgObject.DateCreated = Date.now();
-        MsgCtrl.msgObject.conversationID = convoID
+        MsgCtrl.msgObject.conversationID = {Conversation_ConversationID: convoID}
+
+
+        var obj = {
+    key1: value1,
+    key2: value2
+};
 
 //Find The Message Recipient
         MsgCtrl.findRec = function (recipient) {

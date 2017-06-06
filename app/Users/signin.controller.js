@@ -17,7 +17,6 @@
 
         // Regular Register no Facebook
         SignInCtrl.nameObject = {};
-        SignInCtrl.sObject = {};
         SignInCtrl.nameObject.UserName = "";
         SignInCtrl.nameObject.Password = "";
         SignInCtrl.nameObject.Email = "";
@@ -43,9 +42,10 @@
             UserFactory
                 .postRegistration(nameObject)
                 .then(function (info) {
-                    goProfile();
+
                     localStorageService.setItem('user', info.userID);
                     userID = localStorageService.get('user');
+                    goProfile();
                 }, function (error) {
                     console.log(error);
 
@@ -61,10 +61,9 @@
             UserFactory
                 .findUsers(log)
                 .then(function (response) {
-                    console.log(response);
                     response.data.userID = localStorage.getItem("user");
                     goProfile();
-                    SweetAlert.swal("Successfully Signed In","Welcome","success")
+                    SweetAlert.swal("Successfully Signed In", "Welcome", "success")
                 }, function (error) {
                     console.log(error);
                 })

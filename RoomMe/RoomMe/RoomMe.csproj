@@ -109,9 +109,9 @@
     <Compile Include="Migrations\201706052012176_remake.Designer.cs">
       <DependentUpon>201706052012176_remake.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201706052230053_changedconvo.cs" />
-    <Compile Include="Migrations\201706052230053_changedconvo.Designer.cs">
-      <DependentUpon>201706052230053_changedconvo.cs</DependentUpon>
+    <Compile Include="Migrations\201706061845275_Changedconvo.cs" />
+    <Compile Include="Migrations\201706061845275_Changedconvo.Designer.cs">
+      <DependentUpon>201706061845275_Changedconvo.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Bookmark.cs" />
@@ -139,8 +139,8 @@
     <EmbeddedResource Include="Migrations\201706052012176_remake.resx">
       <DependentUpon>201706052012176_remake.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706052230053_changedconvo.resx">
-      <DependentUpon>201706052230053_changedconvo.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706061845275_Changedconvo.resx">
+      <DependentUpon>201706061845275_Changedconvo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

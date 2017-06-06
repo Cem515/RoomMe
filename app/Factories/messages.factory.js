@@ -47,7 +47,11 @@
             return $http({
                 Method: 'Post',
                 url: localApi + 'Conversations',
-                params: keys
+                data: keys,
+                dataType: "json",
+                headers: {
+                    'Content-Type': 'application/json; charset=utf-8'
+                }
             }).then(function (sation) {
                 return sation;
             }, function (error) {

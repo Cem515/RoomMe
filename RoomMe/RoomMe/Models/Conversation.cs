@@ -11,8 +11,6 @@ namespace RoomMe.Models
         [Key]
         public int ConversationID { get; set; }
 
-        public int? SenderID { get; set; }
-        public int? RecipientId { get; set; }
 
         public User Sender { get; set; }
         public User Recipient { get; set; }
