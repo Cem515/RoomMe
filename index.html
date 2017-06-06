@@ -1,3 +1,67 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>RoomMe</title>
+<!-- bower:css -->
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+<link rel="stylesheet" href="bower_components/sweetalert/dist/sweetalert.css" />
+<!-- endbower -->
+
+<!-- inject:css -->
+<link rel="stylesheet" href="/app/style.css">
+<!-- endinject -->
+</head>
+
+<body ng-controller="SignInController">
+
+  <div id="topbar">
+    <h1 id="MainTitle">Welcome to RoomMe</h1>
+    <div class="topnav" id="myTopnav">
+      <a ui-sref="profile">Profile</a>
+      <a ui-sref="search">Listings</a>
+      <a ui-sref="register">Log In</a>
+      <a ui-sref="addListing">Add Listing</a>
+    </div>
+  </div>
+  
+  <div class="well" ui-view></div>
+
+
+
+
+
+
+<!-- bower:js -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angularjs-social-login/angularjs-social-login.js"></script>
+<script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
+<script src="bower_components/ngSweetAlert/SweetAlert.js"></script>
+<script src="bower_components/filepicker-js/filepicker.min.js"></script>
+<script src="bower_components/angular-filepicker/dist/angular_filepicker.js"></script>
+<!-- endbower -->
+
+<!-- inject:js -->
+<script src="/app/app.js"></script>
+<script src="/app/Factories/bookmarks.factory.js"></script>
+<script src="/app/Factories/messages.factory.js"></script>
+<script src="/app/Factories/owner.listing.factory.js"></script>
+<script src="/app/Factories/search.factory.js"></script>
+<script src="/app/Factories/user.factory.js"></script>
+<script src="/app/Listings/add.listing.controller.js"></script>
+<script src="/app/Listings/owner.controller.js"></script>
+<script src="/app/Profile/profile.controller.js"></script>
+<script src="/app/Messages/message.controller.js"></script>
+<script src="/app/Search/search.controller.js"></script>
+<script src="/app/Users/RegisterAnimation.js"></script>
+<script src="/app/Users/signin.controller.js"></script>
+<!-- endinject -->
+</body>
+=======
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
 <head>
@@ -61,4 +125,5 @@
 <script src="/app/Users/signin.controller.js"></script>
 <!-- endinject -->
 </body>
+>>>>>>> 0b2439ed0f76acc263bb3459dea4ef119d47c9bb
 </html>

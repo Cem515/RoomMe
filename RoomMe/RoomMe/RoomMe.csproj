@@ -111,6 +111,14 @@
     <Compile Include="Migrations\201706022203182_n.Designer.cs">
       <DependentUpon>201706022203182_n.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706021904546_changeduser1.cs" />
+    <Compile Include="Migrations\201706021904546_changeduser1.Designer.cs">
+      <DependentUpon>201706021904546_changeduser1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706021955308_modifieddatetime.cs" />
+    <Compile Include="Migrations\201706021955308_modifieddatetime.Designer.cs">
+      <DependentUpon>201706021955308_modifieddatetime.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Bookmark.cs" />
     <Compile Include="Models\Conversation.cs" />
@@ -139,6 +147,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706022203182_n.resx">
       <DependentUpon>201706022203182_n.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706021904546_changeduser1.resx">
+      <DependentUpon>201706021904546_changeduser1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706021955308_modifieddatetime.resx">
+      <DependentUpon>201706021955308_modifieddatetime.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

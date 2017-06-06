@@ -43,9 +43,15 @@
                 </div>
                 <!-- Birth Date -->
                 <div class="form-group">
+<<<<<<< HEAD
                     <label for="validate-text">Birth Date</label>
                     <div class="input-group">
                         <input id="date" type="date"><br>
+=======
+                    <label>Birth Date</label>
+                    <div class="input-group">
+                        <input id="date" type="date" ng-model="SignInCtrl.nameObject.birthdate"><br>
+>>>>>>> 72bebc9511c2e841d6a31541f031efcf8d9581fb
                     </div>
                 </div>
                 <!-- Landlord -->
@@ -75,7 +81,11 @@
 </div>
 </div>
 
+<<<<<<< HEAD
+            <button ng-click="SignInCtrl.Switch()">Past User? Log In</button>
+=======
             <button ng-click="SignInCtrl.signIn(SignInCtrl.sObject)">Past User? Log In</button>
+>>>>>>> 0b2439ed0f76acc263bb3459dea4ef119d47c9bb
             <div ng-show="SignInCtrl.login">
               <div class="col-md-4">
                 <div class="form-group">
@@ -85,7 +95,7 @@
                   <input type="password" class="form-control" ng-model="SignInCtrl.sObject.password" placeholder="Password" required=""/>
                 </div>
               <div class="form-group">
-                <button type="submit" class="btn btn-success" ng-click="SignInCtrl.getUser(SignInCtrl.sObject)">Login</button>
+                <button type="submit" class="btn btn-success" ng-click="SignInCtrl.signIn(SignInCtrl.sObject)">Login</button>
                 <span class="text-danger">{{error}}</span>
               </div>
               </div>
