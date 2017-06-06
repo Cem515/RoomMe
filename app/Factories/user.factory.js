@@ -60,7 +60,7 @@
                 url: localApi +'Users/UserSearch',
                 params: login
             }).then (function(rerun){
-                return rerun;
+                return rerun.data[0];
             }, function (error){
                 return error;
             })

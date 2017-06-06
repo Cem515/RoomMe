@@ -28,7 +28,9 @@
         }
 
         function logout() {
-            return localStorageService.clearAll();
+            console.log(getLocalStorage('userId'));
+            localStorageService.clearAll();
+            console.log(getLocalStorage('userId'));
         }
     }
 })();

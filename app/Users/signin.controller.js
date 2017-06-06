@@ -17,7 +17,6 @@
 
         // Regular Register no Facebook
         SignInCtrl.nameObject = {};
-        SignInCtrl.sObject={};
         SignInCtrl.nameObject.UserName = "";
         SignInCtrl.nameObject.Password = "";
         SignInCtrl.nameObject.Email = "";
@@ -57,7 +56,11 @@
                 .findUsers(log)
                 .then(function (response) {
                     console.log(response)
-                    response.data.userID = localStorageFactory.getLocalStorage("userID");
+                    var responseId = response.userId;
+                    localStorageFactory.setLocalStorage('userId', responseId);
+                    var storedInfo = localStorageFactory.getLocalStorage('userId');
+                    //response.data.array[0].userID = localStorageFactory.getLocalStorage("userID");
+                    console.log(storedInfo);
                     goProfile();
                     SweetAlert.swal("Successfully Signed In","Welcome","success")
                 }, function (error) {
@@ -74,10 +77,9 @@
             SignInCtrl.Registration = !SignInCtrl.Registration;
         }
 
-        // SignInCtrl.signout = function () {
-        //     localStorageFactory
-        //         .logout();
-        // }
+        SignInCtrl.signout = function () {
+            localStorageFactory.logout();
+        }
     }
 
 })();
