@@ -30,29 +30,24 @@
         SignInCtrl.sObject.username='';
         SignInCtrl.sObject.password='';
 
-        SignInCtrl.register = function (nameObject) {
-
-            console.log(nameObject);
+        SignInCtrl.register = function (nameObject) {    
             UserFactory
                 .postRegistration(nameObject) 
                 .then(function (info) {
-                    console.log(info)
                     var returnedUser = info.data.userId;
-                    goProfile();
             localStorageFactory
                 .setLocalStorage('userId', returnedUser);
-
             var storedVariable = localStorageFactory.getLocalStorage('userId');
-                console.log(storedVariable);
+                goProfile();
                 }, function (error) {
                     console.log(error);
                 })
         }
 
-            // What happens after succesful log in
-            $rootScope.$on('event:social-sign-in-success', function (event, userDetails) {
-                console.log(userDetails);
-            });
+        // What happens after succesful log in
+        $rootScope.$on('event:social-sign-in-success', function (event, userDetails) {
+            console.log(userDetails);
+        });
 
         SignInCtrl.signIn = function (log) {
             UserFactory
@@ -63,6 +58,7 @@
                     console.log(error);
                 })
         }
+        // Change to profile after success!
         function goProfile() {
             $state.go('profile');
         }
