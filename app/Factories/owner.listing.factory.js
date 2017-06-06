@@ -13,7 +13,22 @@
         
        return service;
 
-       ////////////////
+
+       ///////////////// GET LISTINGS
+       function getListing (user) {
+            return $http({
+                Method: 'GET',
+                url: localApi + 'Listings/5',
+                params: user
+            }).then(function (response) {
+                return response;
+            }, function (error) {
+                console.log("Error" + error);
+                return error;
+            });
+        }
+
+       //////////////// POST NEW LISTING
         function postListing(listingInfo) {
             console.log(listingInfo);
             return $http ({
@@ -31,5 +46,43 @@
                 return error;
             })
         }
+
+        /*////////////////  PUT-EDIT LISTING
+        function putListing(lingtingInfo) {
+            console.log(listingInfo);
+            return $http ({
+                method: 'PUT',
+                url: localApi + 'Listings/5',
+                dataType: "json",
+                data: listingInfo,
+                headers: {
+                'Content-Type': 'application/json; charset=utf-8'
+                }
+
+           }).then (function (info){
+                return info;
+            }, function (error) {
+                return error;
+            })
+        }
+
+        //////////////// DELETE LISTING
+        function deleteListing(listingInfo) {
+            console.log(listingInfo);
+            return $http ({
+                method: 'DELETE',
+                url: localApi + 'Listings/5',
+                dataType: "json",
+                data: listingInfo,
+                headers: {
+                'Content-Type': 'application/json; charset=utf-8'
+                }
+
+           }).then (function (info){
+                return info;
+            }, function (error) {
+                return error;
+            })
+        }*/
     }
 })();
