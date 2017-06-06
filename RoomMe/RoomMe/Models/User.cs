@@ -21,5 +21,6 @@ namespace RoomMe.Models
         public int ZipCode { get; set; }
         public string Phone { get; set; }
 
+        public ICollection<Conversation> Conversations { get; set; }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -19,9 +20,11 @@ namespace RoomMe.Models
         public string State { get; set; }
         public int Zipcode { get; set; }
         public string Picture { get; set; }
+        public int UserId { get; set; }
 
+        [ForeignKey("UserId")]
         public User User { get; set; }
 
-
+        public ICollection<Bookmark> Bookmarks { get; set; }
     }
 }

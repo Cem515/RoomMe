@@ -108,7 +108,7 @@ namespace RoomMe.Controllers
         {
             IQueryable<Conversation> cdb = db.Conversations;
 
-            cdb = cdb.Where(c => c.Recipient == check.Recipient && c.Sender == check.Sender);
+            cdb = cdb.Where(c => c.SenderID == check.SenderID && c.RecipientID == check.RecipientID);
             return (cdb);
 
         }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -12,8 +13,12 @@ namespace RoomMe.Models
         public int BookmarkID { get; set; }
 
         public bool Liked { get; set; }
+        public int UserLikeId { get; set; }
+        public int ListingLikeId { get; set; }
 
-        public User User { get; set; }
-        public Listing Listing { get; set; }
+        [ForeignKey("UserLikeId")]
+        public User UserProfile { get; set; }
+        [ForeignKey("ListingLikeId")]
+        public Listing LikedListing { get; set; }
     }
 }
