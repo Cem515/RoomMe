@@ -2,7 +2,7 @@
 (function() {
     'use strict';
 
-    var app = angular.module('app', ['ui.router','socialLogin','LocalStorageModule']).value('localApi', 'http://localhost:61066/api/');
+    var app = angular.module('app', ['ui.router','socialLogin','LocalStorageModule', 'oitozero.ngSweetAlert']).value('localApi', 'http://localhost:61066/api/');
     app.config(function ($stateProvider, $urlRouterProvider, socialProvider){
         $urlRouterProvider.otherwise('/Register');
 
@@ -45,10 +45,6 @@
             })
             
             socialProvider.setFbKey({appId: "129989007575185", apiVersion: "v2.9"});
-<<<<<<< HEAD
-=======
-
->>>>>>> 7b9dae229114228a35ae8cf21fce67cb5940c70b
     })
 })();
 

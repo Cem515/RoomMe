@@ -34,11 +34,11 @@ namespace RoomMe.Migrations
                         State = c.String(),
                         Zipcode = c.Int(nullable: false),
                         Picture = c.String(),
-                        User_UserId = c.Int(),
+                        UserID = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.ListingID)
-                .ForeignKey("dbo.Users", t => t.User_UserId)
-                .Index(t => t.User_UserId);
+                .ForeignKey("dbo.Users", t => t.UserID, cascadeDelete: true)
+                .Index(t => t.UserID);
             
             CreateTable(
                 "dbo.Users",
@@ -48,6 +48,7 @@ namespace RoomMe.Migrations
                         UserName = c.String(),
                         Password = c.String(),
                         Email = c.String(),
+                        Landlord = c.Boolean(nullable: false),
                         DateOfBirth = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
                         ZipCode = c.Int(nullable: false),
                         Phone = c.String(),
@@ -91,11 +92,11 @@ namespace RoomMe.Migrations
             DropForeignKey("dbo.Conversations", "Recipient_UserId", "dbo.Users");
             DropForeignKey("dbo.Bookmarks", "User_UserId", "dbo.Users");
             DropForeignKey("dbo.Bookmarks", "Listing_ListingID", "dbo.Listings");
-            DropForeignKey("dbo.Listings", "User_UserId", "dbo.Users");
+            DropForeignKey("dbo.Listings", "UserID", "dbo.Users");
             DropIndex("dbo.Conversations", new[] { "Sender_UserId" });
             DropIndex("dbo.Conversations", new[] { "Recipient_UserId" });
             DropIndex("dbo.Messages", new[] { "Conversation_ConversationID" });
-            DropIndex("dbo.Listings", new[] { "User_UserId" });
+            DropIndex("dbo.Listings", new[] { "UserID" });
             DropIndex("dbo.Bookmarks", new[] { "User_UserId" });
             DropIndex("dbo.Bookmarks", new[] { "Listing_ListingID" });
             DropTable("dbo.Conversations");

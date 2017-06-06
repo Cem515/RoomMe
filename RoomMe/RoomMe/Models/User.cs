@@ -15,10 +15,7 @@ namespace RoomMe.Models
         public string UserName { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }
-<<<<<<< HEAD
         public bool Landlord { get; set; }
-=======
->>>>>>> 0b2439ed0f76acc263bb3459dea4ef119d47c9bb
         [Column(TypeName = "DateTime2")]
         public DateTime DateOfBirth { get; set; }
         public int ZipCode { get; set; }

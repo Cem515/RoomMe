@@ -6,7 +6,7 @@
                 <!-- UserName -->
                 <div class="form-group">
                     <label for="validate-text">User Name</label>
-                    <div class="input-group" data-validate="text"> 
+                    <div class="input-group" data-validate="text">
                         <input type="text" class="form-control" name="username" id="username" placeholder="Create Username" ng-model="SignInCtrl.nameObject.UserName"
                             required>
                         <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
@@ -24,7 +24,7 @@
                 <!-- Phone -->
                 <div class="form-group">
                     <label for="validate-phone">Phone</label>
-                    <div class="input-group" data-validate="phone"> 
+                    <div class="input-group" data-validate="phone">
                         <input type="text" class="form-control" name="phone" id="phone" placeholder="(814) 555-1234" required ng-model="SignInCtrl.nameObject.Phone">
                         <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
                     </div>
@@ -32,7 +32,7 @@
                 <!-- ZipCode -->
                 <div class="form-group">
                     <label for="validate-number">Zip Code</label>
-                    <div class="input-group" data-validate="number"> 
+                    <div class="input-group" data-validate="number">
                         <input type="number" class="form-control" name="phone" id="phone" placeholder="92119" required ng-model="SignInCtrl.nameObject.ZipCode">
                         <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
                     </div>
@@ -57,9 +57,9 @@
                 <!-- Password -->
                 <div class="form-group">
                     <label for="validate-text">Create a New Password</label>
-                    <div class="input-group" >
-                    <!--data-validate="text">-->
-                        <input type="password" class="form-control" name="password" id="password" placeholder="Password" required ng-model="SignInCtrl.nameObject.Password">
+                    <div class="input-group">
+                        <!--data-validate="text">-->
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Password" required ng-model="SignInCtrl.nameObject.Password" required>
                         <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
                     </div>
                 </div>
@@ -71,7 +71,23 @@
 </div>
 </div>
 
-            <button ng-click="SignInCtrl.Switch()">Past User? Log In</button>
+<div ng-show="SignInCtrl.Login">
+    <div class="col-md-4">
+        <div class="form-group">
+            <input type="text" class="form-control" ng-model="SignInCtrl.sObject.username" placeholder="Username" required="" />
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" ng-model="SignInCtrl.sObject.password" placeholder="Password" required="" />
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-success" ng-click="SignInCtrl.signIn(SignInCtrl.sObject)">Login</button>
+            <span class="text-danger">{{error}}</span>
+        </div>
+    </div>
+</div>
+<button ng-click="SignInCtrl.Switch()">{{SignInCtrl.button}}</button>
+
+<!--<button ng-click="SignInCtrl.Switch()">Past User? Log In</button>
 
             <button ng-click="SignInCtrl.signIn(SignInCtrl.sObject)">Past User? Log In</button>
 
@@ -86,6 +102,6 @@
               <div class="form-group">
                 <button type="submit" class="btn btn-success" ng-click="SignInCtrl.signIn(SignInCtrl.sObject)">Login</button>
                 <span class="text-danger">{{error}}</span>
-              </div>
-              </div>
-              </div>
+              </div>-->
+</div>
+</div>

@@ -8,7 +8,8 @@
    ListingFactory.$inject = ['$http', 'localApi'];
     function ListingFactory($http, localApi) {
         var service = {
-            postListing:postListing
+            postListing : postListing,
+            getListing : getListing
         };
         
        return service;
@@ -18,8 +19,7 @@
        function getListing (user) {
             return $http({
                 Method: 'GET',
-                url: localApi + 'Listings/5',
-                params: user
+                url: localApi + 'Listings/' + user
             }).then(function (response) {
                 return response;
             }, function (error) {

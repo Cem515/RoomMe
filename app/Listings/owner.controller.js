@@ -5,12 +5,12 @@
         .module('app')
         .controller('OwnerController', OwnerController);
 
-    OwnerController.$inject = ['ListingFactory'];
-    function OwnerController(ListingFactory) {
+    OwnerController.$inject = ['ListingFactory', 'localStorageFactory'];
+    function OwnerController(ListingFactory, localStorageFactory) {
         var OwnListCtrl = this;
+        var ownerId = localStorageFactory.getLocalStorage('userID');
 
-
-        function callListings(ownerId) {
+        OwnListCtrl.callListings = function (ownerId) {
             
             ListingFactory
                 .getListing(ownerId)

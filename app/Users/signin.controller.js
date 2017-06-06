@@ -5,9 +5,9 @@
         .module('app')
         .controller('SignInController', SignInController)
 
-    SignInController.$inject = ['$state', '$rootScope', 'socialLoginService', 'userFactory', 'localStorageFactory'];
+    SignInController.$inject = ['$state', '$rootScope', 'socialLoginService', 'UserFactory', 'localStorageFactory', 'SweetAlert'];
 
-    function SignInController($state, $rootScope, socialLoginService, userFactory, localStorageFactory) {
+    function SignInController($state, $rootScope, socialLoginService, UserFactory, localStorageFactory, SweetAlert) {
 
         var SignInCtrl = this; // Not using SignInCtrl
         //facebook details
@@ -25,10 +25,12 @@
         SignInCtrl.nameObject.Landlord = false;
         SignInCtrl.nameObject.ZipCode = 0;
         SignInCtrl.nameObject.Phone = "";
-        SignInCtrl.Registration= true;
+        SignInCtrl.Registration= false;
         SignInCtrl.sObject = {};
         SignInCtrl.sObject.username='';
         SignInCtrl.sObject.password='';
+        SignInCtrl.Login = true;
+        SignInCtrl.button = "New? Register Now"
 
         SignInCtrl.register = function (nameObject) {
 
@@ -38,11 +40,11 @@
                 .then(function (info) {
                     console.log(info)
                     var returnedUser = info.data.userId;
-                    goProfile();
             localStorageFactory
                 .setLocalStorage('userId', returnedUser);
 
             var storedVariable = localStorageFactory.getLocalStorage('userId');
+                goProfile();
                 console.log(storedVariable);
                 }, function (error) {
                     console.log(error);
@@ -57,8 +59,11 @@
         SignInCtrl.signIn = function (log) {
             UserFactory
                 .findUsers(log)
-                .then(function (signin) {
-                    console.log(info);
+                .then(function (response) {
+                    console.log(response)
+                    response.data.userID = localStorageFactory.getLocalStorage("userID");
+                    goProfile();
+                    SweetAlert.swal("Successfully Signed In","Welcome","success")
                 }, function (error) {
                     console.log(error);
                 })
@@ -72,7 +77,10 @@
             SignInCtrl.Registration = !SignInCtrl.Registration;
         }
 
-        
+        // SignInCtrl.signout = function () {
+        //     localStorageFactory
+        //         .logout();
+        // }
     }
 
 })();

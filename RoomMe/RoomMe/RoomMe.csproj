@@ -103,21 +103,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\RoomMeDataContext.cs" />
-    <Compile Include="Migrations\201706051721520_Init1.cs" />
-    <Compile Include="Migrations\201706051721520_Init1.Designer.cs">
-      <DependentUpon>201706051721520_Init1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706052232454_Init2.cs" />
-    <Compile Include="Migrations\201706052232454_Init2.Designer.cs">
-      <DependentUpon>201706052232454_Init2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706021904546_changeduser1.cs" />
-    <Compile Include="Migrations\201706021904546_changeduser1.Designer.cs">
-      <DependentUpon>201706021904546_changeduser1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706021955308_modifieddatetime.cs" />
-    <Compile Include="Migrations\201706021955308_modifieddatetime.Designer.cs">
-      <DependentUpon>201706021955308_modifieddatetime.cs</DependentUpon>
+    <Compile Include="Migrations\201706061630184_Init1.cs" />
+    <Compile Include="Migrations\201706061630184_Init1.Designer.cs">
+      <DependentUpon>201706061630184_Init1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Bookmark.cs" />
@@ -142,17 +130,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706051721520_Init1.resx">
-      <DependentUpon>201706051721520_Init1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706052232454_Init2.resx">
-      <DependentUpon>201706052232454_Init2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706021904546_changeduser1.resx">
-      <DependentUpon>201706021904546_changeduser1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706021955308_modifieddatetime.resx">
-      <DependentUpon>201706021955308_modifieddatetime.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706061630184_Init1.resx">
+      <DependentUpon>201706061630184_Init1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

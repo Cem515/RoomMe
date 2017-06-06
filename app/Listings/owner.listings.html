@@ -2,6 +2,8 @@
     <h1> owner listings </h1>
 </div>
 
+<button ng-click="OwnListCtrl.callListings()">Show your stuff brah</button>
+
 <div class="panel-body">
     <ul class="list-group" ng-repeat="listing in OwnListCtrl.displayListings">
         <li class="list-group-item">Description: {{listing.description}}</li>
