@@ -40,12 +40,15 @@
             .state('ownerList', {
                 url: "/ownerlist",
                 templateUrl: "app/listings/owner.listings.html",
-                controller: "OwnListingsController",
+                controller: "OwnerController",
                 controllerAs : "OwnListCtrl"
             })
             
             socialProvider.setFbKey({appId: "129989007575185", apiVersion: "v2.9"});
+<<<<<<< HEAD
+=======
 
+>>>>>>> 7b9dae229114228a35ae8cf21fce67cb5940c70b
     })
 })();
 

@@ -19,6 +19,8 @@ namespace RoomMe.Models
         public string State { get; set; }
         public int Zipcode { get; set; }
         public string Picture { get; set; }
+        public int UserID { get; set; }
+
 
         public User User { get; set; }
 

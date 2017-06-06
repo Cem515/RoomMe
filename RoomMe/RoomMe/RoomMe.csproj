@@ -103,13 +103,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\RoomMeDataContext.cs" />
-    <Compile Include="Migrations\201706022159393_m.cs" />
-    <Compile Include="Migrations\201706022159393_m.Designer.cs">
-      <DependentUpon>201706022159393_m.cs</DependentUpon>
+    <Compile Include="Migrations\201706051721520_Init1.cs" />
+    <Compile Include="Migrations\201706051721520_Init1.Designer.cs">
+      <DependentUpon>201706051721520_Init1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201706022203182_n.cs" />
-    <Compile Include="Migrations\201706022203182_n.Designer.cs">
-      <DependentUpon>201706022203182_n.cs</DependentUpon>
+    <Compile Include="Migrations\201706052232454_Init2.cs" />
+    <Compile Include="Migrations\201706052232454_Init2.Designer.cs">
+      <DependentUpon>201706052232454_Init2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201706021904546_changeduser1.cs" />
     <Compile Include="Migrations\201706021904546_changeduser1.Designer.cs">
@@ -142,11 +142,11 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706022159393_m.resx">
-      <DependentUpon>201706022159393_m.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706051721520_Init1.resx">
+      <DependentUpon>201706051721520_Init1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706022203182_n.resx">
-      <DependentUpon>201706022203182_n.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706052232454_Init2.resx">
+      <DependentUpon>201706052232454_Init2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706021904546_changeduser1.resx">
       <DependentUpon>201706021904546_changeduser1.cs</DependentUpon>
