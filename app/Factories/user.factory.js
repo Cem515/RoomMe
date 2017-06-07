@@ -32,32 +32,17 @@
             })
          }
 
-       //  function getUser(UserId) {
-        //     return $http({
-        //         method: 'GET',
-        //         url: localApi + '/users' + UserId,
-
-       //     }).then(function (response){
-        //         console.log(response);
-
-       //         if (typeof response.data !== null) {
-
-       //             return response;
-        //         } else {
-
-       //             return 'no data!';
-        //         }
-        //     }, function (error) {
-        //         return error;
-        //     })
-        //  }
-
        function getUser(id) {
-            var defer = $q.defer();
-            $http({
+            return $http({
                 method: 'GET',
-                url: localApi + 'Users/UserSearch' + id
+                url: localApi + 'Users/UserSearch' + id,
+                params: id
+            }).then (function(response){
+                return response.data[0];
+            }, function (error){
+                return error;
             })
+
         }
 
         function findUsers(login) {

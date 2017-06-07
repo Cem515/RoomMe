@@ -1,18 +1,29 @@
-(function(){
+(function() {
     'use strict';
 
-    angular
+   angular
         .module('app')
-        .controller('ProfileController', ProfileController)
+        .controller('ProfileController', ProfileController);
 
-    ProfileController.$inject = ['$location'];
+   ProfileController.$inject = ['$state', 'UserFactory', 'localStorageFactory'];
+    function ProfileController($state, UserFactory, localStorageFactory) {
+        var ProfileCtrl = this;
+        ProfileCtrl.userInfo.details = {};
+        ProfileCtrl.userInfo.UserName = "";
+        ProfileCtrl.userInfo.Email = "";
+        ProfileCtrl.userInfo.ZipCode = 0;
+        ProfileCtrl.userInfo.BirthDate = "";
+        ProfileCtrl.userInfo.Password = "";
 
-    function ProfileController($location) {
-        /* jshint validthis:true */
-        var vm = this;
+       ProfileCtrl.loadProfileInfo = function() {
+            var id = localStorageFactory.getLocalStorage('userId');
+            UserFactory.getUser(id).then(function(response) {
+                console.log(response);
+                userInfo.details = response;
 
-        activate();
 
-        function activate() { }
-    }
+           })
+        }
+
+   }
 })();
