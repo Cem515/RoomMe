@@ -1,16 +1,16 @@
 (function () {
     'use strict';
 
-    angular
+   angular
         .module('app')
         .controller('AddListingsController', AddListingsController);
 
-    AddListingsController.$inject = ['ListingFactory'];
+   AddListingsController.$inject = ['ListingFactory'];
 
-    function AddListingsController(ListingFactory) {
+   function AddListingsController(ListingFactory) {
         var AddListCtrl = this;
 
-        AddListCtrl.listObject = {};
+       AddListCtrl.listObject = {};
         AddListCtrl.listObject.description = "";
         AddListCtrl.listObject.price = 0;
         AddListCtrl.listObject.address = "";
@@ -20,15 +20,15 @@
         AddListCtrl.listObject.picture = '/imagepath';
         AddListCtrl.listObject.userID = 1;
 
-        ////////////////
+       ////////////////
 
-        AddListCtrl.addListing = function (listingInfo) {
+       AddListCtrl.addListing = function (listingInfo) {
             ListingFactory
                 .postListing(listingInfo)
                 .then(function (response) {
                     console.log(response);
 
-                }, function (error) {
+               }, function (error) {
                     console.log(error);
                 })
         }

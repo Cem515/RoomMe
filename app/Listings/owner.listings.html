@@ -1,0 +1,17 @@
+<div class="jumbotron">
+    <h1> owner listings </h1>
+</div>
+
+<button ng-click="OwnListCtrl.callListings()">Show your stuff brah</button>
+
+<div class="panel-body">
+    <ul class="list-group" ng-repeat="listing in OwnListCtrl.displayListings">
+        <li class="list-group-item">Description: {{listing.description}}</li>
+        <li class="list-group-item">Price: {{listing.price}}</li>
+        <li class="list-group-item">Address: {{listing.address}}</li>
+        <li class="list-group-item">City: {{listing.city}}</li>
+        <li class="list-group-item">State: {{listing.state}}</li>
+        <li class="list-group-item">ZipCode: {{listing.zipCode}}</li>
+        <li class="list-group-item">Image: {{listing.image}}</li>
+    </ul>
+</div>
