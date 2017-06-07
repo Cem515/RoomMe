@@ -1,18 +1,33 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 <head>
   <meta charset="UTF-8">
   <title>RoomMe</title>
 <!-- bower:css -->
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+<link rel="stylesheet" href="bower_components/sweetalert/dist/sweetalert.css" />
 <!-- endbower -->
 
 <!-- inject:css -->
+<link rel="stylesheet" href="/app/style.css">
 <!-- endinject -->
 </head>
 
-<body>
+<body ng-controller="SignInController">
 
-
+  <div id="topbar">
+    <h1 id="MainTitle">Welcome to RoomMe</h1>
+    <div class="topnav" id="myTopnav">
+      <a ui-sref="profile">Profile</a>
+      <a ui-sref="search">Listings</a>
+      <a ui-sref="register">Log In</a>
+      <a ui-sref="addListing">Add Listing</a>
+      <a ui-sref="messages">Messanger(TESTING)</a>
+    </div>
+  </div>
+  
+  <div class="well" ui-view></div>
 
 
 
@@ -24,7 +39,11 @@
 <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
 <script src="bower_components/jquery/dist/jquery.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angularjs-social-login/angularjs-social-login.js"></script>
+<script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
+<script src="bower_components/ngSweetAlert/SweetAlert.js"></script>
+<script src="bower_components/filepicker-js/filepicker.min.js"></script>
+<script src="bower_components/angular-filepicker/dist/angular_filepicker.js"></script>
 <!-- endbower -->
 
 <!-- inject:js -->
@@ -39,7 +58,7 @@
 <script src="/app/Messages/message.controller.js"></script>
 <script src="/app/Profile/profile.controller.js"></script>
 <script src="/app/Search/search.controller.js"></script>
+<script src="/app/Users/RegisterAnimation.js"></script>
 <script src="/app/Users/signin.controller.js"></script>
 <!-- endinject -->
 </body>
-</html>
