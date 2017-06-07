@@ -9,7 +9,7 @@ namespace RoomMe.Models
 {
     public class Message
     {
-        [Key]
+//add public virtual
         public int MessageID { get; set; }
 
         public string Subject { get; set; }
@@ -17,7 +17,8 @@ namespace RoomMe.Models
         public DateTime DateCreated { get; set; }
         public int ConvoId { get; set; }
 
-        [ForeignKey("ConvoId")]
-        public Conversation Conversation { get; set; }
+        public Conversation Conversations { get; set; }
+
+
     }
 }

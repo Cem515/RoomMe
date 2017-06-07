@@ -97,6 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\BookmarksController.cs" />
     <Compile Include="Controllers\ConversationsController.cs" />
     <Compile Include="Controllers\ListingsController.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
@@ -105,13 +106,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\RoomMeDataContext.cs" />
-    <Compile Include="Migrations\201706052012176_remake.cs" />
-    <Compile Include="Migrations\201706052012176_remake.Designer.cs">
-      <DependentUpon>201706052012176_remake.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706061845275_Changedconvo.cs" />
-    <Compile Include="Migrations\201706061845275_Changedconvo.Designer.cs">
-      <DependentUpon>201706061845275_Changedconvo.cs</DependentUpon>
+    <Compile Include="Migrations\201706071656225_fixcasdel.cs" />
+    <Compile Include="Migrations\201706071656225_fixcasdel.Designer.cs">
+      <DependentUpon>201706071656225_fixcasdel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Bookmark.cs" />
@@ -136,11 +133,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706052012176_remake.resx">
-      <DependentUpon>201706052012176_remake.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706061845275_Changedconvo.resx">
-      <DependentUpon>201706061845275_Changedconvo.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706071656225_fixcasdel.resx">
+      <DependentUpon>201706071656225_fixcasdel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

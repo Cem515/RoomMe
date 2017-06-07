@@ -68,7 +68,5 @@ C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\bin\System.Web.Http.xml
 C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\bin\System.Web.Http.WebHost.xml
 C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.dll
 C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.pdb
-C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.csprojResolveAssemblyReference.cache
-C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.remake.resources
+C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.fixcasdel.resources
 C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.csproj.GenerateResource.Cache
-C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.changedconvo.resources

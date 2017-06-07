@@ -3,7 +3,7 @@ using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
+
 using System.Web.Http;
 using System.Web.Http.Cors;
 using System.Web.Http.Description;
@@ -102,7 +102,20 @@ namespace RoomMe.Controllers
             return Ok(message);
         }
 
-        protected override void Dispose(bool disposing)
+        //MessageHistorySearch
+        [HttpGet]
+        [Route("api/Messages/MessageHistory")]
+        public IQueryable<Message> MessagesSearch([FromUri] Message past)
+        {
+            IQueryable<Message> mdb = db.Messages;
+
+            mdb = from m in mdb
+                  join c in db.Conversations on m.ConvoId equals c.ConversationID
+                  where (past.ConvoId == c.ConversationID)
+                  select m;
+                  return (mdb);
+        }
+    protected override void Dispose(bool disposing)
         {
             if (disposing)
             {

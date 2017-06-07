@@ -108,10 +108,17 @@ namespace RoomMe.Controllers
         {
             IQueryable<Conversation> cdb = db.Conversations;
 
-            cdb = cdb.Where(c => c.SenderID == check.SenderID && c.RecipientID == check.RecipientID);
+            cdb = cdb.Where(c => c.SenderID == check.SenderID && c.RecipientID == check.RecipientID || c.SenderID == check.RecipientID && c.RecipientID == check.SenderID);
             return (cdb);
 
         }
+
+        //[HttpPost]
+        //[Route("api/Conversations/NewConversation")]
+        //public IQueryable<Conversation> NewConversation ([FromUri]Conversation post)
+        //{
+        //    IQueryable<Conversation> pdb = db.Conversations
+        //}
 
         protected override void Dispose(bool disposing)
         {

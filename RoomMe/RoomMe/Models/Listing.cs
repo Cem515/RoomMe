@@ -9,8 +9,7 @@ namespace RoomMe.Models
 {
     public class Listing
     {
-
-        [Key]
+// add public virtual
         public int ListingID { get; set; }
 
         public string Description { get; set; }
@@ -22,9 +21,9 @@ namespace RoomMe.Models
         public string Picture { get; set; }
         public int UserId { get; set; }
 
-        [ForeignKey("UserId")]
         public User User { get; set; }
 
-        public ICollection<Bookmark> Bookmarks { get; set; }
+        public virtual ICollection<Bookmark> Bookmarks { get; set; }
+        public virtual ICollection<User> UserPosted { get; set; }
     }
 }

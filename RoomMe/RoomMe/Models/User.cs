@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Web;
+
 
 namespace RoomMe.Models
 {
     public class User
     {
-        [Key]
+        //add public virtual
         public int UserId { get; set; }
 
         public string UserName { get; set; }
@@ -21,6 +19,19 @@ namespace RoomMe.Models
         public int ZipCode { get; set; }
         public string Phone { get; set; }
 
-        public ICollection<Conversation> Conversations { get; set; }
+        public virtual ICollection<Conversation> SentConversations { get; set; }
+        public virtual ICollection<Conversation> GotConversations { get; set; }
+        public virtual ICollection<Bookmark> Bookmarked { get; set; }
+        public virtual ICollection<Listing> ListingPosted { get; set; }
+
+       // public virtual IEnumerable<Conversation> Conversations => SentConversations.Concat(GotConversations);
+
+        //public virtual IEnumerable<Conversation> Conversations
+        //{
+        //    get
+        //    {
+        //        return SentConversations.Concat(GotConversations);
+        //    }
+        //}
     }
 }
