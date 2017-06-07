@@ -16,13 +16,13 @@
         MsgCtrl.recipient = "";
 
         //Conversation ID Variables
-        MsgCtrl.conObject.Sender_UserID = localStorageFactory.getLocalStorage('userId')
-        MsgCtrl.conObject.Receiver_UserID = localStorageFactory.getLocalStorage('recipient')
+        MsgCtrl.conObject.SenderId = 0;
+        MsgCtrl.conObject.RecipientId = 0;
         //Message Object
         MsgCtrl.msgObject.Subject = "";
         MsgCtrl.msgObject.Body = "";
         MsgCtrl.msgObject.DateCreated = Date.now();
-        MsgCtrl.msgObject.convoID = localStorageFactory.getLocalStorage('conversation')
+        MsgCtrl.msgObject.convoID = parseInt(localStorageFactory.getLocalStorage('conversation'));
 
 
 
@@ -33,6 +33,8 @@
                 .getRecd(recipient)
                 .then(function (rec) {
                     recFound(rec.data[0]);
+                    MsgCtrl.conObject.SenderId = parseInt(localStorageFactory.getLocalStorage('userId'));
+                    MsgCtrl.conObject.RecipientId = parseInt(localStorageFactory.getLocalStorage('recipient'));
                     startConvo(MsgCtrl.conObject);
                 }, function (error) {
                     SweetAlert.swal("Error Searching Users");
@@ -40,14 +42,14 @@
         }
         // Alert User to Success/Error
         function recFound(found) {
-            if (found != 0) {
+            if (found != undefined) {
                 localStorageFactory
                     .setLocalStorage('recipient', found.userId);
                 localStorageFactory
                     .getLocalStorage('recipient');
                 SweetAlert.swal("User Found");
             } else {
-                SweetAlert.swal("User Not Found");
+                SweetAlert.swal("User Not Found", "error");
             }
         }
 
@@ -56,18 +58,18 @@
             MessagesFactory
                 .converse(convo)
                 .then(function (conID) {
-                    if (conID.array == 0) {
+                    if (conID.length == 0) {
                         MessagesFactory
                             .startCon(MsgCtrl.conObject)
                             .then(function (newcon) {
                                 localStorageFactory
-                                    .setLocalStorage('conversation', convo.conversationID);
+                                    .setLocalStorage('conversation', conID.conversationID);
                                 localStorageFactory
-                                    .getLocalStorage('conversation');;
+                                    .getLocalStorage('conversation');
                             })
                     } else {
                         localStorageFactory
-                            .setLocalStorage('conversation', convo.conversationID)
+                            .setLocalStorage('conversation', conID.conversationID)
                         localStorageFactory
                             .getLocalStorage('conversation');
                     };
@@ -78,7 +80,7 @@
 
         MsgCtrl.sendMsg = function (msg) {
             MessagesFactory
-                .sendMsg(msg)
+                .sendMessage(msg)
                 .then(function (sent) {
                     SweetAlert.swal("Message Sent")
                 }, function (error) {

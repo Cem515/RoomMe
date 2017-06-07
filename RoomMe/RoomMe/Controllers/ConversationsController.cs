@@ -18,23 +18,23 @@ namespace RoomMe.Controllers
         private RoomMeDataContext db = new RoomMeDataContext();
 
         // GET: api/Conversations
-        public IQueryable<Conversation> GetConversations()
-        {
-            return db.Conversations;
-        }
+        //public IQueryable<Conversation> GetConversations()
+        //{
+        //    return db.Conversations;
+        //}
 
         // GET: api/Conversations/5
-        [ResponseType(typeof(Conversation))]
-        public IHttpActionResult GetConversation(int id)
-        {
-            Conversation conversation = db.Conversations.Find(id);
-            if (conversation == null)
-            {
-                return NotFound();
-            }
+        //[ResponseType(typeof(Conversation))]
+        //public IHttpActionResult GetConversation(int id)
+        //{
+        //    Conversation conversation = db.Conversations.Find(id);
+        //    if (conversation == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            return Ok(conversation);
-        }
+        //    return Ok(conversation);
+        //}
 
         // PUT: api/Conversations/5
         [ResponseType(typeof(void))]
@@ -108,8 +108,12 @@ namespace RoomMe.Controllers
         {
             IQueryable<Conversation> cdb = db.Conversations;
 
-            cdb = cdb.Where(c => c.SenderID == check.SenderID && c.RecipientID == check.RecipientID || c.SenderID == check.RecipientID && c.RecipientID == check.SenderID);
-            return (cdb);
+           // cdb = cdb.Where(c => c.SenderID == check.SenderID && c.RecipientID == check.RecipientID || c.SenderID == check.RecipientID && c.RecipientID == check.SenderID);
+
+            var cons = from c in cdb
+                       where (c.SenderID == check.SenderID && c.RecipientID == check.RecipientID || c.SenderID == check.RecipientID && c.RecipientID == check.SenderID)
+                       select c;
+            return (cons);
 
         }
 

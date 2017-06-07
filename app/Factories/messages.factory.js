@@ -12,7 +12,7 @@
             getRecd: getRecd,
             converse: converse,
             startCon: startCon,
-            sendMsg: sendMsg
+            sendMessage: sendMessage
         };
 
         return service;
@@ -36,7 +36,7 @@
                 url: localApi + 'Conversations/ConvoSearch',
                 params: number
             }).then(function (cons) {
-                return cons;
+                return cons.data;
             }, function (error) {
                 return error;
             })
@@ -44,11 +44,12 @@
         }
 
         function startCon(keys) {
+
             return $http({
-                Method: 'Post',
+                Method: 'POST',
                 url: localApi + 'Conversations',
-                data: keys,
-                dataType: "json",
+                datatype: JSON,
+                params: keys,
                 headers: {
                     'Content-Type': 'application/json; charset=utf-8'
                 }
@@ -61,9 +62,9 @@
         }
 
 
-        function sendMsg(mso) {
+        function sendMessage(mso) {
             return $http({
-                Method: 'Post',
+                Method: 'POST',
                 url: localApi + 'Messages',
                 params: mso
             }).then(function (sage) {

@@ -60,8 +60,6 @@
                     var responseId = response.userId;
                     localStorageFactory.setLocalStorage('userId', responseId);
                     var storedInfo = localStorageFactory.getLocalStorage('userId');
-                    //response.data.array[0].userID = localStorageFactory.getLocalStorage("userID");
-                    console.log(storedInfo);
                     goProfile();
                     SweetAlert.swal("Successfully Signed In","Welcome","success")
                 }, function (error) {
