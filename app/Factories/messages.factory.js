@@ -12,43 +12,19 @@
             getRecd: getRecd,
             converse: converse,
             startCon: startCon,
-            sendMsg: sendMsg
+            sendMessage: sendMessage,
+            getHistory: getHistory
         };
 
         return service;
 
-        function getRecd(name) {
+                function startCon(keys) {
 
             return $http({
-                Method: 'GET',
-                url: localApi + 'Users/NameSearch?username=' + name
-            }).then(function (response) {
-                return response;
-            }, function (error) {
-                return error;
-            })
-        }
-
-        function converse(number) {
-
-            return $http({
-                Method: 'GET',
-                url: localApi + 'Conversations/ConvoSearch',
-                params: number
-            }).then(function (cons) {
-                return cons;
-            }, function (error) {
-                return error;
-            })
-
-        }
-
-        function startCon(keys) {
-            return $http({
-                Method: 'Post',
+                method: 'POST',
                 url: localApi + 'Conversations',
                 data: keys,
-                dataType: "json",
+                dataType:"json",
                 headers: {
                     'Content-Type': 'application/json; charset=utf-8'
                 }
@@ -57,15 +33,58 @@
             }, function (error) {
                 return error;
             })
+        }
+
+        function getRecd(name) {
+
+            return $http({
+                method: 'GET',
+                url: localApi + 'Users/NameSearch?username=' + name
+            }).then(function (response) {
+                return response;
+            }, function (error) {
+                return error;
+            })
+        }
+
+
+
+        function getHistory(id) {
+
+            return $http({
+                method: 'GET',
+                url: localApi +'Messages/MessageHistory?past='+id
+            }).then(function (message) {
+                return message.data;
+            }, function (error) {
+                return error;
+            })
+        }
+
+        function converse(number) {
+
+            return $http({
+                method: 'GET',
+                url: localApi + 'Conversations/ConvoSearch',
+                params: number
+            }).then(function (cons) {
+                return cons.data;
+            }, function (error) {
+                return error;
+            })
 
         }
 
 
-        function sendMsg(mso) {
+        function sendMessage(mso) {
             return $http({
-                Method: 'Post',
+                method: 'POST',
                 url: localApi + 'Messages',
-                params: mso
+                data: mso,
+                dataType:"json",
+                headers: {
+                    'Content-Type': 'application/json; charset=utf-8'
+                }
             }).then(function (sage) {
                     return sage;
                 }, function (error) {

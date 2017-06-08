@@ -58,7 +58,8 @@
                     <label for="validate-text">Create a New Password</label>
                     <div class="input-group">
                         <!--data-validate="text">-->
-                        <input type="password" class="form-control" name="password" id="password" placeholder="Password" required ng-model="SignInCtrl.nameObject.Password" required>
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Password" required ng-model="SignInCtrl.nameObject.Password"
+                            required>
                         <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
                     </div>
                 </div>
@@ -69,7 +70,7 @@
     </div>
 </div>
 </div>
-<button ng-click="SignInCtrl.signout()">Sign Out</button>
+
 <div ng-show="SignInCtrl.Login">
     <div class="col-md-4">
         <div class="form-group">
@@ -85,19 +86,6 @@
     </div>
 </div>
 <button ng-click="SignInCtrl.Switch()">{{SignInCtrl.button}}</button>
-<!--<button ng-click="SignInCtrl.Switch()">Past User? Log In</button>
-            <button ng-click="SignInCtrl.signIn(SignInCtrl.sObject)">Past User? Log In</button>
-            <div ng-show="SignInCtrl.login">
-              <div class="col-md-4">
-                <div class="form-group">
-                  <input type="text" class="form-control" ng-model="SignInCtrl.sObject.username" placeholder="Username" required=""/>
-                </div>
-                <div class="form-group">
-                  <input type="password" class="form-control" ng-model="SignInCtrl.sObject.password" placeholder="Password" required=""/>
-                </div>
-              <div class="form-group">
-                <button type="submit" class="btn btn-success" ng-click="SignInCtrl.signIn(SignInCtrl.sObject)">Login</button>
-                <span class="text-danger">{{error}}</span>
-              </div>-->
+<button ng-click="SignInCtrl.signout()">Sign Out</button>
 </div>
 </div>

@@ -105,13 +105,13 @@ namespace RoomMe.Controllers
         //MessageHistorySearch
         [HttpGet]
         [Route("api/Messages/MessageHistory")]
-        public IQueryable<Message> MessagesSearch([FromUri] Message past)
+        public IQueryable<Message> MessagesSearch([FromUri] int past)
         {
             IQueryable<Message> mdb = db.Messages;
 
             mdb = from m in mdb
-                  join c in db.Conversations on m.ConvoId equals c.ConversationID
-                  where (past.ConvoId == c.ConversationID)
+               //   join c in db.Conversations on m.ConvoId equals c.ConversationID
+                  where (past == m.ConvoId)
                   select m;
                   return (mdb);
         }
