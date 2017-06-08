@@ -24,7 +24,7 @@
         MsgCtrl.msgObject.Subject = "";
         MsgCtrl.msgObject.Body = "";
 
-        MsgCtrl.ShowMsg = false;
+        MsgCtrl.fullMessage = false;
 
 
         //Find The Message Recipient
@@ -34,7 +34,7 @@
                 .then(function (rec) {
                     recFound(rec.data[0]);
                     MsgCtrl.conObject.SenderId = parseInt(localStorageFactory.getLocalStorage('userId'));
-                    MsgCtrl.conObject.RecipientId = parseInt(localStorageFactory.getLocalStorage('recipient'));                   
+                    MsgCtrl.conObject.RecipientId = parseInt(localStorageFactory.getLocalStorage('recipient'));
                     startConvo(MsgCtrl.conObject);
                 }, function (error) {
                     SweetAlert.swal("Error Searching Users");
@@ -64,14 +64,15 @@
                             .then(function (newcon) {
                                 localStorageFactory
                                     .setLocalStorage('conversation', conID[0].conversationID)
-                                    .getHistory(conID[0].conversationID)
-                                    .then(function (past){
-                                MsgCtrl.PastMessages = past;
-                            })
                             })
                     } else {
                         localStorageFactory
                             .setLocalStorage('conversation', conID[0].conversationID)
+                        MessagesFactory
+                            .getHistory(conID[0].conversationID)
+                            .then(function (past) {
+                                MsgCtrl.PastMessages = past;
+                            })
                     };
                 }, function (error) {
                     SweetAlert.swal("Error")
@@ -90,7 +91,7 @@
         }
 
         MsgCtrl.ShowMsg = function () {
-            MsgCtrl.ShowMsg = !MsgCtrl.ShowMsg;
+            MsgCtrl.fullMessage = !MsgCtrl.fullMessage;
         }
     }
 })();

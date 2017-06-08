@@ -53,10 +53,9 @@
 
             return $http({
                 method: 'GET',
-                url: localApi + 'Messages/MessageHistory',
-                params: id
+                url: localApi +'Messages/MessageHistory?past='+id
             }).then(function (message) {
-                return message;
+                return message.data;
             }, function (error) {
                 return error;
             })
