@@ -1,3 +1,15 @@
+#profileImg {
+    text-align: center;
+    border: solid black 2px;
+    margin-bottom: 20px;
+}
+#welcomeMessageProfile {
+    text-align: center;
+}
+#topbar {
+    margin-bottom: 20px;
+}
+
 .topnav {
     background-color: #333;
     overflow: hidden;
@@ -11,6 +23,13 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+}
+
+#fbButton {
+    padding: 5%;
+    border-radius: 5%;
+    box-shadow: black 5px 5px 5px;
+    margin: 20% 20%;
 }
 
 
@@ -28,4 +47,32 @@
 
 #MainTitle {
     text-align: center;
+}
+
+/* Validation styles for registration */
+
+.input-group-addon.primary {
+    color: rgb(255, 255, 255);
+    background-color: rgb(50, 118, 177);
+    border-color: rgb(40, 94, 142);
+}
+.input-group-addon.success {
+    color: rgb(255, 255, 255);
+    background-color: rgb(92, 184, 92);
+    border-color: rgb(76, 174, 76);
+}
+.input-group-addon.info {
+    color: rgb(255, 255, 255);
+    background-color: rgb(57, 179, 215);
+    border-color: rgb(38, 154, 188);
+}
+.input-group-addon.warning {
+    color: rgb(255, 255, 255);
+    background-color: rgb(240, 173, 78);
+    border-color: rgb(238, 162, 54);
+}
+.input-group-addon.danger {
+    color: rgb(255, 255, 255);
+    background-color: rgb(217, 83, 79);
+    border-color: rgb(212, 63, 58);
 }

@@ -2,9 +2,10 @@
 (function() {
     'use strict';
 
-    var app = angular.module('app', ['ui.router']).value('localApi', 'http://localhost:61066/');
-    app.config(function ($stateProvider, $urlRouterProvider){
+    var app = angular.module('app', ['ui.router','socialLogin', 'oitozero.ngSweetAlert','LocalStorageModule']).value('localApi', 'http://localhost:61066/api/');
+    app.config(function ($stateProvider, $urlRouterProvider, socialProvider){
         $urlRouterProvider.otherwise('/Register');
+        socialProvider.setFbKey({appId: "129989007575185", apiVersion: "v2.9"});
 
         $stateProvider
             .state('register', {
@@ -32,7 +33,7 @@
                 controllerAs : "MsgCtrl"
             })
             .state('addListing', {
-                url: "/addlistings",
+                url: "/addlisting",
                 templateUrl: "app/listings/add.listings.html",
                 controller: "AddListingsController",
                 controllerAs : "AddListCtrl"
@@ -43,6 +44,8 @@
                 controller: "OwnListingsController",
                 controllerAs : "OwnListCtrl"
             })
+                
+
     })
 })();
 

@@ -97,27 +97,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\BookmarksController.cs" />
+    <Compile Include="Controllers\ConversationsController.cs" />
     <Compile Include="Controllers\ListingsController.cs" />
+    <Compile Include="Controllers\MessagesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\RoomMeDataContext.cs" />
-    <Compile Include="Migrations\201705312102007_InitialCreate.cs" />
-    <Compile Include="Migrations\201705312102007_InitialCreate.Designer.cs">
-      <DependentUpon>201705312102007_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705312113225_addedTables.cs" />
-    <Compile Include="Migrations\201705312113225_addedTables.Designer.cs">
-      <DependentUpon>201705312113225_addedTables.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705312206283_bookmarks.cs" />
-    <Compile Include="Migrations\201705312206283_bookmarks.Designer.cs">
-      <DependentUpon>201705312206283_bookmarks.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706011854218_changedstring.cs" />
-    <Compile Include="Migrations\201706011854218_changedstring.Designer.cs">
-      <DependentUpon>201706011854218_changedstring.cs</DependentUpon>
+    <Compile Include="Migrations\201706071930115_newdb.cs" />
+    <Compile Include="Migrations\201706071930115_newdb.Designer.cs">
+      <DependentUpon>201706071930115_newdb.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Bookmark.cs" />
@@ -126,6 +117,7 @@
     <Compile Include="Models\ListingSearch.cs" />
     <Compile Include="Models\Message.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserSearch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -141,17 +133,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201705312102007_InitialCreate.resx">
-      <DependentUpon>201705312102007_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705312113225_addedTables.resx">
-      <DependentUpon>201705312113225_addedTables.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705312206283_bookmarks.resx">
-      <DependentUpon>201705312206283_bookmarks.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706011854218_changedstring.resx">
-      <DependentUpon>201706011854218_changedstring.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706071930115_newdb.resx">
+      <DependentUpon>201706071930115_newdb.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,35 +1,34 @@
-(function() {
+(function () {
     'use strict';
 
    angular
         .module('app')
-        .factory('ListingFactory', ListingFactory);
+        .controller('OwnerController', OwnerController);
 
-   ListingFactory.$inject = ['$http', 'localApi'];
-    function ListingFactory($http, localApi) {
-        var service = {
-            postListing:postListing
-        };
-        
-       return service;
+   OwnerController.$inject = ['ListingFactory', 'localStorageFactory'];
+    function OwnerController(ListingFactory, localStorageFactory) {
+        var OwnListCtrl = this;
+        var ownerId = localStorageFactory.getLocalStorage('userID');
 
-       ////////////////
-        function postListing(listingInfo) {
-            console.log(listingInfo);
-            return $http ({
-                method: 'POST',
-                url: localApi + '/addlistings',
-                dataType: "json",
-                data: listingInfo,
-                headers: {
-                'Content-Type': 'application/json; charset=utf-8'
-                }
+       OwnListCtrl.callListings = function (ownerId) {
+            
+           ListingFactory
+                .getListing(ownerId)
+                
+               .then(function (response) {
+                    displayListings(response.data);
+                    console.log(response);
 
-           }).then (function (info){
-                return info;
-            }, function (error) {
-                return error;
-            })
+               }, function (error) {
+                    console.log(error);
+                })
         }
+        ////////////////
+
+       function displayListings(results) {
+            OwnListCtrl.ownerListings = results;
+            console.log(OwnListCtrl.ownerListings);
+            console.log(results.data);
+        };
     }
 })();
