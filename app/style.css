@@ -1,3 +1,15 @@
+#profileImg {
+    text-align: center;
+    border: solid black 2px;
+    margin-bottom: 20px;
+}
+#welcomeMessageProfile {
+    text-align: center;
+}
+#topbar {
+    margin-bottom: 20px;
+}
+
 .topnav {
     background-color: #333;
     overflow: hidden;

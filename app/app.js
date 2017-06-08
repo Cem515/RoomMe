@@ -5,6 +5,7 @@
     var app = angular.module('app', ['ui.router','socialLogin', 'oitozero.ngSweetAlert','LocalStorageModule']).value('localApi', 'http://localhost:61066/api/');
     app.config(function ($stateProvider, $urlRouterProvider, socialProvider){
         $urlRouterProvider.otherwise('/Register');
+        socialProvider.setFbKey({appId: "129989007575185", apiVersion: "v2.9"});
 
         $stateProvider
             .state('register', {
@@ -43,7 +44,7 @@
                 controller: "OwnListingsController",
                 controllerAs : "OwnListCtrl"
             })
-                   socialProvider.setFbKey({appId: "129989007575185", apiVersion: "v2.9"});
+                
 
     })
 })();
