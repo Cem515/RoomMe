@@ -18,7 +18,7 @@
         AddListCtrl.listObject.state = "";
         AddListCtrl.listObject.zipCode = 0;
         AddListCtrl.listObject.picture = '/imagepath';
-        AddListCtrl.listObject.userID = LocalStorageFactory.getLocalStorage('userId');
+        AddListCtrl.listObject.userID = localStorageFactory.getLocalStorage('userId');
 
         ////////////////
 

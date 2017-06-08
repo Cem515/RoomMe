@@ -1,21 +1,21 @@
 (function () {
     'use strict';
 
-   angular
+    angular
         .module('app')
         .controller('SignInController', SignInController)
 
-   SignInController.$inject = ['$state', '$rootScope', 'socialLoginService', 'UserFactory', 'localStorageFactory', 'SweetAlert'];
+    SignInController.$inject = ['$state', '$rootScope', 'socialLoginService', 'UserFactory', 'localStorageFactory', 'SweetAlert'];
 
-   function SignInController($state, $rootScope, socialLoginService, UserFactory, localStorageFactory, SweetAlert) {
+    function SignInController($state, $rootScope, socialLoginService, UserFactory, localStorageFactory, SweetAlert) {
 
-       var SignInCtrl = this; // Not using SignInCtrl
+        var SignInCtrl = this; // Not using SignInCtrl
         //facebook details
         SignInCtrl.userDetails = {};
         SignInCtrl.userDetails.name = "";
         SignInCtrl.userDetails.Email = "";
 
-       // Regular Register no Facebook
+        // Regular Register no Facebook
         SignInCtrl.nameObject = {};
         SignInCtrl.nameObject.UserName = "";
         SignInCtrl.nameObject.Password = "";
@@ -24,44 +24,44 @@
         SignInCtrl.nameObject.Landlord = false;
         SignInCtrl.nameObject.ZipCode = 0;
         SignInCtrl.nameObject.Phone = "";
-        SignInCtrl.Registration= false;
+        SignInCtrl.Registration = false;
         SignInCtrl.sObject = {};
-        SignInCtrl.sObject.username='';
-        SignInCtrl.sObject.password='';
+        SignInCtrl.sObject.username = '';
+        SignInCtrl.sObject.password = '';
         SignInCtrl.Login = true;
         SignInCtrl.button = "New? Register Now"
 
-       SignInCtrl.register = function (nameObject) {    
-           UserFactory
+        SignInCtrl.register = function (nameObject) {
+            UserFactory
                 .postRegistration(nameObject)
                 .then(function (info) {
                     var returnedUser = info.data.userId;
-            localStorageFactory
-                .setLocalStorage('userId', returnedUser);
-            var storedVariable = localStorageFactory.getLocalStorage('userId');
-                goProfile();
-                SweetAlert.swal("Account Created", "Welcome", "Success")
-                console.log(storedVariable);
+                    localStorageFactory
+                        .setLocalStorage('userId', returnedUser);
+                    var storedVariable = localStorageFactory.getLocalStorage('userId');
+                    goProfile();
+               //     SweetAlert.swal("Account Created", "Welcome", "Success")
+                    console.log(storedVariable);
                 }, function (error) {
                     console.log(error);
                 })
         }
 
-       // What happens after succesful log in
+        // What happens after succesful log in
         $rootScope.$on('event:social-sign-in-success', function (event, userDetails) {
             console.log(userDetails);
         });
 
-       SignInCtrl.signIn = function (log) {
+        SignInCtrl.signIn = function (log) {
             UserFactory
                 .findUsers(log)
                 .then(function (response) {
-                  if (response !== undefined) {
-                    var responseId = response.userId;
-                    localStorageFactory.setLocalStorage('userId', responseId);
-                    var storedInfo = localStorageFactory.getLocalStorage('userId');
-                    goProfile();
-                    SweetAlert.swal("Successfully Signed In", "Welcome", "success")
+                    if (response !== undefined) {
+                        var responseId = response.userId;
+                        localStorageFactory.setLocalStorage('userId', responseId);
+                        var storedInfo = localStorageFactory.getLocalStorage('userId');
+                        goProfile();
+                        SweetAlert.swal("Successfully Signed In", "Welcome", "success")
                     } else {
                         SweetAlert.swal("Incorrect Information", "No Record Found", "warning");
                         SignInCtrl.sObject.username = "";
@@ -76,13 +76,9 @@
             $state.go('profile');
         }
 
-       SignInCtrl.Switch = function() {
+        SignInCtrl.Switch = function () {
             SignInCtrl.Login = !SignInCtrl.Login;
             SignInCtrl.Registration = !SignInCtrl.Registration;
-        }
-
-       SignInCtrl.signout = function () {
-            localStorageFactory.logout();
         }
     }
 

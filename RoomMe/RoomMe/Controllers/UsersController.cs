@@ -25,18 +25,18 @@ namespace RoomMe.Controllers
             return db.Users;
         }
 
-        //// GET: api/Users/5
-        //[ResponseType(typeof(User))]
-        //public IHttpActionResult GetUser(int id)
-        //{
-        //    User user = db.Users.Find(id);
-        //    if (user == null)
-        //    {
-        //        return NotFound();
-        //    }
+        // GET: api/Users/5
+        [ResponseType(typeof(User))]
+        public IHttpActionResult GetUser(int id)
+        {
+            User user = db.Users.Find(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
 
-        //    return Ok(user);
-        //}
+            return Ok(user);
+        }
 
         // PUT: api/Users/5
         [ResponseType(typeof(void))]

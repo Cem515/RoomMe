@@ -15,7 +15,6 @@
             var ownerId = localStorageFactory.getLocalStorage('userId');
             ListingFactory
                 .getListing(ownerId)
-
                 .then(function (response) {
                     console.log(response.data);
                     OwnListCtrl.listingObject = response.data;

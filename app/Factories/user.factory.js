@@ -35,26 +35,6 @@
             })
          }
 
-       //  function getUser(UserId) {
-        //     return $http({
-        //         method: 'GET',
-        //         url: localApi + '/users' + UserId,
-
-       //     }).then(function (response){
-        //         console.log(response);
-
-       //         if (typeof response.data !== null) {
-
-       //             return response;
-        //         } else {
-
-       //             return 'no data!';
-        //         }
-        //     }, function (error) {
-        //         return error;
-        //     })
-        //  }
-
         function getUser(id) {
 
             return $http({

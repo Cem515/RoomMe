@@ -7,8 +7,6 @@
 
     ProfileController.$inject = ['$state', 'UserFactory', 'localStorageFactory', 'SweetAlert'];
 
-    function ProfileController($state, UserFactory, localStorageFactory, SweetAlert) {
-        /* jshint validthis:true */
         function ProfileController($state, UserFactory, localStorageFactory, SweetAlert) {
             var ProfileCtrl = this;
             ProfileCtrl.userInfo = {};
@@ -62,13 +60,16 @@
             $state.go('addListing');
         }
 
+        ProfileCtrl.yourListings = function() {
+            $state.go('ownerlist');
+        }
+
         ProfileCtrl.showListingButton = function (landlordBool) {
             if (landlordBool == true) {
                 return true;
             } else {
                 return false;
             }
-        }
         }
     }
 })();

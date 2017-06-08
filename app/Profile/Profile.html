@@ -33,31 +33,31 @@
                      <button id="showEditInfobtn" class="btn btn-default" ng-hide="editProfile" ng-click="editProfile=! editProfile">Edit</button>
                      <div ng-show="editProfile" class="form">
                          <div class="form-group">
-                             <label>New User Name?</label>
+                             <label>New User Name</label>
                              <div class="input-group">
                                  <input type="text" ng-model="ProfileCtrl.userInfo.userName">
                              </div>
                          </div>
                          <div class="form-group">
-                             <label>New Password?</label>
+                             <label>New Password</label>
                              <div class="input-group">
                                  <input type="password" ng-show="editProfile" ng-model="ProfileCtrl.userInfo.password">
                              </div>
                          </div>
                          <div class="form-group">
-                             <label>New Email?</label>
+                             <label>New Email</label>
                              <div class="input-group">
                                  <input type="text" ng-show="editProfile" ng-model="ProfileCtrl.userInfo.email">
                              </div>
                          </div>
                          <div class="form-group">
-                             <label>New Zip Code?</label>
+                             <label>New Zip Code</label>
                              <div class="input-group">
                                  <input type="text" ng-show="editProfile" ng-model="ProfileCtrl.userInfo.zipCode">
                              </div>
                          </div>
                          <div class="form-group">
-                            <label>New Phone?</label>
+                            <label>New Phone</label>
                             <div class="input-group">
                                 <input type="text" ng-show="editProfile" ng-model="ProfileCtrl.userInfo.phone">
                             </div>
@@ -77,6 +77,7 @@
                     <li>{{ProfileCtrl.userInfo.bookmarked}}</li>
                 </ul>
             </div>
+            <button ng-click="ProfileCtrl.yourListings()" ng-show="ProfileCtrl.showListingButton(ProfileCtrl.userInfo.landlord)">Your Listings</button>
             <button ng-click="ProfileCtrl.signout()">Sign Out</button>
             <button ng-click="ProfileCtrl.goAddListingPage()" ng-show="ProfileCtrl.showListingButton(ProfileCtrl.userInfo.landlord)">Add Listing</button>
         </div>
