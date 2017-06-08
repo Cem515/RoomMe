@@ -10,4 +10,11 @@
 </label>
 </br>
 <button ng-click="MsgCtrl.sendMsg(MsgCtrl.msgObject)">Send Message</button>
- 
+<!--<input id="date" type="date" ng-model="MsgCtrl.MsgObject.DateCreated"><br>-->
+
+<p>Past Messages with {{MsgCtrl.recipient}}</p>
+<ol ng-repeat="messages in MsgCtrl.PastMessages" class="list-group">
+    <li class="list-group-item">{{messages.subject}}</li>
+    <li class="list-group-item"ng-show="MsgCtrl.fullMessage">{{messages.body}}</li>
+    <a ng-click="MsgCtrl.ShowMsg()">Show Message</a>
+</ol>

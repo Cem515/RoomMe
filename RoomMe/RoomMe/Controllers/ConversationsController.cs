@@ -17,11 +17,12 @@ namespace RoomMe.Controllers
     {
         private RoomMeDataContext db = new RoomMeDataContext();
 
-        // GET: api/Conversations
-        //public IQueryable<Conversation> GetConversations()
-        //{
-        //    return db.Conversations;
-        //}
+        //GET:api/Conversations
+        [ResponseType(typeof(Conversation))]
+        public IQueryable<Conversation> GetConversations()
+        {
+             return db.Conversations;
+        }
 
         // GET: api/Conversations/5
         //[ResponseType(typeof(Conversation))]
@@ -117,12 +118,21 @@ namespace RoomMe.Controllers
 
         }
 
-        //[HttpPost]
-        //[Route("api/Conversations/NewConversation")]
-        //public IQueryable<Conversation> NewConversation ([FromUri]Conversation post)
-        //{
-        //    IQueryable<Conversation> pdb = db.Conversations
-        //}
+        [HttpPost]
+        [Route("api/Conversations/NewConversation")]
+        public IHttpActionResult NewConversation([FromUri]Conversation post)
+        {
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            db.Conversations.Add(post);
+            db.SaveChanges();
+
+            return CreatedAtRoute("DefaultApi", new { id = post.ConversationID }, post);
+        }
 
         protected override void Dispose(bool disposing)
         {
