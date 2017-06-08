@@ -49,7 +49,7 @@
                 Method: 'POST',
                 url: localApi + 'Conversations',
                 datatype: JSON,
-                params: keys,
+                data: keys,
                 headers: {
                     'Content-Type': 'application/json; charset=utf-8'
                 }
