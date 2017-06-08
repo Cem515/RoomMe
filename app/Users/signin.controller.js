@@ -56,12 +56,17 @@
             UserFactory
                 .findUsers(log)
                 .then(function (response) {
-                    console.log(response)
+                  if (response !== undefined) {
                     var responseId = response.userId;
                     localStorageFactory.setLocalStorage('userId', responseId);
                     var storedInfo = localStorageFactory.getLocalStorage('userId');
                     goProfile();
-                    SweetAlert.swal("Successfully Signed In","Welcome","success")
+                    SweetAlert.swal("Successfully Signed In", "Welcome", "success")
+                    } else {
+                        SweetAlert.swal("Incorrect Information", "No Record Found", "warning");
+                        SignInCtrl.sObject.username = "";
+                        SignInCtrl.sObject.password = "";
+                    }
                 }, function (error) {
                     console.log(error);
                 })

@@ -1,1 +1,86 @@
-<a ui-sref="ownerList">View Your Listings</a>
+ <div onload="ProfileCtrl.loadProfileInfo()">
+     <div class="row">
+         <div class="col-lg-12">
+             <div class="well">
+                 <h1 id="welcomeMessageProfile"> Welcome Back {{ProfileCtrl.userInfo.userName}} </h1>
+             </div>
+         </div>
+     </div>
+     <div class="row">
+         <div class="col-xs-12 col-sm-5">
+             <div class="well">
+                 <div class="row">
+                     <div class="col-xs-8 col-xs-offset-2" id="profileImg">
+                         <p> Img Placeholder </p>
+                     </div>
+                 </div>
+                 <div class="row">
+                     <ul ng-hide="editProfile">
+                         <li>
+                             <p>{{ProfileCtrl.userInfo.userName}}</p>
+                         </li>
+                         <li>
+                             <p>{{ProfileCtrl.userInfo.email}}</p>
+                         </li>
+                         <li>
+                             <p>{{ProfileCtrl.userInfo.zipCode}}</p>
+                         </li>
+                         <li>
+                             <p>{{ProfileCtrl.userInfo.phone}}</p>
+                         </li>
+                     </ul>
+ 
+                     <button id="showEditInfobtn" class="btn btn-default" ng-hide="editProfile" ng-click="editProfile=! editProfile">Edit</button>
+                     <div ng-show="editProfile" class="form">
+                         <div class="form-group">
+                             <label>New User Name?</label>
+                             <div class="input-group">
+                                 <input type="text" ng-model="ProfileCtrl.userInfo.userName">
+                             </div>
+                         </div>
+                         <div class="form-group">
+                             <label>New Password?</label>
+                             <div class="input-group">
+                                 <input type="password" ng-show="editProfile" ng-model="ProfileCtrl.userInfo.password">
+                             </div>
+                         </div>
+                         <div class="form-group">
+                             <label>New Email?</label>
+                             <div class="input-group">
+                                 <input type="text" ng-show="editProfile" ng-model="ProfileCtrl.userInfo.email">
+                             </div>
+                         </div>
+                         <div class="form-group">
+                             <label>New Zip Code?</label>
+                             <div class="input-group">
+                                 <input type="text" ng-show="editProfile" ng-model="ProfileCtrl.userInfo.zipCode">
+                             </div>
+                         </div>
+                         <div class="form-group">
+                            <label>New Phone?</label>
+                            <div class="input-group">
+                                <input type="text" ng-show="editProfile" ng-model="ProfileCtrl.userInfo.phone">
+                            </div>
+                        </div>
+
+
+                        <button id="updateInfobtn" class="btn btn-default" ng-show="editProfile" ng-click="ProfileCtrl.editProfile()">Submit Changes</button>
+                        <button id="updateInfobtn" class="btn btn-default" ng-show="editProfile" ng-click="editProfile=! editProfile">Go Back</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-7">
+            <div class="well">
+                <ul>
+                    <li>{{ProfileCtrl.userInfo.bookmarked}}</li>
+                </ul>
+            </div>
+            <button ng-click="ProfileCtrl.signout()">Sign Out</button>
+            <button ng-click="ProfileCtrl.goAddListingPage()" ng-show="ProfileCtrl.showListingButton(ProfileCtrl.userInfo.landlord)">Add Listing</button>
+        </div>
+
+
+    </div>
+</div> 

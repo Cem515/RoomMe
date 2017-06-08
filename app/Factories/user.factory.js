@@ -10,7 +10,10 @@
    function UserFactory($http, localApi) {
         var service = {
             postRegistration: postRegistration,
-            findUsers: findUsers
+            findUsers: findUsers,
+             getUser: getUser,
+            updateInfo: updateInfo
+
         };
 
        return service;
@@ -52,11 +55,16 @@
         //     })
         //  }
 
-       function getUser(id) {
-            var defer = $q.defer();
-            $http({
-                method: 'GET',
-                url: localApi + 'Users/UserSearch' + id
+        function getUser(id) {
+
+            return $http({
+                 method: 'GET',
+                url: localApi + 'Users/' + id,
+                params: id
+            }).then (function(response){
+                return response.data;
+            }, function (error){
+                return error;
             })
         }
 
@@ -70,7 +78,19 @@
             }, function (error){
                 return error;
             })
+        }
 
+        function updateInfo(id, edit) {
+            return $http({
+                method: 'PUT',
+                url: localApi + 'Users/' + id,
+                headers: {'Content-Type': 'application/json'},
+                data: edit
+            }).then(function(response){
+                console.log(response);
+            }, function(error) {
+                console.log(error);
+            });
         }
     }
 })();
