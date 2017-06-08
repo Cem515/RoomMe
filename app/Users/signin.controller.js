@@ -40,6 +40,7 @@
                 .setLocalStorage('userId', returnedUser);
             var storedVariable = localStorageFactory.getLocalStorage('userId');
                 goProfile();
+                SweetAlert.swal("Account Created", "Welcome", "Success")
                 console.log(storedVariable);
                 }, function (error) {
                     console.log(error);
@@ -59,8 +60,6 @@
                     var responseId = response.userId;
                     localStorageFactory.setLocalStorage('userId', responseId);
                     var storedInfo = localStorageFactory.getLocalStorage('userId');
-                    //response.data.array[0].userID = localStorageFactory.getLocalStorage("userID");
-                    console.log(storedInfo);
                     goProfile();
                     SweetAlert.swal("Successfully Signed In","Welcome","success")
                 }, function (error) {
@@ -73,7 +72,7 @@
         }
 
        SignInCtrl.Switch = function() {
-            SignInCtrl.login = !SignInCtrl.login;
+            SignInCtrl.Login = !SignInCtrl.Login;
             SignInCtrl.Registration = !SignInCtrl.Registration;
         }
 

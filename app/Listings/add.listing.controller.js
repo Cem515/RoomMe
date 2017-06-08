@@ -5,9 +5,9 @@
         .module('app')
         .controller('AddListingsController', AddListingsController);
 
-   AddListingsController.$inject = ['ListingFactory'];
+   AddListingsController.$inject = ['ListingFactory','LocalStorageFactory'];
 
-   function AddListingsController(ListingFactory) {
+   function AddListingsController(ListingFactory,LocalStorageFactory) {
         var AddListCtrl = this;
 
        AddListCtrl.listObject = {};
@@ -18,7 +18,7 @@
         AddListCtrl.listObject.state = "";
         AddListCtrl.listObject.zipCode = 0;
         AddListCtrl.listObject.picture = '/imagepath';
-        AddListCtrl.listObject.userID = 1;
+        AddListCtrl.listObject.userID = LocalStorageFactory.getLocalStorage('userId');
 
        ////////////////
 

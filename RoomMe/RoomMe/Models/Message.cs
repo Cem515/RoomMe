@@ -14,7 +14,6 @@ namespace RoomMe.Models
 
         public string Subject { get; set; }
         public string Body { get; set; }
-        public DateTime DateCreated { get; set; }
         public int ConvoId { get; set; }
 
         public Conversation Conversations { get; set; }

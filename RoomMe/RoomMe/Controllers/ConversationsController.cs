@@ -17,24 +17,25 @@ namespace RoomMe.Controllers
     {
         private RoomMeDataContext db = new RoomMeDataContext();
 
-        // GET: api/Conversations
+        //GET:api/Conversations
+        [ResponseType(typeof(Conversation))]
         public IQueryable<Conversation> GetConversations()
         {
-            return db.Conversations;
+             return db.Conversations;
         }
 
         // GET: api/Conversations/5
-        [ResponseType(typeof(Conversation))]
-        public IHttpActionResult GetConversation(int id)
-        {
-            Conversation conversation = db.Conversations.Find(id);
-            if (conversation == null)
-            {
-                return NotFound();
-            }
+        //[ResponseType(typeof(Conversation))]
+        //public IHttpActionResult GetConversation(int id)
+        //{
+        //    Conversation conversation = db.Conversations.Find(id);
+        //    if (conversation == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            return Ok(conversation);
-        }
+        //    return Ok(conversation);
+        //}
 
         // PUT: api/Conversations/5
         [ResponseType(typeof(void))]
@@ -108,17 +109,30 @@ namespace RoomMe.Controllers
         {
             IQueryable<Conversation> cdb = db.Conversations;
 
-            cdb = cdb.Where(c => c.SenderID == check.SenderID && c.RecipientID == check.RecipientID || c.SenderID == check.RecipientID && c.RecipientID == check.SenderID);
-            return (cdb);
+           // cdb = cdb.Where(c => c.SenderID == check.SenderID && c.RecipientID == check.RecipientID || c.SenderID == check.RecipientID && c.RecipientID == check.SenderID);
+
+            var cons = from c in cdb
+                       where (c.SenderID == check.SenderID && c.RecipientID == check.RecipientID || c.SenderID == check.RecipientID && c.RecipientID == check.SenderID)
+                       select c;
+            return (cons);
 
         }
 
-        //[HttpPost]
-        //[Route("api/Conversations/NewConversation")]
-        //public IQueryable<Conversation> NewConversation ([FromUri]Conversation post)
-        //{
-        //    IQueryable<Conversation> pdb = db.Conversations
-        //}
+        [HttpPost]
+        [Route("api/Conversations/NewConversation")]
+        public IHttpActionResult NewConversation([FromUri]Conversation post)
+        {
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            db.Conversations.Add(post);
+            db.SaveChanges();
+
+            return CreatedAtRoute("DefaultApi", new { id = post.ConversationID }, post);
+        }
 
         protected override void Dispose(bool disposing)
         {

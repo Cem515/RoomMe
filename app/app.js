@@ -21,7 +21,7 @@
             })
             .state('profile', {
                 url: "/Profile",
-                templateUrl: "app/profile/Profile.html",
+                templateUrl: "app/Profile/Profile.html",
                 controller: "ProfileController",
                 controllerAs : "ProfileCtrl"
             })
@@ -37,7 +37,7 @@
                 controller: "AddListingsController",
                 controllerAs : "AddListCtrl"
             })
-            .state('ownerList', {
+            .state('ownerlist', {
                 url: "/ownerlist",
                 templateUrl: "app/listings/owner.listings.html",
                 controller: "OwnListingsController",
