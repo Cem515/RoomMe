@@ -1,34 +1,32 @@
 (function () {
     'use strict';
 
-   angular
+    angular
         .module('app')
         .controller('OwnerController', OwnerController);
 
-   OwnerController.$inject = ['ListingFactory', 'localStorageFactory'];
+    OwnerController.$inject = ['ListingFactory', 'localStorageFactory'];
+
     function OwnerController(ListingFactory, localStorageFactory) {
         var OwnListCtrl = this;
-        var ownerId = localStorageFactory.getLocalStorage('userID');
+        OwnListCtrl.listingObject = [];
 
-       OwnListCtrl.callListings = function (ownerId) {
-            
-           ListingFactory
+        OwnListCtrl.callListings = function () {
+            var ownerId = localStorageFactory.getLocalStorage('userId');
+            ListingFactory
                 .getListing(ownerId)
-                
-               .then(function (response) {
-                    displayListings(response.data);
-                    console.log(response);
 
-               }, function (error) {
+                .then(function (response) {
+                    console.log(response.data);
+                    OwnListCtrl.listingObject = response.data;
+
+                }, function (error) {
                     console.log(error);
                 })
         }
         ////////////////
 
-       function displayListings(results) {
-            OwnListCtrl.ownerListings = results;
-            console.log(OwnListCtrl.ownerListings);
-            console.log(results.data);
-        };
+        window.onload = OwnListCtrl.callListings();
+
     }
 })();

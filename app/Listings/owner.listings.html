@@ -1,17 +1,23 @@
-<div class="jumbotron">
-    <h1> owner listings </h1>
+<div onload="OwnListCtrl.callListings()" class="well">
+    <h1> Your Listings </h1>
 </div>
 
-<button ng-click="OwnListCtrl.callListings()">Show your stuff brah</button>
-
-<div class="panel-body">
-    <ul class="list-group" ng-repeat="listing in OwnListCtrl.displayListings">
-        <li class="list-group-item">Description: {{listing.description}}</li>
-        <li class="list-group-item">Price: {{listing.price}}</li>
-        <li class="list-group-item">Address: {{listing.address}}</li>
-        <li class="list-group-item">City: {{listing.city}}</li>
-        <li class="list-group-item">State: {{listing.state}}</li>
-        <li class="list-group-item">ZipCode: {{listing.zipCode}}</li>
-        <li class="list-group-item">Image: {{listing.image}}</li>
-    </ul>
+<div class="panel panel-success" </div>
+    <div class="panel-heading">Displaying listings as Oldest to Newest</div>
+    <div class="panel-body">
+        <ul class="list-group" ng-repeat="listing in OwnListCtrl.listingObject">
+            <li class="list-group-item">Description: {{listing.description}}</li>
+            <li class="list-group-item">Price: {{listing.price}}</li>
+            <li class="list-group-item">Address: {{listing.address}}</li>
+            <li class="list-group-item">City: {{listing.city}}</li>
+            <li class="list-group-item">State: {{listing.state}}</li>
+            <li class="list-group-item">ZipCode: {{listing.zipcode}}</li>
+            <li class="list-group-item">Image: {{listing.image}}</li>
+            <li class="list-group-item">
+                <button type="button" class="btn btn-primary">Edit</button>
+                <button type="button" class="btn btn-danger">Delete</button>
+            </li>
+        </ul>
+    </div>
+</div>
 </div>

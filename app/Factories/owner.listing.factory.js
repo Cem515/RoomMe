@@ -16,10 +16,10 @@
 
 
       ///////////////// GET LISTINGS
-       function getListing (user) {
+       function getListing (userId) {
             return $http({
                 Method: 'GET',
-                url: localApi + 'Listings/' + user
+                url: localApi + 'Listings/UserListings?userId=' + userId
             }).then(function (response) {
                 return response;
             }, function (error) {
