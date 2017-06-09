@@ -1,97 +1,97 @@
 (function () {
     'use strict';
-
     angular
         .module('app')
         .controller('MessagesController', MessagesController)
-
     MessagesController.$inject = ['$state', 'MessagesFactory', 'localStorageFactory', 'SweetAlert'];
-
     function MessagesController($state, MessagesFactory, localStorageFactory, SweetAlert) {
-
         var MsgCtrl = this;
         MsgCtrl.msgObject = {};
         MsgCtrl.conObject = {};
         //Empty Variables to Be Modified
         MsgCtrl.recipient = "";
-
         //Conversation ID Variables
         MsgCtrl.conObject.SenderId = 0;
         MsgCtrl.conObject.RecipientId = 0;
-
-
         //Message Object
         MsgCtrl.msgObject.Subject = "";
         MsgCtrl.msgObject.Body = "";
-
         MsgCtrl.fullMessage = false;
-
-
-        //Find The Message Recipient
-        MsgCtrl.findRec = function (recipient) {
+        var id = localStorageFactory.getLocalStorage('userId');
+        window.onload = function () {
             MessagesFactory
-                .getRecd(recipient)
-                .then(function (rec) {
-                    recFound(rec.data[0]);
-                    MsgCtrl.conObject.SenderId = parseInt(localStorageFactory.getLocalStorage('userId'));
-                    MsgCtrl.conObject.RecipientId = parseInt(localStorageFactory.getLocalStorage('recipient'));
-                    startConvo(MsgCtrl.conObject);
-                }, function (error) {
-                    SweetAlert.swal("Error Searching Users");
-                })
-        }
-        // Alert User to Success/Error
-        function recFound(found) {
-            if (found != undefined) {
-                localStorageFactory
-                    .setLocalStorage('recipient', found.userId);
-                localStorageFactory
-                    .getLocalStorage('recipient');
-                SweetAlert.swal("User Found");
-            } else {
-                SweetAlert.swal("User Not Found", "error");
+                .getMessageHistory(id)
+                .then(function (history) {
+                    MsgCtrl.MessageHistory = history.data;
+                });
+            //Find The Message Recipient
+            MsgCtrl.findRec = function (recipient) {
+                MessagesFactory
+                    .getRecd(recipient)
+                    .then(function (rec) {
+                        recFound(rec.data[0]);
+                        MsgCtrl.conObject.SenderId = parseInt(localStorageFactory.getLocalStorage('userId'));
+                        MsgCtrl.conObject.RecipientId = parseInt(localStorageFactory.getLocalStorage('recipient'));
+                        startConvo(MsgCtrl.conObject);
+                    }, function (error) {
+                        SweetAlert.swal("Error Searching Users");
+                    })
             }
-        }
-
-        //Find Conversation ID or Create New Conversation 
-        function startConvo(convo) {
-            MessagesFactory
-                .converse(convo)
-                .then(function (conID) {
-                    if (conID.length == 0) {
+            // Alert User to Success/Error
+            function recFound(found) {
+                if (found != undefined) {
+                    localStorageFactory
+                        .setLocalStorage('recipient', found.userId);
+                    localStorageFactory
+                        .getLocalStorage('recipient');
+                    SweetAlert.swal("User Found");
+                } else {
+                    SweetAlert.swal("User Not Found", "error");
+                }
+            }
+            //Find Conversation ID or Create New Conversation 
+            function startConvo(convo) {
+                MessagesFactory
+                    .converse(convo)
+                    .then(function (conID) {
+                        if (conID.length == 0) {
+                            MessagesFactory
+                                .startCon(MsgCtrl.conObject)
+                                .then(function (newcon) {
+                                    localStorageFactory
+                                        .setLocalStorage('conversation', newcon.data.conversationID)
+                                })
+                        } else {
+                            localStorageFactory
+                                .setLocalStorage('conversation', conID[0].conversationID)
+                            MessagesFactory
+                                .getHistory(conID[0].conversationID)
+                                .then(function (past) {
+                                    MsgCtrl.PastMessages = past;
+                                })
+                        };
+                    }, function (error) {
+                        SweetAlert.swal("Error")
+                    })
+            }
+            MsgCtrl.sendMsg = function (msg) {
+                MsgCtrl.msgObject.convoID = localStorageFactory.getLocalStorage('conversation');
+                MessagesFactory
+                    .sendMessage(msg)
+                    .then(function (sent) {
+                        SweetAlert.swal("Message Sent")
                         MessagesFactory
-                            .startCon(MsgCtrl.conObject)
-                            .then(function (newcon) {
-                                localStorageFactory
-                                    .setLocalStorage('conversation', conID[0].conversationID)
-                            })
-                    } else {
-                        localStorageFactory
-                            .setLocalStorage('conversation', conID[0].conversationID)
-                        MessagesFactory
-                            .getHistory(conID[0].conversationID)
+                            .getHistory(MsgCtrl.msgObject.convoID)
                             .then(function (past) {
                                 MsgCtrl.PastMessages = past;
                             })
-                    };
-                }, function (error) {
-                    SweetAlert.swal("Error")
-                })
-        }
-
-        MsgCtrl.sendMsg = function (msg) {
-            MsgCtrl.msgObject.convoID = localStorageFactory.getLocalStorage('conversation');
-            MessagesFactory
-                .sendMessage(msg)
-                .then(function (sent) {
-                    SweetAlert.swal("Message Sent")
-                }, function (error) {
-                    SweetAlert.swal("Error", "Message Failed")
-                })
-        }
-
-        MsgCtrl.ShowMsg = function () {
-            MsgCtrl.fullMessage = !MsgCtrl.fullMessage;
+                    }, function (error) {
+                        SweetAlert.swal("Error", "Message Failed")
+                    })
+            }
+            MsgCtrl.ShowMsg = function () {
+                MsgCtrl.fullMessage = !MsgCtrl.fullMessage;
+            }
         }
     }
 })();

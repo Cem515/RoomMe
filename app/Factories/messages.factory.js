@@ -1,26 +1,27 @@
 (function () {
     'use strict';
 
-    angular
+   angular
         .module('app')
         .factory('MessagesFactory', MessagesFactory)
 
-    MessagesFactory.$inject = ['$http', 'localApi'];
+   MessagesFactory.$inject = ['$http', 'localApi'];
 
-    function MessagesFactory($http, localApi) {
+   function MessagesFactory($http, localApi) {
         var service = {
             getRecd: getRecd,
             converse: converse,
             startCon: startCon,
             sendMessage: sendMessage,
-            getHistory: getHistory
+            getHistory: getHistory,
+            getMessageHistory: getMessageHistory
         };
 
-        return service;
+       return service;
 
-                function startCon(keys) {
+               function startCon(keys) {
 
-            return $http({
+           return $http({
                 method: 'POST',
                 url: localApi + 'Conversations',
                 data: keys,
@@ -35,9 +36,9 @@
             })
         }
 
-        function getRecd(name) {
+       function getRecd(name) {
 
-            return $http({
+           return $http({
                 method: 'GET',
                 url: localApi + 'Users/NameSearch?username=' + name
             }).then(function (response) {
@@ -49,9 +50,9 @@
 
 
 
-        function getHistory(id) {
+       function getHistory(id) {
 
-            return $http({
+           return $http({
                 method: 'GET',
                 url: localApi +'Messages/MessageHistory?past='+id
             }).then(function (message) {
@@ -61,9 +62,9 @@
             })
         }
 
-        function converse(number) {
+       function converse(number) {
 
-            return $http({
+           return $http({
                 method: 'GET',
                 url: localApi + 'Conversations/ConvoSearch',
                 params: number
@@ -73,10 +74,10 @@
                 return error;
             })
 
-        }
+       }
 
 
-        function sendMessage(mso) {
+       function sendMessage(mso) {
             return $http({
                 method: 'POST',
                 url: localApi + 'Messages',
@@ -91,8 +92,20 @@
                     return error;
                 }
 
-            )
+           )
         }
 
-    }
+       function getMessageHistory(id) {
+            return $http ({
+            method:'GET',
+            url: localApi+'Messages/AllMessages?user='+id
+            }). then (function (messages) {
+                return messages;
+            }, function (error) {
+                return error;
+            })
+
+       }
+
+   }
 })();

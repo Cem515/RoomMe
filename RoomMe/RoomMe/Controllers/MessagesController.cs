@@ -115,7 +115,22 @@ namespace RoomMe.Controllers
                   select m;
                   return (mdb);
         }
-    protected override void Dispose(bool disposing)
+
+        [HttpGet]
+        [Route("api/Messages/AllMessages")]
+        public IQueryable<Message> AllMessages([FromUri] int user)
+        {
+            IQueryable<Message> mdb = db.Messages;
+
+            mdb = from m in mdb
+                  join c in db.Conversations on m.ConvoId equals c.ConversationID
+                  join u in db.Users on c.RecipientID equals u.UserId
+                  where (user == c.RecipientID || user == c.SenderID)
+                  select m;
+            return (mdb);
+
+        }
+        protected override void Dispose(bool disposing)
         {
             if (disposing)
             {
