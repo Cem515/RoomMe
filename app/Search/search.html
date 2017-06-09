@@ -1,25 +1,25 @@
 <label for="city">City
     <input ng-model="SearchCtrl.srchObject.city"></input>
 </label>
-<label for="MinRent">Minimum Rent 
-    <input ng-model="SearchCtrl.srchObject.minRent"></input>
+<label for="MinRent">Minimum Rent
+    <input type="number" ng-model="SearchCtrl.srchObject.minPrice"></input>
 </label>
 <label for="MaxRent">Maximum Rent
-    <input ng-model="SearchCtrl.srchObject.maxRent"></input>
+    <input type="number" ng-model="SearchCtrl.srchObject.maxPrice"></input>
 </label>
 <label for="zipCode">Zip Code
-    <input ng-model="SearchCtrl.srchObject.zipCode"></input>
+    <input type="number" ng-model="SearchCtrl.srchObject.zipCode"></input>
 </label>
 <button type="button" class="btn btn-primary" ng-click="SearchCtrl.search(SearchCtrl.srchObject)">Search Listings</button>
-
+        <button type="button" ng-click="SearchCtrl.expand()">Show Full Listings</button>
 <div class="panel-body">
 
-    <ol class="list-group" ng-show="SearchCtrl.showResults" ng-repeat="listing in SearchCtrl.Results">
+   <ol class="list-group" ng-show="SearchCtrl.showResults" ng-repeat="listing in SearchCtrl.Results">
         <li class="list-group-item">Address: {{listing.address}}</li>
         <li class="list-group-item">Location: {{listing.city}},{{listing.state}}</li>
         <li class="list-group-item">Rent: {{listing.price}}</li>
         <li class="list-group-item" ng-show="SearchCtrl.fullListing">Description: {{listing.description}}</li>
         <li class="list-group-item" ng-show="SearchCtrl.fullListing">Zip Code: {{listing.zipcode}}</li>
         <li class="list-group-item" ng-show="SearchCtrl.fullListing">Pictures: {{listing.picture}}</li>
-        <button type="button" ng-click="SearchCtrl.expand()">Show Full Listing</button>
+        <li class="list-group-item" ng-show="SearchCtrl.fullListing">Poster: {{listing.userId}}</li>
 </div>

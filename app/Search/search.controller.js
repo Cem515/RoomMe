@@ -1,24 +1,24 @@
 (function(){
     'use strict';
 
-    angular
+   angular
         .module('app')
         .controller('SearchController', SearchController)
 
-    SearchController.$inject = ['$location', 'SearchFactory'];
+   SearchController.$inject = ['$location', 'SearchFactory'];
 
-    function SearchController($location, SearchFactory) {
+   function SearchController($location, SearchFactory) {
         /* jshint validthis:true */
         var SearchCtrl = this;
         SearchCtrl.srchObject = {};
         SearchCtrl.srchObject.city= "";
-        SearchCtrl.srchObject.minRent=0;
-        SearchCtrl.srchObject.maxRent=0;
-        SearchCtrl.srchObject.zipCode=0;
+        SearchCtrl.srchObject.minPrice=null;
+        SearchCtrl.srchObject.maxPrice=null;
+        SearchCtrl.srchObject.zipCode=null;
         SearchCtrl.fullListing = false;
         SearchCtrl.showResults = false;
 
-        SearchCtrl.search = function (params){
+       SearchCtrl.search = function (params){
         SearchFactory
             .searchListings(params)
             .then(function (response){
@@ -29,14 +29,13 @@
             })
         }
 
-       function matches (results) {
+      function matches (results) {
            SearchCtrl.Results = results;
            console.log(results);
        }
 
-       SearchCtrl.expand = function() {
+      SearchCtrl.expand = function() {
            SearchCtrl.fullListing = !SearchCtrl.fullListing;
        }
     }
 })();
-
