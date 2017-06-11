@@ -1,3 +1,4 @@
+<div class="container">
 <label for="city">City
     <input ng-model="SearchCtrl.srchObject.city"></input>
 </label>
@@ -11,7 +12,14 @@
     <input type="number" ng-model="SearchCtrl.srchObject.zipCode"></input>
 </label>
 <button type="button" class="btn btn-primary" ng-click="SearchCtrl.search(SearchCtrl.srchObject)">Search Listings</button>
-        <button type="button" ng-click="SearchCtrl.expand()">Show Full Listings</button>
+</div>
+
+<div class="container">
+<button type="button" ng-click="SearchCtrl.convert(SearchCtrl.user)">Find UserName</button>
+<input type="number" ng-model="SearchCtrl.user"></input>
+<p>{{SearchCtrl.ListerName}}</p>
+</div>
+<button type="button" class="btn btn-primary" ng-click="SearchCtrl.expand()">Show Full Listings</button>
 <div class="panel-body">
 
    <ol class="list-group" ng-show="SearchCtrl.showResults" ng-repeat="listing in SearchCtrl.Results">
@@ -21,5 +29,5 @@
         <li class="list-group-item" ng-show="SearchCtrl.fullListing">Description: {{listing.description}}</li>
         <li class="list-group-item" ng-show="SearchCtrl.fullListing">Zip Code: {{listing.zipcode}}</li>
         <li class="list-group-item" ng-show="SearchCtrl.fullListing">Pictures: {{listing.picture}}</li>
-        <li class="list-group-item" ng-show="SearchCtrl.fullListing">Poster: {{SearchCtrl.ListerId}}</li>
+        <li class="list-group-item" ng-show="SearchCtrl.fullListing" >Poster: {{listing.userId}}</li>
 </div>

@@ -111,6 +111,10 @@ namespace RoomMe.Controllers
         {
             IQueryable<Listing> fl = db.Listings;
 
+            fl = from f in fl
+                 join u in db.Users on f.UserId equals u.UserId
+                 select f;
+
            if(search.City != null)
             {
                 fl = fl.Where(l => l.City == search.City);

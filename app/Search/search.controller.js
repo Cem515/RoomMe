@@ -5,9 +5,9 @@
         .module('app')
         .controller('SearchController', SearchController)
 
-    SearchController.$inject = ['$location', 'SearchFactory','UserFactory'];
+    SearchController.$inject = ['$location', 'SearchFactory', 'UserFactory'];
 
-    function SearchController($location, SearchFactory,UserFactory) {
+    function SearchController($location, SearchFactory, UserFactory) {
         /* jshint validthis:true */
         var SearchCtrl = this;
         SearchCtrl.srchObject = {};
@@ -17,7 +17,7 @@
         SearchCtrl.srchObject.zipCode = null;
         SearchCtrl.fullListing = false;
         SearchCtrl.showResults = false;
-        var arrayIndex = -1;
+        SearchCtrl.ListnerName = "";
 
         SearchCtrl.search = function (params) {
             SearchFactory
@@ -32,18 +32,20 @@
 
         function matches(results) {
             SearchCtrl.Results = results;
-            arrayIndex++;
-            UserFactory
-                .getUser(results[arrayIndex].userId)
-                .then(function (response) {
-                    SearchCtrl.ListerId = response.userName;
-                }, function (error) {
-                    console.log(error);
-                })
         }
 
         SearchCtrl.expand = function () {
             SearchCtrl.fullListing = !SearchCtrl.fullListing;
+        }
+
+        SearchCtrl.convert = function(id) {       
+            UserFactory
+                .getUser(id)
+                .then(function (response) {
+                    SearchCtrl.ListerName = response.userName;
+                }, function (error) {
+                    console.log(error);
+                })
         }
     }
 })();
