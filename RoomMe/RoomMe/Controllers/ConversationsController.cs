@@ -24,18 +24,18 @@ namespace RoomMe.Controllers
              return db.Conversations;
         }
 
-        // GET: api/Conversations/5
-        //[ResponseType(typeof(Conversation))]
-        //public IHttpActionResult GetConversation(int id)
-        //{
-        //    Conversation conversation = db.Conversations.Find(id);
-        //    if (conversation == null)
-        //    {
-        //        return NotFound();
-        //    }
+        //GET: api/Conversations/5
+        [ResponseType(typeof(Conversation))]
+        public IHttpActionResult GetConversation(int id)
+        {
+            Conversation conversation = db.Conversations.Find(id);
+            if (conversation == null)
+            {
+                return NotFound();
+            }
 
-        //    return Ok(conversation);
-        //}
+            return Ok(conversation);
+        }
 
         // PUT: api/Conversations/5
         [ResponseType(typeof(void))]

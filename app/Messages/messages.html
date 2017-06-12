@@ -17,6 +17,11 @@
 </div>
 <div class="container-fluid" id="past">
 <div class="col-md-6">
+    <label>Convert Conversation ID:
+    <input ng-model="MsgCtrl.ConversationId"></input>
+    </label>
+    <button ng-click="MsgCtrl.Convert(MsgCtrl.ConversationId)">Find Sender/Recipient</button>
+    <p>{{MsgCtrl.OtherUser}}</p>
     <ol ng-repeat="pasts in MsgCtrl.MessageHistory" class="list-group">
         <li class="list-group-item">{{pasts.convoId}}</li>
         <li class="list-group-item">{{pasts.subject}}</li>

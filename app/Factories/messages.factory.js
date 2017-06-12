@@ -14,7 +14,8 @@
             startCon: startCon,
             sendMessage: sendMessage,
             getHistory: getHistory,
-            getMessageHistory: getMessageHistory
+            getMessageHistory: getMessageHistory,
+            Conversationalists: Conversationalists
         };
 
        return service;
@@ -105,6 +106,17 @@
                 return error;
             })
 
+       }
+
+       function Conversationalists(id) {
+           return $http ({
+               method:'GET',
+               url: localApi+'Conversations/'+id,
+           }).then(function(response){
+               return response.data;
+           }, function(error) {
+               return error;
+           })
        }
 
    }
