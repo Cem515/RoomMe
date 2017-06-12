@@ -5,17 +5,23 @@
 <div class="panel panel-success" </div>
     <div class="panel-heading">Displaying listings as Oldest to Newest</div>
     <div class="panel-body">
-        <ul class="list-group" ng-repeat="listing in OwnListCtrl.listingObject">
-            <li class="list-group-item">Description: {{listing.description}}</li>
-            <li class="list-group-item">Price: {{listing.price}}</li>
-            <li class="list-group-item">Address: {{listing.address}}</li>
-            <li class="list-group-item">City: {{listing.city}}</li>
-            <li class="list-group-item">State: {{listing.state}}</li>
-            <li class="list-group-item">ZipCode: {{listing.zipcode}}</li>
-            <li class="list-group-item">Image: {{listing.image}}</li>
-            <li class="list-group-item">
-                <button type="button" class="btn btn-primary">Edit</button>
-                <button type="button" class="btn btn-danger">Delete</button>
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="listing in OwnListCtrl.listingObject">
+                <div style="float: right;">
+                    <img ng-src="{{listing.picture}}" id="listingPicture">
+                </div>
+                <div>
+                    <p>Description: {{listing.description}}</p>
+                    <p>Price: {{listing.price}}</p>
+                    <p>Address: {{listing.address}}</p>
+                    <p>City: {{listing.city}}</p>
+                    <p>State: {{listing.state}}</p>
+                    <p>ZipCode: {{listing.zipcode}}</p>
+                    <p>
+                        <button type="button" class="btn btn-primary">Edit</button>
+                        <button type="button" class="btn btn-danger">Delete</button>
+                    </p>
+                </div>
             </li>
         </ul>
     </div>
