@@ -1,69 +1,69 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
-
 <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/273d6d9d01.js"></script>
   <meta charset="UTF-8">
   <title>RoomMe</title>
-  <!-- bower:css -->
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-  <link rel="stylesheet" href="bower_components/sweetalert/dist/sweetalert.css" />
-  <!-- endbower -->
+<!-- bower:css -->
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+<link rel="stylesheet" href="bower_components/sweetalert/dist/sweetalert.css" />
+<!-- endbower -->
 
-  <!-- inject:css -->
-  <link rel="stylesheet" href="/app/Styles/style.css">
-  <!-- endinject -->
-
-  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One" rel="stylesheet">
+<!-- inject:css -->
+<link rel="stylesheet" href="/app/styles/style.css">
+<!-- endinject -->
+<link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One" rel="stylesheet">
 </head>
 
 <body>
 
-  <div id="topbar">
+<div id="topbar">
 
-    <div id="topbar">
-      <div class="topnav" id="myTopnav">
-        <img id="MainTitle" src="app/Styles/MiCasa.png" / ui-sref='register'>
-        <a ui-sref="profile">Profile</a>
-        <a ui-sref="search">Search Listings</a>
-        <a ui-sref="messages">Messanger(TESTING)</a>
-      </div>
+    <div class="topnav" id="myTopnav">
+      <img id="MainTitle" src="app/Styles/MiCasa.png"/ ui-sref='register'>
+      <a ui-sref="profile">Profile</a>
+      <a ui-sref="search">Search Listings</a>
+      <a ui-sref="messages">Messanger(TESTING)</a>
     </div>
+  </div>
 
-    <div class="container">
-      <div id="uiview" ui-view></div>
-    </div>
-
-
-
+  <div class="container">
+  <div id="uiview" ui-view></div>
+  </div>
 
 
 
-    <!-- bower:js -->
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angularjs-social-login/angularjs-social-login.js"></script>
-    <script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="bower_components/ngSweetAlert/SweetAlert.js"></script>
-    <script src="bower_components/filepicker-js/filepicker.min.js"></script>
-    <script src="bower_components/angular-filepicker/dist/angular_filepicker.js"></script>
-    <!-- endbower -->
 
-    <!-- inject:js -->
-    <script src="/app/app.js"></script>
-    <script src="/app/Factories/localStorage.factory.js"></script>
-    <script src="/app/Factories/messages.factory.js"></script>
-    <script src="/app/Factories/owner.listing.factory.js"></script>
-    <script src="/app/Factories/search.factory.js"></script>
-    <script src="/app/Factories/user.factory.js"></script>
-    <script src="/app/Listings/add.listing.controller.js"></script>
-    <script src="/app/Listings/owner.controller.js"></script>
-    <script src="/app/Messages/message.controller.js"></script>
-    <script src="/app/Profile/profile.controller.js"></script>
-    <script src="/app/Search/search.controller.js"></script>
-    <script src="/app/Users/RegisterAnimation.js"></script>
-    <script src="/app/Users/signin.controller.js"></script>
-    <!-- endinject -->
+
+
+<!-- bower:js -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angularjs-social-login/angularjs-social-login.js"></script>
+<script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
+<script src="bower_components/ngSweetAlert/SweetAlert.js"></script>
+<script src="bower_components/filepicker-js/filepicker.min.js"></script>
+<script src="bower_components/angular-filepicker/dist/angular_filepicker.js"></script>
+<!-- endbower -->
+
+<!-- inject:js -->
+<script src="/app/app.js"></script>
+<script src="/app/Factories/localStorage.factory.js"></script>
+<script src="/app/Factories/messages.factory.js"></script>
+<script src="/app/Factories/owner.listing.factory.js"></script>
+<script src="/app/Factories/search.factory.js"></script>
+<script src="/app/Factories/user.factory.js"></script>
+<script src="/app/Listings/add.listing.controller.js"></script>
+<script src="/app/Listings/owner.controller.js"></script>
+<script src="/app/Messages/message.controller.js"></script>
+<script src="/app/Profile/profile.controller.js"></script>
+<script src="/app/Search/search.controller.js"></script>
+<script src="/app/Users/RegisterAnimation.js"></script>
+<script src="/app/Users/signin.controller.js"></script>
+<!-- endinject -->
 </body>

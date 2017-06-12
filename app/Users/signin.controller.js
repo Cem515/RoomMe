@@ -22,7 +22,7 @@
         SignInCtrl.nameObject.Email = "";
         // SignInCtrl.nameObject.birthdate = '0000 0, 0'
         SignInCtrl.nameObject.Landlord = false;
-        SignInCtrl.nameObject.ZipCode = 0;
+        SignInCtrl.nameObject.ZipCode = null;
         SignInCtrl.nameObject.Phone = "";
         SignInCtrl.Registration = false;
         SignInCtrl.sObject = {};
