@@ -30,6 +30,16 @@
         SignInCtrl.sObject.password = '';
         SignInCtrl.Login = true;
         SignInCtrl.button = "Register Now"
+        SignInCtrl.SignedIn = true;
+
+
+// window.onload = function() {
+//     if(localStorageFactory.getLocalStorage('userId') = undefined) {
+//         SignInCtrl.SignedIn = true;
+//     } else {
+//         SignInCtrl.SignedIn = false;
+//     };
+// }
 
         SignInCtrl.register = function (nameObject) {
             UserFactory

@@ -101,7 +101,7 @@
             method:'GET',
             url: localApi+'Messages/AllMessages?user='+id
             }). then (function (messages) {
-                return messages;
+                return messages.data.reverse();
             }, function (error) {
                 return error;
             })

@@ -74,7 +74,7 @@
 
 <div class="col-sm-12">
     <div ng-show="SignInCtrl.Login">
-        <div class="row">
+        <div class="row" ng-show="SignInCtrl.SignedIn">
             <div class="col-sm-5">
                 <div class="form-group">
                     <input type="text" class="form-control" ng-model="SignInCtrl.sObject.username" placeholder="Username" required="" />

@@ -23,7 +23,7 @@
                 MessagesFactory
                     .getMessageHistory(id)
                     .then(function (history) {
-                        MsgCtrl.MessageHistory = history.data;
+                        MsgCtrl.MessageHistory = history;
                     });
                 //Find The Message Recipient
                 MsgCtrl.findRec = function (recipient) {
@@ -98,7 +98,7 @@
                     MessagesFactory
                         .Conversationalists(iid)
                         .then(function (users) {
-                                if (users.recipientID == id) {
+                                if (users.recipientID = id) {
                                     UserFactory
                                         .getUser(users.senderID)
                                         .then(function (post) {
@@ -106,7 +106,7 @@
                                         }, function (error) {
                                             return error;
                                         })
-                                } else if (users.SenderID == id) {
+                                } else if (users.SenderID = id) {
                                     UserFactory
                                         .getUser(users.recipientID)
                                         .then(function (post) {

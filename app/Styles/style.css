@@ -10,7 +10,9 @@
     padding-bottom: 5px;
 }
 
-
+#pastmessagehistory {
+    border: 3px double black;
+}
 .topnav {
     background-color: white;
     overflow: hidden;

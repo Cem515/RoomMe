@@ -89,6 +89,11 @@
                         console.log(Blob);
                         ProfileCtrl.userInfo.image = Blob.url;
                     })
-                    }
+                }
+                
+                ProfileCtrl.goMessages = function () {
+                    $state.go('messages');
+                }
+
                 }
             })();
