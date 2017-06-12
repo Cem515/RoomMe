@@ -5,9 +5,9 @@
         .module('app')
         .controller('SearchController', SearchController)
 
-    SearchController.$inject = ['$location', 'SearchFactory', 'UserFactory'];
+    SearchController.$inject = ['$location', 'SearchFactory', 'UserFactory', 'SweetAlert','localStorageFactory', '$state'];
 
-    function SearchController($location, SearchFactory, UserFactory) {
+    function SearchController($location, SearchFactory, UserFactory, SweetAlert, localStorageFactory, $state) {
         /* jshint validthis:true */
         var SearchCtrl = this;
         SearchCtrl.srchObject = {};

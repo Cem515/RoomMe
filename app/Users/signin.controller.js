@@ -29,7 +29,7 @@
         SignInCtrl.sObject.username = '';
         SignInCtrl.sObject.password = '';
         SignInCtrl.Login = true;
-        SignInCtrl.button = "New? Register Now"
+        SignInCtrl.button = "Register Now"
 
         SignInCtrl.register = function (nameObject) {
             UserFactory
@@ -41,7 +41,6 @@
                     var storedVariable = localStorageFactory.getLocalStorage('userId');
                     goProfile();
                //     SweetAlert.swal("Account Created", "Welcome", "Success")
-                    console.log(storedVariable);
                 }, function (error) {
                     console.log(error);
                 })
