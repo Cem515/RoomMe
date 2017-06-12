@@ -25,7 +25,6 @@
 
                             <p><button class="btn btn-default " id="box" ng-show="editProfile " ng-click="ProfileCtrl.pickFile() ">Upload a photo</button></p>
                             <img ng-src="{{ProfileCtrl.userInfo.image}}">
-                            <!--<img ng-src="{{ProfileCtrl.userInfo.image}}" id="profileImg">-->
                         </div>
                     </div>
 
@@ -77,7 +76,8 @@
                                 </div>
                             </div>
 
-                            <button class="btn btn-default" ng-show="editProfile" ng-click="ProfileCtrl.editProfile()" id="box">Submit Changes</button>                            <button class="btn btn-default" ng-show="editProfile" ng-click="editProfile=! editProfile" id="box">Go Back</button>
+                            <button class="btn btn-default" ng-show="editProfile" ng-click="ProfileCtrl.editProfile()" id="box">Submit Changes</button>                            
+    I                        <button class="btn btn-default" ng-show="editProfile" ng-click="editProfile=! editProfile" id="box">Go Back</button>
                         </div>
                     </div>
                 </div>
