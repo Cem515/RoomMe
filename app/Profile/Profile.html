@@ -84,13 +84,9 @@
             </div>
             <div class="col-xs-12 col-sm-7">
 
-                <div class="panel" id="box">
-                    <ul>
-                        <li>{{ProfileCtrl.userInfo.bookmarked}}</li>
-                    </ul>
-                </div>
-                <button id="box" class="btn btn-default" ng-click="ProfileCtrl.yourListings()" ng-show="ProfileCtrl.showListingButton(ProfileCtrl.userInfo.landlord)">Your Listings</button>                <button id="box" class="btn btn-default" ng-click="ProfileCtrl.signout()">Sign Out</button> <button id="box"
-                    class="btn btn-default" ng-click="ProfileCtrl.goAddListingPage()" ng-show="ProfileCtrl.showListingButton(ProfileCtrl.userInfo.landlord)">Add Listing</button>
+                <button id="box" class="btn btn-default" ng-click="ProfileCtrl.yourListings()" ng-show="ProfileCtrl.showListingButton(ProfileCtrl.userInfo.landlord)">Your Listings</button>               
+                 <button id="box" class="btn btn-default" ng-click="ProfileCtrl.signout()">Sign Out</button> 
+                 <button id="box" class="btn btn-default" ng-click="ProfileCtrl.goAddListingPage()" ng-show="ProfileCtrl.showListingButton(ProfileCtrl.userInfo.landlord)">Add Listing</button>
             </div>
         </div>
     </div>

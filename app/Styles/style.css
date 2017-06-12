@@ -8,8 +8,11 @@
 #box {
     box-shadow: 2px 3px 9px;
     padding-bottom: 5px;
+    font-family: 'Pathway Gothic One', cursive;
+    font-size: 1.3em;
+    padding: 10px;
+    font: bold;
 }
-
 
 .topnav {
     background-color: white;
