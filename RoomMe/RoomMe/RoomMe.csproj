@@ -118,6 +118,10 @@
     <Compile Include="Migrations\201706082006407_removeddate.Designer.cs">
       <DependentUpon>201706082006407_removeddate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706121605475_addedimage.cs" />
+    <Compile Include="Migrations\201706121605475_addedimage.Designer.cs">
+      <DependentUpon>201706121605475_addedimage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Bookmark.cs" />
     <Compile Include="Models\Conversation.cs" />
@@ -149,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706082006407_removeddate.resx">
       <DependentUpon>201706082006407_removeddate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706121605475_addedimage.resx">
+      <DependentUpon>201706121605475_addedimage.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

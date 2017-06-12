@@ -1,13 +1,17 @@
 (function () {
     'use strict';
 
-    var app = angular.module('app', ['ui.router', 'socialLogin', 'oitozero.ngSweetAlert', 'LocalStorageModule']).value('localApi', 'http://localhost:61066/api/');
-    app.config(function ($stateProvider, $urlRouterProvider, socialProvider) {
+    var app = angular.module('app', ['ui.router', 'socialLogin', 'oitozero.ngSweetAlert', 'LocalStorageModule', 'angular-filepicker']).value('localApi', 'http://localhost:61066/api/');
+    app.config(function ($stateProvider, $urlRouterProvider, socialProvider, filepickerProvider) {
         $urlRouterProvider.otherwise('/Register');
+
         socialProvider.setFbKey({
             appId: "129989007575185",
             apiVersion: "v2.9"
         });
+
+      filepickerProvider.setKey('ANB3QmaaUTLe1bT9ZaKGMz');
+
         $stateProvider
             .state('register', {
                 url: "/Register",

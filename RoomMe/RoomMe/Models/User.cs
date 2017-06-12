@@ -18,6 +18,7 @@ namespace RoomMe.Models
         public DateTime DateOfBirth { get; set; }
         public int ZipCode { get; set; }
         public string Phone { get; set; }
+        public string Image { get; set; }
 
         public virtual ICollection<Conversation> SentConversations { get; set; }
         public virtual ICollection<Conversation> GotConversations { get; set; }

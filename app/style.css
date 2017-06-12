@@ -85,3 +85,9 @@
 #topbar {
     margin-bottom: 20px;
 }
+
+#profileImage {
+    height: 150;
+    width: 125;
+    border-radius: 10%;
+}
