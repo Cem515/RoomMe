@@ -1,4 +1,18 @@
+#biggerImg {
+    height: 400px;
+    width: 500px;
+    border-radius: 5%;
+    border: inset grey 2px;
 
+}
+
+#searchInput {
+    border-radius: 5%;
+    border: inset grey 2px;
+}
+#registrationInputs {
+    margin-bottom: 20px;
+}
 #welcomeMessageProfile {
     font-family: 'Pathway Gothic One', cursive;
     text-shadow: 2px 2px 5px grey;
@@ -117,8 +131,7 @@ color: black;
 }
 
 #profileImg {
-    text-align: center;
-    border: solid black 2px;
+
     margin-bottom: 20px;
 }
 
@@ -130,11 +143,6 @@ color: black;
     margin-bottom: 20px;
 }
 
-#profileImage {
-    height: 150;
-    width: 125;
-    border-radius: 10%;
-}
 #logInBtn {
     text-align: center;
     width: 100%;
@@ -145,6 +153,7 @@ color: black;
 
 .carousel .item {
   height: 400px;
+
 }
 
 .item img {
@@ -154,6 +163,7 @@ color: black;
 }
 .carousel-inner {
     border-radius: 1%;
+      margin-bottom: 20px;
 }
 
 #book {
@@ -165,6 +175,18 @@ color: black;
     text-align: right;
     font-family: 'Pathway Gothic One';
     font-size: 30px;
+}
+
+
+.fa {
+     margin: 5px 5px;
+}
+
+#profileBtns {
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    padding: 5%;
+    box-shadow: 2px 3px 5px black;
 }
 
 #messageTitle {

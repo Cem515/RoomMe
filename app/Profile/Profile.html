@@ -1,103 +1,95 @@
 <div class="container">
-
     <div onload="ProfileCtrl.loadProfileInfo()">
 
+        <!-- Welcome Heading -->
         <div class="row">
-
-            <div class="col-lg-12">
-
+            <div class="col-sm-12">
                 <div class="panel" id="box">
-
                     <h1 id="welcomeMessageProfile"> Welcome {{ProfileCtrl.userInfo.userName}} </h1>
                 </div>
             </div>
         </div>
 
-        <div class="row">
-
-            <div class="col-xs-12 col-sm-5">
-
-                <div class="panel" id="box">
-
-                    <div class="row">
-
-                        <div class="col-xs-8 col-xs-offset-3">
-
-                            <p><button class="btn btn-default " id="box" ng-show="editProfile " ng-click="ProfileCtrl.pickFile() ">Upload a photo</button></p>
-                            <img ng-src="{{ProfileCtrl.userInfo.image}}">
-                        </div>
-                    </div>
-
-                    <div class="row">
-
-                        <div class="col-xs-8 col-xs-offset-3">
-
-                            <div ng-hide="editProfile">
-
-                                <p><i class="fa fa-user-circle-o" aria-hidden="true"></i>{{ProfileCtrl.userInfo.userName}}</p>
-
-                                <p><i class="fa fa-envelope" aria-hidden="true"></i>{{ProfileCtrl.userInfo.email}}</p>
-
-                                <p><i class="fa fa-home" aria-hidden="true"></i>{{ProfileCtrl.userInfo.zipCode}}</p>
-
-                                <p><i class="fa fa-phone-square" aria-hidden="true"></i>{{ProfileCtrl.userInfo.phone}}</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-5">
+                    <div id="box" class="panel">
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <p><button class="btn btn-default " id="box" ng-show="editProfile " ng-click="ProfileCtrl.pickFile() ">Upload a photo</button></p>
+                                <img src="{{ProfileCtrl.userInfo.image}}" alt="" id="profileImg" class="img-rounded img-responsive" />
                             </div>
-                            <button id="box" id="showEditInfobtn" class="btn btn-default" ng-hide="editProfile" ng-click="editProfile=! editProfile">Edit</button>
-                            <div ng-show="editProfile" class="form">
+                            <div ng-hide="editProfile" class="col-sm-6 col-md-6">
+                                <i class="fa fa-user-circle-o" aria-hidden="true"></i>{{ProfileCtrl.userInfo.userName}}
+                                <br />
+                                <i class="fa fa-home"></i>{{ProfileCtrl.userInfo.zipCode}}
+                                <br />
+                                <i class="fa fa-envelope"></i>{{ProfileCtrl.userInfo.email}}
+                                <br />
+                                <i class="fa fa-phone-square" aria-hidden="true"></i>{{ProfileCtrl.userInfo.phone}}
+                                <br />
 
-                                <div class="form-group">
-                                    <label>New User Name</label>
-                                    <div class="input-group">
-                                        <input type="text" ng-model="ProfileCtrl.userInfo.userName"> </div>
-                                </div>
+                                <button id="box" id="showEditInfobtn" class="btn btn-default" ng-hide="editProfile" ng-click="editProfile=! editProfile">Edit</button>
+                                <br />
+                            </div>
+                        
 
-                                <div class="form-group">
-                                    <label>New Password</label>
-                                    <div class="input-group">
-                                        <input type="password" ng-show="editProfile" ng-model="ProfileCtrl.userInfo.password">                                        </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label>New Email</label>
-                                    <div class="input-group">
-                                        <input type="text" ng-show="editProfile" ng-model="ProfileCtrl.userInfo.email"> </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label>New Zip Code</label>
-                                    <div class="input-group">
-                                        <input type="text" ng-show="editProfile" ng-model="ProfileCtrl.userInfo.zipCode">                                        </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label>New Phone</label>
-                                    <div class="input-group">
-                                        <input type="text" ng-show="editProfile" ng-model="ProfileCtrl.userInfo.phone"> </div>
+                            <div class="col-sm-6 col-md-4">
+                                <!-- Edit User Information -->
+                                <div ng-show="editProfile" class="form">
+                                    <!-- Username -->
+                                    <div class="form-group">
+                                        <label>New User Name</label>
+                                        <div class="input-group">
+                                            <input type="text" ng-model="ProfileCtrl.userInfo.userName">
+                                        </div>
+                                    </div>
+                                    <!-- Password -->
+                                    <div class="form-group">
+                                        <label>New Password</label>
+                                        <div class="input-group">
+                                            <input type="password" ng-show="editProfile" ng-model="ProfileCtrl.userInfo.password">
+                                        </div>
+                                    </div>
+                                    <!-- New Email -->
+                                    <div class="form-group">
+                                        <label>New Email</label>
+                                        <div class="input-group">
+                                            <input type="text" ng-show="editProfile" ng-model="ProfileCtrl.userInfo.email">
+                                        </div>
+                                    </div>
+                                    <!-- Zip Code -->
+                                    <div class="form-group">
+                                        <label>New Zip Code</label>
+                                        <div class="input-group">
+                                            <input type="text" ng-show="editProfile" ng-model="ProfileCtrl.userInfo.zipCode">
+                                        </div>
+                                    </div>
+                                    <!-- New Phone -->
+                                    <div class="form-group">
+                                        <label>New Phone</label>
+                                        <div class="input-group">
+                                            <input type="text" ng-show="editProfile" ng-model="ProfileCtrl.userInfo.phone">
+                                        </div>
+                                        <button class="btn btn-default" ng-show="editProfile" ng-click="ProfileCtrl.editProfile()" id="box">Submit Changes</button>
+                                        <button class="btn btn-default" ng-show="editProfile" ng-click="editProfile=! editProfile" id="box">Go Back</button>
+                                    </div>
                                 </div>
                             </div>
-
-                            <button class="btn btn-default" ng-show="editProfile" ng-click="ProfileCtrl.editProfile()" id="box">Submit Changes</button>                            
-    I                        <button class="btn btn-default" ng-show="editProfile" ng-click="editProfile=! editProfile" id="box">Go Back</button>
                         </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <button id="profileBtns" class="btn btn-default" ng-click="ProfileCtrl.signout()">Sign Out<i class="fa fa-sign-out" aria-hidden="true"></i></button>
+                                 </div>
+                            </div>
                     </div>
-                </div>
+                </div>                 
+                <div class="col-xs-12 col-sm-7">
+                    <div style="text-align: center;" class="panel" id="box">
+                         <div class="row">
+                        <div class="col-sm-4"><button id="profileBtns" class="btn btn-default" ng-click="ProfileCtrl.yourListings()" ng-show="ProfileCtrl.showListingButton(ProfileCtrl.userInfo.landlord)">View Your Listings<i class="fa fa-eye" aria-hidden="true"></i></button></div>       
+                        <div class="col-sm-4"><button id="profileBtns" class="btn btn-default" ng-click="ProfileCtrl.goMessenger()" >Messenger<i class="fa fa-commenting-o" aria-hidden="true"></i></button></div>
+                        <div class="col-sm-4"><button id="profileBtns" class="btn btn-default" ng-click="ProfileCtrl.goAddListingPage()" ng-show="ProfileCtrl.showListingButton(ProfileCtrl.userInfo.landlord)">Add Listing<i class="fa fa-plus" aria-hidden="true"></i></button></div>
             </div>
-            <div class="col-xs-12 col-sm-7">
-                
-                <button id="box" class="btn btn-default" ng-click="ProfileCtrl.yourListings()" ng-show="ProfileCtrl.showListingButton(ProfileCtrl.userInfo.landlord)">Your Listings</button>               
-                 <button id="box" class="btn btn-default" ng-click="ProfileCtrl.signout()">Sign Out</button> 
-                 <button id="box" class="btn btn-default" ng-click="ProfileCtrl.goAddListingPage()" ng-show="ProfileCtrl.showListingButton(ProfileCtrl.userInfo.landlord)">Add Listing</button>
-
             </div>
-        </div>
-    </div>
-</div>
-
-<!-- Messenger -->
-<!--<div class="col-xs-12">
-    <div class="row">
-        <div ui-view="messages" class="panel">
-
-        </div>
-    </div>
-</div>-->
+        </div> <!-- End of Container -->

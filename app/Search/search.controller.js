@@ -5,7 +5,7 @@
         .module('app')
         .controller('SearchController', SearchController)
 
-    SearchController.$inject = ['$location', 'SearchFactory', 'UserFactory', 'SweetAlert','localStorageFactory', '$state'];
+    SearchController.$inject = ['$location', 'SearchFactory', 'UserFactory', 'SweetAlert', 'localStorageFactory', '$state'];
 
     function SearchController($location, SearchFactory, UserFactory, SweetAlert, localStorageFactory, $state) {
         /* jshint validthis:true */
@@ -18,6 +18,10 @@
         SearchCtrl.fullListing = false;
         SearchCtrl.showResults = false;
         SearchCtrl.ListnerName = "";
+
+
+        SearchCtrl.oneObject = {};
+        SearchCtrl.oneObject.address = "";
 
         SearchCtrl.search = function (params) {
             SearchFactory
@@ -47,6 +51,17 @@
                 }, function (error) {
                     console.log(error);
                 })
+        }
+
+        SearchCtrl.oneListing = function (listid) {
+            SearchFactory.getOneList(listid)
+                .then(function (response) {
+                    console.log(response);
+                    SearchCtrl.oneObject = response;
+                }, function (error) {
+                    console.log(error);
+                })
+
         }
     }
 })();
