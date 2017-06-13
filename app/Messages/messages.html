@@ -1,41 +1,66 @@
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-sm-4">
-            <button ng-click="MsgCtrl.findRec(MsgCtrl.recipient)" type="btn btn-primary">Find Recipient</button>
-            <input ng-model="MsgCtrl.recipient" placeholder="Recipient UserName"></input>
-
-            <label for="subject">Subject
-             <input ng-model="MsgCtrl.msgObject.Subject" placeholder="Subject"></input>
-            </label>
-
-            <label for="Body">Message
-             <input ng-model="MsgCtrl.msgObject.Body" placeholder="Enter Message"></input>
-            </label>
-
-            <button ng-click="MsgCtrl.sendMsg(MsgCtrl.msgObject)">Send Message</button>
-<p></p>
-            <div class="col-xs-12 col-sm-6 col-md-offset-2" id="pastConversation">
-                <p>Past Messages with {{MsgCtrl.recipient}}</p>
-                <button ng-click="MsgCtrl.ShowMsg()">Show Past Message</button>
-                <ol ng-repeat="messages in MsgCtrl.PastMessages" class="list-group">
-                    <li class="list-group-item">Header: {{messages.subject}}</li>
-                    <li class="list-group-item" ng-show="MsgCtrl.fullMessage">Body: {{messages.body}}</li>
-                </ol>
+<div class="row">
+<div class="container" data-ng-init="MsgCtrl.init()">
+    <div class="form-horizontal" class="col-sm-6">
+        <div class="form-group">
+            <button ng-click="MsgCtrl.findRec(MsgCtrl.recipient)" id="contactButton" class="col-sm-2 control-label">Find Contact</button>
+            <div class="col-sm-4">
+                <input class="form-control" ng-model="MsgCtrl.recipient" placeholder="Recipient UserName" ng-disabled="MsgCtrl.resubmit"></input>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-2 control-label">
+        <a ng-click="MsgCtrl.reenter()" class="form-control">Change Contact</a>
+        </div>
+        </div>
+        <div class="form-group">
+            <label for="subject" class="col-sm-2 control-label">Subject</label>
+            <div class="col-sm-4">
+                <input class="form-control" ng-model="MsgCtrl.msgObject.Subject" placeholder="Subject"></input>
             </div>
 
         </div>
-        <div class="col-xs-12 col-sm-8"id="pastmessagehistory">
-            <label>Convert Conversation ID:
-            <input ng-model="MsgCtrl.ConversationId"></input>
-             </label>
-            <button ng-click="MsgCtrl.Convert(MsgCtrl.ConversationId)">Find Sender/Recipient</button>
-            <p>{{MsgCtrl.OtherUser}}</p>
-            <ol ng-repeat="pasts in MsgCtrl.MessageHistory" class="list-group">
-                <li class="list-group-item">Conversation ID: {{pasts.convoId}}</li>
-                <li class="list-group-item">Subject: {{pasts.subject}}</li>
-                <li class="list-group-item">Body: {{pasts.body}}</li>
-            </ol>
+        <div class="form-group">
+            <label for="Body" class="col-sm-2 control-label">Message</label>
+            <div class="col-sm-4">
+                <input class="form-control" ng-model="MsgCtrl.msgObject.Body" placeholder="Enter Message"></input>
+                <button ng-click="MsgCtrl.sendMsg(MsgCtrl.msgObject)" id="sendButton">Send Message</button>
+            </div>
         </div>
-</div>
+    </div>
+    <div class="col-xs-12 col-sm-8 col-md-offset-2" id="pastConversation">
+        <p>Past Messages with {{MsgCtrl.recipient}}</p>
+        <button ng-click="MsgCtrl.ShowMsg()" id="pastMessageButton">Show Past Message</button>
+        <ol ng-repeat="messages in MsgCtrl.PastMessages" class="list-group">
+            <li class="list-group-item">Header: {{messages.subject}}</li>
+            <li class="list-group-item" ng-show="MsgCtrl.fullMessage">Body: {{messages.body}}</li>
+        </ol>
+    </div>
 
+</div>
+</div>
+<div class="col-sm-6">
+        <h2 id="messageTitle"> Full Message History</h2>
+    <div id="pastmessagehistory">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th> View Message</th>
+                    <th>Contact</th>
+                    <th> Title</th>
+                    <th>Message </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="pasts in MsgCtrl.MessageHistory">
+                    <td>
+                        <a ng-click="MsgCtrl.Convert(pasts.convoId)"> View Message</a>
+                        </td>
+                    <!--<td ng-show="MsgCtrl.completeMessage">{{MsgCtrl.OtherUser}}</td>-->
+                    <td>{{MsgCtrl.OtherUser}}</td>
+                    <td ng-show="MsgCtrl.completeMessage"> {{pasts.subject}}</td>
+                    <td ng-show="MsgCtrl.completeMessage"> {{pasts.body}}</td>
+                </tr>
+            </tbody>
+            </div>
+</div>
 </div>

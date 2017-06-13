@@ -18,24 +18,30 @@
         MsgCtrl.msgObject.Subject = "";
         MsgCtrl.msgObject.Body = "";
         MsgCtrl.fullMessage = false;
+        MsgCtrl.completeMessage = false;
+        MsgCtrl.resubmit = false;
+
+
         var id = localStorageFactory.getLocalStorage('userId');
-        window.onload = function () {
+    //    window.onload 
+        MsgCtrl.init= function () {
             MessagesFactory
                 .getMessageHistory(id)
                 .then(function (history) {
-                        MsgCtrl.MessageHistory = history;
-                        if (localStorageFactory.getLocalStorage("sellerName") != null) {
-                            MsgCtrl.recipient= localStorageFactory.getLocalStorage("sellerName")
-                            MsgCtrl.findRec(MsgCtrl.recipient);
-                        }
-                        }, function (error) {
-                            console.log(error);
-                        })
+                    MsgCtrl.MessageHistory = history;
+                    if (localStorageFactory.getLocalStorage("sellerName") != null) {
+                        MsgCtrl.recipient = localStorageFactory.getLocalStorage("sellerName")
+                        MsgCtrl.findRec(MsgCtrl.recipient);
+                        MsgCtrl.resubmit = true;
+                    }
+                }, function (error) {
+                    console.log(error);
+                })
         };
-                        
-             
-                    
-          //      });
+
+
+
+        //      });
         //Find The Message Recipient
         MsgCtrl.findRec = function (recipient) {
             MessagesFactory
@@ -45,6 +51,7 @@
                     MsgCtrl.conObject.SenderId = parseInt(localStorageFactory.getLocalStorage('userId'));
                     MsgCtrl.conObject.RecipientId = parseInt(localStorageFactory.getLocalStorage('recipient'));
                     startConvo(MsgCtrl.conObject);
+                    MsgCtrl.resubmit = true;
                 }, function (error) {
                     SweetAlert.swal("Error Searching Users");
                 })
@@ -114,6 +121,7 @@
                                 .getUser(users.senderID)
                                 .then(function (post) {
                                     MsgCtrl.OtherUser = post.userName;
+                                    MsgCtrl.completeMessage = !MsgCtrl.completeMessage;
                                 }, function (error) {
                                     return error;
                                 })
@@ -122,6 +130,7 @@
                                 .getUser(users.recipientID)
                                 .then(function (post) {
                                     MsgCtrl.OtherUser = post.userName;
+                                    MsgCtrl.completeMessage = !MsgCtrl.completeMessage;
                                 }, function (error) {
                                     return error;
                                 })
@@ -133,5 +142,9 @@
             function (error) {
                 SweetAlert.swal("No Conversation Found", "Try again")
             }
+
+        MsgCtrl.reenter = function () {
+            MsgCtrl.resubmit = false;
+        };
     }
 })();

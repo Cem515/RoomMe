@@ -1,88 +1,84 @@
-(function() {
+(function () {
     'use strict';
-
-  angular
+    angular
         .module('app')
         .factory('ListingFactory', ListingFactory);
-
-  ListingFactory.$inject = ['$http', 'localApi'];
+    ListingFactory.$inject = ['$http', 'localApi'];
     function ListingFactory($http, localApi) {
         var service = {
-            postListing : postListing,
-            getListing : getListing
+            getListings: getListings,
+            getOneList: getOneList,
+            postListing: postListing,
+            putListing: putListing,
+            deleteListing: deleteListing
         };
-        
-      return service;
-
-
-      ///////////////// GET LISTINGS
-       function getListing (userId) {
+        return service;
+        ///////////////// GET LISTINGS BY USER, to display in left panel in owner.listings.html
+        function getListings(userId) {
             return $http({
                 Method: 'GET',
                 url: localApi + 'Listings/UserListings?userId=' + userId
             }).then(function (response) {
-                return response;
+                return response.data;
             }, function (error) {
                 console.log("Error" + error);
                 return error;
             });
         }
-
-      //////////////// POST NEW LISTING
+        ///////////////// GET ONE LISTING, to display in right panel in owner.listings.html after selecting listing from left panel
+        function getOneList(listId) {
+            return $http({
+                Method: 'GET',
+                url: localApi + 'Listings/' + listId
+            }).then(function (response) {
+                return response.data;
+            }, function (error) {
+                console.log("Error" + error);
+                return error;
+            });
+        }
+        //////////////// POST NEW LISTING, posts to database from add.listings.html
         function postListing(listingInfo) {
             console.log(listingInfo);
-            return $http ({
+            return $http({
                 method: 'POST',
                 url: localApi + 'Listings',
                 dataType: "json",
                 data: listingInfo,
                 headers: {
-                'Content-Type': 'application/json; charset=utf-8'
+                    'Content-Type': 'application/json; charset=utf-8'
                 }
-
-          }).then (function (info){
+            }).then(function (info) {
                 return info;
             }, function (error) {
                 return error;
             })
         }
-
-       /*////////////////  PUT-EDIT LISTING
-        function putListing(lingtingInfo) {
-            console.log(listingInfo);
-            return $http ({
+        ////////////////  PUT-EDIT LISTING, edit listing in right panel in owner.listings.html after selecting listing from left panel
+        function putListing(listid, edits) {
+            return $http({
                 method: 'PUT',
-                url: localApi + 'Listings/5',
-                dataType: "json",
-                data: listingInfo,
+                url: localApi + 'Listings/' + listid,
                 headers: {
-                'Content-Type': 'application/json; charset=utf-8'
-                }
-
-          }).then (function (info){
-                return info;
+                    'Content-Type': 'application/json; charset=utf-8'
+                },
+                data: edits,
+            }).then(function (info) {
+                console.log(info);
             }, function (error) {
-                return error;
+                console.log(error);
             })
         }
-
-       //////////////// DELETE LISTING
-        function deleteListing(listingInfo) {
-            console.log(listingInfo);
-            return $http ({
-                method: 'DELETE',
-                url: localApi + 'Listings/5',
-                dataType: "json",
-                data: listingInfo,
-                headers: {
-                'Content-Type': 'application/json; charset=utf-8'
-                }
-
-          }).then (function (info){
-                return info;
-            }, function (error) {
-                return error;
-            })
-        }*/
+        //////////////// DELETE LISTING, deletes listing from right panel in owner.listings.html after selecting listing from left panel
+         function deleteListing(lid) {
+             return $http ({
+                 method: 'DELETE',
+                 url: localApi + 'Listings/' + lid
+           }).then (function (info){
+                 console.log(info);
+             }, function (error) {
+                 console.log(error);
+             })
+         }
     }
 })();

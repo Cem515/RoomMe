@@ -1,43 +1,58 @@
 <head>
     <title>Add Listing</title>
 </head>
-
 <body>
-    <form class="form-horizontal">
-        <div class="form-group">
-            <label rows="4" cols="50" for="propertyName" class="control-label col-lg-2"> Description </label>
-            <textarea ng-model="AddListCtrl.listObject.description" type="text" required></textarea>
-        </div>
-        <div class="form-group">
-            <label for="propertyName" class="control-label col-lg-2">Rent</label>
-            <input ng-model="AddListCtrl.listObject.price" type="text" required>
-        </div>
-        <div class="form-group">
-            <label for="propertyName" class="control-label col-lg-2"> Address </label>
-            <input ng-model="AddListCtrl.listObject.address" type="text" required>
-        </div>
-        <div class="form-group">
-            <label for="propertyName" class="control-label col-lg-2"> City </label>
-            <input ng-model="AddListCtrl.listObject.city" type="text" required>
-        </div>
-        <div class="form-group">
-            <label for="propertyName" class="control-label col-lg-2"> State </label>
-            <input ng-model="AddListCtrl.listObject.state" type="text" required>
-        </div>
-        <div class="form-group">
-            <label for="propertyName" class="control-label col-lg-2"> Zip Code </label>
-            <input ng-model="AddListCtrl.listObject.zipCode" type="text" required>
-        </div>
-        <div class="form-group">
-            <label for="exampleInputFile" class="control-label col-lg-2">File input</label>
-            <button class="btn btn-default " id="profilebtn" ng-click="AddListCtrl.pickFile() ">Upload a photo</button>
-        </div>
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" ng-click="AddListCtrl.addListing(AddListCtrl.listObject)">Add Your Listing</button>
+    <div class="well">
+        <!--Complete form to add a listing-->
+        <form>
+            <div class="form-group">
+                <label>Description</label>
+                <div class="input-group">
+                    <input type="text" ng-model="AddListCtrl.listObject.description" required></input>
+                </div>
             </div>
-    </form>
-
+            <div class="form-group">
+                <label>Price</label>
+                <div class="input-group">
+                    <input type="number" ng-model="AddListCtrl.listObject.price" required></input>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Address</label>
+                <div class="input-group">
+                    <input type="text" ng-model="AddListCtrl.listObject.address" required></input>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>City</label>
+                <div class="input-group">
+                    <input type="text" ng-model="AddListCtrl.listObject.city" required></input>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>State</label>
+                <div class="input-group">
+                    <input type="text" ng-model="AddListCtrl.listObject.state" required></input>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>ZipCode</label>
+                <div class="input-group">
+                    <input type="text" ng-model="AddListCtrl.listObject.zipcode" required></input>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Image</label>
+                <div class="input-group">
+                    <button class="btn btn-default" ng-model="AddListCtrl.listObject.picture" ng-click="AddListCtrl.pickFile()">Upload a photo</button>
+                    <!--<img src="{{AddListCtrl.listObject.picture}}" class="img-thumbnail">-->
+                    <!--Unable to get freshly add image to preview on page-->
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-warning" type="button" ng-click="AddListCtrl.addListing(AddListCtrl.listObject)">Add Your Listing</button>
+            </div>
+        </form>
+    </div>
 </body>
-
 
