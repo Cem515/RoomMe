@@ -19,6 +19,26 @@
     color:black;
 }
 
+#sendButton {
+border-radius: 50%;
+color: black;
+}
+
+#sendButton:hover {
+    background-color: dimgrey;
+    color: white;
+}
+
+#contactButton {
+    color:black;
+    border-radius: 8px;
+}
+
+#contactButton:hover {
+    background-color: dimgrey;
+    color: white;
+}
+
 #box {
     box-shadow: 2px 3px 9px;
     padding-bottom: 5px;
@@ -26,6 +46,10 @@
     font-size: 1.3em;
     padding: 10px;
     font: bold;
+}
+
+#pastmessagehistory {
+    border: 3px double black;
 }
 
 .topnav {
@@ -165,3 +189,17 @@
     box-shadow: 2px 3px 5px black;
 }
 
+#messageTitle {
+    text-align: center;
+   font-family: 'Architects Daughter', cursive;
+}
+
+#pastMessageButton {
+    color:black;
+    border-radius: 8px;
+}
+
+#pastMessageButton:hover {
+    background-color: dimgrey;
+    color: white;
+}

@@ -27,6 +27,8 @@
                     <div class="input-group" data-validate="phone">
                         <input type="phone" class="form-control" id="phone" placeholder="(814) 555-1234" ng-model="SignInCtrl.nameObject.Phone" required>
                         <span class="input-group-addon danger"></span>
+                        <!--<span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>-->
+                        <!-- May not implement -->
                     </div>
                 </div>
                 <!-- ZipCode -->
@@ -35,6 +37,8 @@
                     <div class="input-group" data-validate="number">
                         <input type="number" class="form-control" id="phone" placeholder="92119" ng-model="SignInCtrl.nameObject.ZipCode" required>
                         <span class="input-group-addon danger"></span>
+                        <!--<span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>-->
+                        <!-- May not implement -->
                     </div>
                 </div>
                 <!-- Birth Date -->
@@ -77,7 +81,7 @@
 <!-- Sign in page/home page -->
 <div class="col-sm-12">
     <div ng-show="SignInCtrl.Login">
-        <div class="row">
+        <div class="row" ng-show="SignInCtrl.SignedIn">
             <div class="col-sm-5">
                 <div class="form-group">
                     <input type="text" class="form-control" ng-model="SignInCtrl.sObject.username" placeholder="Username" required="" />

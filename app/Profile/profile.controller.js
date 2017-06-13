@@ -84,6 +84,7 @@
             } else {
                 return false;
             }
+
         }
 
         // Image upload 

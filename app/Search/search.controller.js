@@ -42,11 +42,12 @@
             SearchCtrl.fullListing = !SearchCtrl.fullListing;
         }
 
-        SearchCtrl.convert = function (id) {
+        SearchCtrl.contactLister = function(id) {       
             UserFactory
                 .getUser(id)
                 .then(function (response) {
-                    SearchCtrl.ListerName = response.userName;
+                    localStorageFactory.setLocalStorage("sellerName",response.userName)
+                    $state.go("messages")
                 }, function (error) {
                     console.log(error);
                 })
