@@ -1,33 +1,111 @@
-<div class="container">
-<label for="city">City
-    <input ng-model="SearchCtrl.srchObject.city"></input>
-</label>
-<label for="MinRent">Minimum Rent
-    <input type="number" ng-model="SearchCtrl.srchObject.minPrice"></input>
-</label>
-<label for="MaxRent">Maximum Rent
-    <input type="number" ng-model="SearchCtrl.srchObject.maxPrice"></input>
-</label>
-<label for="zipCode">Zip Code
-    <input type="number" ng-model="SearchCtrl.srchObject.zipCode"></input>
-</label>
-<button type="button" class="btn btn-primary" ng-click="SearchCtrl.search(SearchCtrl.srchObject)">Search Listings</button>
-</div>
+<div id="box" style="text-align:center;" class="col-sm-11 container">
+    <div class="row">
+        <div class="col-sm-1">
+            <h1><i class="fa fa-search" aria-hidden="true"></i></h1>
+        </div>
+        <div class="col-sm-2">
+            <label for="city">City
+                <input id="searchInput" ng-model="SearchCtrl.srchObject.city"></input>
+            </label>
+        </div>
+        <div class="col-sm-2">
+            <label for="MinRent">Minimum Rent
+                <input id="searchInput" type="number" ng-model="SearchCtrl.srchObject.minPrice"></input>
+            </label>
+        </div>
+        <div class="col-sm-2">
+            <label for="MaxRent">Maximum Rent
+                <input id="searchInput" type="number" ng-model="SearchCtrl.srchObject.maxPrice"></input>
+            </label>
+        </div>
+        <div class="col-sm-2">
+            <label for="zipCode">Zip Code
+                <input id="searchInput" type="number" ng-model="SearchCtrl.srchObject.zipCode"></input>
+            </label>
+        </div>
+        <div class="col-sm-3">
+            <h1><button type="button" class="btn btn-primary btn-lg" ng-click="SearchCtrl.search(SearchCtrl.srchObject)">Search Listings</button></h1>
+        </div>
+    </div>
 
-<div class="container">
-<button type="button" ng-click="SearchCtrl.convert(SearchCtrl.user)">Find UserName</button>
-<input type="number" ng-model="SearchCtrl.user"></input>
-<p>{{SearchCtrl.ListerName}}</p>
-</div>
-<button type="button" class="btn btn-primary" ng-click="SearchCtrl.expand()">Show Full Listings</button>
-<div class="panel-body">
 
-   <ol class="list-group" ng-show="SearchCtrl.showResults" ng-repeat="listing in SearchCtrl.Results">
-        <li class="list-group-item">Address: {{listing.address}}</li>
-        <li class="list-group-item">Location: {{listing.city}},{{listing.state}}</li>
-        <li class="list-group-item">Rent: {{listing.price}}</li>
-        <li class="list-group-item" ng-show="SearchCtrl.fullListing">Description: {{listing.description}}</li>
-        <li class="list-group-item" ng-show="SearchCtrl.fullListing">Zip Code: {{listing.zipcode}}</li>
-        <li class="list-group-item" ng-show="SearchCtrl.fullListing">Pictures: {{listing.picture}}</li>
-        <li class="list-group-item" ng-show="SearchCtrl.fullListing" >Poster: {{listing.userId}}</li>
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div class="panel-body">
+                <div>
+                    <div ng-show="SearchCtrl.fullListing" class="row">
+                        <div class="col-xs-7">
+                            <img id="biggerImg" ng-src="{{SearchCtrl.oneObject.picture}}">
+                        </div>
+                        <div style="text-align: left;" class="col-xs-5">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <h3>Description: {{SearchCtrl.oneObject.description}}</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <h3>Price: {{SearchCtrl.oneObject.price}}</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <h3>Address: {{SearchCtrl.oneObject.address}}</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <h3>City: {{SearchCtrl.oneObject.city}}</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <h3>State: {{SearchCtrl.oneObject.state}}</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <h3>ZipCode: {{SearchCtrl.oneObject.zipcode}}</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                <h3><i class="fa fa-angle-double-up" ng-click="SearchCtrl.expand()" style="cursor: pointer;" aria-hidden="true"></i></h3>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="panel col-xs-12 col-sm-4" ng-repeat="listing in SearchCtrl.Results">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <img src="{{listing.picture}}" style="margin-top: 50px; border-radius: 5%; border: inset grey 2px;" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    {{listing.city}}, {{listing.state}}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    ${{listing.price}} Per Month
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <h1><i class="fa fa-angle-double-down" aria-hidden="true" style="cursor: pointer;" ng-click="SearchCtrl.oneListing(listing.listingID); SearchCtrl.expand()"></i></h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
 </div>
