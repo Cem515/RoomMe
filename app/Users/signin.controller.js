@@ -33,13 +33,13 @@
         SignInCtrl.SignedIn = true;
 
 
-window.onload = function() {
-    if(localStorageFactory.getLocalStorage('userId') == null) {
-        SignInCtrl.SignedIn = true;
-    } else {
-        SignInCtrl.SignedIn = false;
-    };
-}
+        SignInCtrl.init = function () {
+            if (localStorageFactory.getLocalStorage('userId') == null) {
+                SignInCtrl.SignedIn = true;
+            } else {
+                SignInCtrl.SignedIn = false;
+            };
+        }
 
         SignInCtrl.register = function (nameObject) {
             UserFactory
@@ -50,7 +50,7 @@ window.onload = function() {
                         .setLocalStorage('userId', returnedUser);
                     var storedVariable = localStorageFactory.getLocalStorage('userId');
                     goProfile();
-               //     SweetAlert.swal("Account Created", "Welcome", "Success")
+                    SweetAlert.swal("Account Created", "Welcome", "success")
                 }, function (error) {
                     console.log(error);
                 })
