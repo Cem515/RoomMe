@@ -35,7 +35,7 @@
                 <div>
                     <div ng-show="SearchCtrl.fullListing" class="row">
                         <div class="col-xs-7">
-                            <img id="biggerImg" ng-src="{{SearchCtrl.oneObject.picture}}">
+                            <img id="biggerImg" class="img-responsive" ng-src="{{SearchCtrl.oneObject.picture}}">
                         </div>
                         <div style="text-align: left;" class="col-xs-5">
                             <div class="row">
@@ -68,6 +68,11 @@
                                     <h3>ZipCode: {{SearchCtrl.oneObject.zipcode}}</h3>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <button ng-click="SearchCtrl.contactLister(SearchCtrl.oneObject.userId)">Contact Landlord</button>
+                                </div>
+                                </div>
                             <div class="row">
                                 <div class="col-xs-12">
                                 <h3><i class="fa fa-angle-double-up" ng-click="SearchCtrl.expand()" style="cursor: pointer;" aria-hidden="true"></i></h3>
