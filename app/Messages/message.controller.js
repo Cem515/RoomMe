@@ -112,24 +112,25 @@
             MsgCtrl.fullMessage = !MsgCtrl.fullMessage;
         }
 
-        MsgCtrl.Convert = function (iid) {
+
+        MsgCtrl.Convert = function (message) {
                 MessagesFactory
-                    .Conversationalists(iid)
+                    .Conversationalists(message.convoId)
                     .then(function (users) {
-                        if (users.recipientID = id) {
+                        if (users.recipientID == id) {
                             UserFactory
                                 .getUser(users.senderID)
                                 .then(function (post) {
-                                    MsgCtrl.OtherUser = post.userName;
+                                    message.otherUser = post.userName;
                                     MsgCtrl.completeMessage = !MsgCtrl.completeMessage;
                                 }, function (error) {
                                     return error;
                                 })
-                        } else if (users.SenderID = id) {
+                        } else if (users.senderID == id) {
                             UserFactory
                                 .getUser(users.recipientID)
                                 .then(function (post) {
-                                    MsgCtrl.OtherUser = post.userName;
+                                    message.otherUser = post.userName;
                                     MsgCtrl.completeMessage = !MsgCtrl.completeMessage;
                                 }, function (error) {
                                     return error;

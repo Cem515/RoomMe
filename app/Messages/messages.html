@@ -1,33 +1,54 @@
-<div class="container" data-ng-init="MsgCtrl.init()">
+<!--<div class="container" data-ng-init="MsgCtrl.init()">
     <div class="row">
-        <div class="form-horizontal" class="col-sm-6">
-            <div class="form-group">
-                <button ng-click="MsgCtrl.findRec(MsgCtrl.recipient)" id="contactButton" class="col-sm-2 control-label">Find Contact</button>
-                <div class="col-sm-4">
-                    <input class="form-control" ng-model="MsgCtrl.recipient" placeholder="Recipient UserName" ng-disabled="MsgCtrl.resubmit"></input>
+        <div class="col-xs-6">
+            <div id="box" class="panel">
+                <div class="row">
+                    <div class="col-xs-2">
+                        <button class="btn btn-default" ng-click="MsgCtrl.findRec(MsgCtrl.recipient)" id="profileBtns">Find Contact</button>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="form-group">
+                            <input class="form-control" style="margin-left: 10px;" ng-model="MsgCtrl.recipient" placeholder="Recipient UserName" ng-disabled="MsgCtrl.resubmit"></input>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <button class="btn btn-default" style="padding: 2px;" ng-click="MsgCtrl.reenter()" id="profileBtns">Change Contact</button>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-2 control-label">
-                    <a ng-click="MsgCtrl.reenter()" class="form-control">Change Contact</a>
+                <div class="row">
+                    <hr />
                 </div>
-            </div>
-            <div class="form-group">
-                <label for="subject" class="col-sm-2 control-label">Subject</label>
-                <div class="col-sm-4">
-                    <input class="form-control" ng-model="MsgCtrl.msgObject.Subject" placeholder="Subject"></input>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <label for="subject" class="col-sm-2 control-label">Subject</label>
+                            <div class="col-sm-4">
+                                <input class="form-control" ng-model="MsgCtrl.msgObject.Subject" placeholder="Subject"></input>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-            </div>
-            <div class="form-group">
-                <label for="Body" class="col-sm-2 control-label">Message</label>
-                <div class="col-sm-4">
-                    <input class="form-control" ng-model="MsgCtrl.msgObject.Body" placeholder="Enter Message"></input>
-                    <button ng-click="MsgCtrl.sendMsg(MsgCtrl.msgObject)" id="sendButton">Send Message</button>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <label for="Body" class="col-sm-2 control-label">Message</label>
+                            <div class="col-sm-4">
+                                <input class="form-control" ng-model="MsgCtrl.msgObject.Body" placeholder="Enter Message"></input>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                <hr />
+                <div class="row">
+                    <div class="col-xs-2">
+                        <button ng-click="MsgCtrl.sendMsg(MsgCtrl.msgObject)" class="btn btn-default" id="profileBtns">Send Message</button>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
+</div>
+</div>
         <div class="row">
             <div class="col-sm-8">
                 <h2 id="messagePersTitle">Message History with {{MsgCtrl.recipient}}</h2>
@@ -61,17 +82,121 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="pasts in MsgCtrl.MessageHistory">
+                            <tr ng-repeat="message in MsgCtrl.MessageHistory">
                                 <td>
-                                    <a ng-click="MsgCtrl.Convert(pasts.convoId)"> View Message</a>
+                                    <a ng-click="MsgCtrl.Convert(message)"> View Message</a>
                                 </td>
-                                <!--<td ng-show="MsgCtrl.completeMessage">{{MsgCtrl.OtherUser}}</td>-->
-                                <td>{{MsgCtrl.OtherUser}}</td>
-                                <td ng-show="MsgCtrl.completeMessage"> {{pasts.subject}}</td>
-                                <td ng-show="MsgCtrl.completeMessage"> {{pasts.body}}</td>
+                                <td ng-show="MsgCtrl.completeMessage">{{message.otherUser}}</td>
+                                <td ng-show="MsgCtrl.completeMessage"> {{message.subject}}</td>
+                                <td ng-show="MsgCtrl.completeMessage"> {{message.body}}</td>
                             </tr>
                         </tbody>
                 </div>
             </div>
         </div>
+    </div>-->
+
+    <div class="container" data-ng-init="MsgCtrl.init()">
+    <div class="row">
+        <div class="col-xs-8">
+            <div id="box" class="panel">
+                <div class="row">
+                    <div class="col-xs-2">
+                        <button class="btn btn-default" ng-click="MsgCtrl.findRec(MsgCtrl.recipient)" id="profileBtns">Find Contact</button>
+                    </div>
+                    <div style="text-align: center;" class="col-xs-6">
+                        <div class="form-group">
+                            <input class="form-control" ng-model="MsgCtrl.recipient" placeholder="Recipient UserName" ng-disabled="MsgCtrl.resubmit"></input>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <button class="btn btn-default" style="padding: 2px;" ng-click="MsgCtrl.reenter()" id="profileBtns">Change Contact</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <hr />
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <label for="subject" class="col-sm-2 control-label">Subject</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" ng-model="MsgCtrl.msgObject.Subject" placeholder="Subject"></input>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <label for="Body" class="col-sm-2 control-label">Message</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" ng-model="MsgCtrl.msgObject.Body" placeholder="Enter Message"></input>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-xs-2">
+                        <button ng-click="MsgCtrl.sendMsg(MsgCtrl.msgObject)" class="btn btn-default" id="profileBtns">Send Message</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="panel" id="box">
+                <h2 id="welcomeMessageProfile">Message History with {{MsgCtrl.recipient}}</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Message</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="messages in MsgCtrl.PastMessages">
+                            <td>{{messages.subject}}</td>
+                            <td>{{messages.body}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="panel" id="box">
+                    <h2 id="welcomeMessageProfile"> Full Message History</h2>
+                    <div id="pastMessageHistory">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th> View Message</th>
+                                    <th>Contact</th>
+                                    <th> Title</th>
+                                    <th>Message </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="message in MsgCtrl.MessageHistory">
+                                    <td>
+                                        <a ng-click="MsgCtrl.Convert(message)"> View Message</a>
+                                    </td>
+                                    <!--<td ng-show="MsgCtrl.completeMessage">{{MsgCtrl.OtherUser}}</td>-->
+                                    <td ng-show="MsgCtrl.completeMessage">{{message.otherUser}}</td>
+                                    <td ng-show="MsgCtrl.completeMessage">{{message.subject}}</td>
+                                    <td ng-show="MsgCtrl.completeMessage">{{message.body}}</td>
+                                </tr>
+                            </tbody>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
