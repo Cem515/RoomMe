@@ -33,13 +33,13 @@
         SignInCtrl.SignedIn = true;
 
 
-window.onload = function() {
-    if(localStorageFactory.getLocalStorage('userId') == null) {
-        SignInCtrl.SignedIn = true;
-    } else {
-        SignInCtrl.SignedIn = false;
-    };
-}
+        SignInCtrl.init = function () {
+            if (localStorageFactory.getLocalStorage('userId') == null) {
+                SignInCtrl.SignedIn = true;
+            } else {
+                SignInCtrl.SignedIn = false;
+            };
+        }
 
         SignInCtrl.register = function (nameObject) {
             UserFactory

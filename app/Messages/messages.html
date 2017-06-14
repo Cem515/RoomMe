@@ -1,22 +1,11 @@
-<<<<<<< HEAD
-<div class="row">
-    <div class="container" data-ng-init="MsgCtrl.init()">
+<div class="container" data-ng-init="MsgCtrl.init()">
+    <div class="row">
         <div class="form-horizontal" class="col-sm-6">
             <div class="form-group">
                 <button ng-click="MsgCtrl.findRec(MsgCtrl.recipient)" id="contactButton" class="col-sm-2 control-label">Find Contact</button>
                 <div class="col-sm-4">
                     <input class="form-control" ng-model="MsgCtrl.recipient" placeholder="Recipient UserName" ng-disabled="MsgCtrl.resubmit"></input>
                 </div>
-=======
-
-<div div class="container">
-<div data-ng-init="MsgCtrl.init()">
-    <div class="form-horizontal" class="col-sm-6">
-        <div class="form-group">
-            <button ng-click="MsgCtrl.findRec(MsgCtrl.recipient)" class="col-sm-2 control-label">Find Contact</button>
-            <div class="col-sm-4">
-                <input class="form-control" ng-model="MsgCtrl.recipient" placeholder="Recipient UserName" ng-disabled="MsgCtrl.resubmit"></input>
->>>>>>> f18ae5a257612e11325bab56db0ed799c361887a
             </div>
             <div class="form-group">
                 <div class="col-sm-2 control-label">
@@ -37,11 +26,11 @@
                     <button ng-click="MsgCtrl.sendMsg(MsgCtrl.msgObject)" id="sendButton">Send Message</button>
                 </div>
             </div>
+            </div>
         </div>
-
-        <div class="col-sm-8">
-            <h2 class="messageTitle">Message History with {{MsgCtrl.recipient}}</h2>
-            <div class="pastMessageHistory">
+        <div class="row">
+            <div class="col-sm-8">
+                <h2 id="messagePersTitle">Message History with {{MsgCtrl.recipient}}</h2>
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -55,38 +44,34 @@
                             <td>{{messages.body}}</td>
                         </tr>
                     </tbody>
+                </table>
             </div>
         </div>
-
-
+        <div class="row">
+            <div class="col-sm-8">
+                <h2 id="messageTitle"> Full Message History</h2>
+                <div id="pastMessageHistory">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th> View Message</th>
+                                <th>Contact</th>
+                                <th> Title</th>
+                                <th>Message </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="pasts in MsgCtrl.MessageHistory">
+                                <td>
+                                    <a ng-click="MsgCtrl.Convert(pasts.convoId)"> View Message</a>
+                                </td>
+                                <!--<td ng-show="MsgCtrl.completeMessage">{{MsgCtrl.OtherUser}}</td>-->
+                                <td>{{MsgCtrl.OtherUser}}</td>
+                                <td ng-show="MsgCtrl.completeMessage"> {{pasts.subject}}</td>
+                                <td ng-show="MsgCtrl.completeMessage"> {{pasts.body}}</td>
+                            </tr>
+                        </tbody>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-<div class="col-sm-8">
-    <h2 class="messageTitle"> Full Message History</h2>
-    <div class="pastMessageHistory">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th> View Message</th>
-                    <th>Contact</th>
-                    <th> Title</th>
-                    <th>Message </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="pasts in MsgCtrl.MessageHistory">
-                    <td>
-                        <a ng-click="MsgCtrl.Convert(pasts.convoId)"> View Message</a>
-                    </td>
-                    <!--<td ng-show="MsgCtrl.completeMessage">{{MsgCtrl.OtherUser}}</td>-->
-                    <td>{{MsgCtrl.OtherUser}}</td>
-                    <td ng-show="MsgCtrl.completeMessage"> {{pasts.subject}}</td>
-                    <td ng-show="MsgCtrl.completeMessage"> {{pasts.body}}</td>
-                </tr>
-            </tbody>
-    </div>
-</div>
-<<<<<<< HEAD
-</div>
-=======
->>>>>>> f18ae5a257612e11325bab56db0ed799c361887a

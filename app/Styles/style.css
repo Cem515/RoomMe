@@ -54,7 +54,7 @@ color: black;
     background-color: white;
 }
 
-.pastMessageHistory {
+#pastMessageHistory {
     border: 3px double black;
 }
 
@@ -137,7 +137,6 @@ color: black;
 }
 
 #profileImg {
-
     margin-bottom: 20px;
 }
 
@@ -195,9 +194,15 @@ color: black;
     box-shadow: 2px 3px 5px black;
 }
 
-.messageTitle {
+#messageTitle {
     text-align: center;
    font-family: 'Architects Daughter', cursive;
+}
+
+#messagePersTitle {
+    text-align: center;
+   font-family: 'Architects Daughter', cursive;
+
 }
 
 #pastMessageButton {

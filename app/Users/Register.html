@@ -1,4 +1,4 @@
-<div ng-show="SignInCtrl.Registration">
+<div ng-show="SignInCtrl.Registration" data-ng-init="SignInCtrl.init()">
     <div class="row">
         <div class="container" id="box">
             <div class="container">
@@ -122,7 +122,9 @@
         <!-- home page heading -->
         <div>
             <h1 id="book"> Discover Your Next Adventure </h1>
-            <h3 id="sign"> Sign In or <button ng-click="SignInCtrl.Switch()">{{SignInCtrl.button}}</button> With Us Today to Get Started</h3>
+            <div ng-show="SignInCtrl.SignedIn">
+                <h3 id="sign"> Sign In or <button ng-click="SignInCtrl.Switch()">{{SignInCtrl.button}}</button> With Us Today to Get Started</h3>
+            </div>
         </div>
         <!-- carousel nonsense -->
         <div class="row-fluid">

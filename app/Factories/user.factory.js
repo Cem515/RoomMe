@@ -22,7 +22,7 @@
 
            return $http({
                 method: 'POST',
-                url: localApi + '/users',
+                url: localApi + 'users',
                 dataType: "json",
                 data: registration,
                 headers: {
