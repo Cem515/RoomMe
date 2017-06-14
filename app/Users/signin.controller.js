@@ -50,7 +50,7 @@ window.onload = function() {
                         .setLocalStorage('userId', returnedUser);
                     var storedVariable = localStorageFactory.getLocalStorage('userId');
                     goProfile();
-               //     SweetAlert.swal("Account Created", "Welcome", "Success")
+                    SweetAlert.swal("Account Created", "Welcome", "success")
                 }, function (error) {
                     console.log(error);
                 })

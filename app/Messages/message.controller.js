@@ -63,7 +63,7 @@
                     .setLocalStorage('recipient', found.userId);
                 localStorageFactory
                     .getLocalStorage('recipient');
-                SweetAlert.swal("User Found");
+                SweetAlert.swal("USER FOUND", "Send a message or view message history", "success");
             } else {
                 SweetAlert.swal("User Not Found", "error");
             }

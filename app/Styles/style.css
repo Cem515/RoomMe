@@ -1,6 +1,11 @@
+
+#titleOwn {
+    text-shadow: grey 2px 2px 1px;
+    color: black;
+}
 #biggerImg {
-    height: 400px;
-    width: 500px;
+    height: 300px;
+    width: 400px;
     border-radius: 5%;
     border: inset grey 2px;
 
@@ -46,6 +51,7 @@ color: black;
     font-size: 1.3em;
     padding: 10px;
     font: bold;
+    background-color: white;
 }
 
 #pastmessagehistory {
@@ -184,7 +190,7 @@ color: black;
 
 #profileBtns {
     margin-bottom: 5px;
-    font-size: 1.1em;
+    font-size: 1.2em;
     padding: 5%;
     box-shadow: 2px 3px 5px black;
 }

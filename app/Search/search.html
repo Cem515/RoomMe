@@ -35,7 +35,7 @@
                 <div>
                     <div ng-show="SearchCtrl.fullListing" class="row">
                         <div class="col-xs-7">
-                            <img id="biggerImg" ng-src="{{SearchCtrl.oneObject.picture}}">
+                            <img id="biggerImg" class="img-responsive" ng-src="{{SearchCtrl.oneObject.picture}}">
                         </div>
                         <div style="text-align: left;" class="col-xs-5">
                             <div class="row">
@@ -70,6 +70,11 @@
                             </div>
                             <div class="row">
                                 <div class="col-xs-12">
+                                    <button ng-click="SearchCtrl.contactLister(SearchCtrl.oneObject.userId)">Contact Landlord</button>
+                                </div>
+                                </div>
+                            <div class="row">
+                                <div class="col-xs-12">
                                 <h3><i class="fa fa-angle-double-up" ng-click="SearchCtrl.expand()" style="cursor: pointer;" aria-hidden="true"></i></h3>
                                 </div>
                             </div>
@@ -77,11 +82,11 @@
 
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="panel col-xs-12 col-sm-4" ng-repeat="listing in SearchCtrl.Results">
+                    <div class="row" >
+                        <div style="text-align: center;" class="panel col-xs-12 col-sm-4" ng-repeat="listing in SearchCtrl.Results">
                             <div class="row">
-                                <div class="col-xs-12">
-                                    <img src="{{listing.picture}}" style="margin-top: 50px; border-radius: 5%; border: inset grey 2px;" />
+                                <div style="text-align: center;" class="col-xs-12">
+                                    <img src="{{listing.picture}}" class="img-responsive" style="margin-top: 50px; border: inset grey 2px;" />
                                 </div>
                             </div>
                             <div class="row">
