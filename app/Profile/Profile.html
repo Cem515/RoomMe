@@ -5,7 +5,15 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="panel" id="box">
-                    <h1 id="welcomeMessageProfile"> Welcome {{ProfileCtrl.userInfo.userName}} </h1>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <h1 id="welcomeMessageProfile"> Welcome {{ProfileCtrl.userInfo.userName}} </h1>
+
+                        </div>
+                        <div class="col-sm-2">
+                            <button id="profileBtns" style="text-align: right;" class="btn btn-default" ng-click="ProfileCtrl.signout()">Sign Out<i class="fa fa-sign-out" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -15,24 +23,25 @@
                 <div class="col-xs-12 col-sm-5">
                     <div id="box" class="panel">
                         <div class="row">
-                            <div class="col-sm-5">
-                                <p><button class="btn btn-default " id="box" ng-show="editProfile " ng-click="ProfileCtrl.pickFile() ">Upload a photo</button></p>
+                            <div style="text-align:center;" class="col-sm-7">
+                                <button class="btn btn-default " id="profileBtns"  ng-show="editProfile " ng-click="ProfileCtrl.pickFile() ">Upload a photo</button>
                                 <img src="{{ProfileCtrl.userInfo.image}}" alt="" id="profileImg" class="img-rounded img-responsive" />
                             </div>
-                            <div ng-hide="editProfile" class="col-sm-6 col-md-6">
-                                <i class="fa fa-user-circle-o" aria-hidden="true"></i>{{ProfileCtrl.userInfo.userName}}
-                                <br />
-                                <i class="fa fa-home"></i>{{ProfileCtrl.userInfo.zipCode}}
-                                <br />
-                                <i class="fa fa-envelope"></i>{{ProfileCtrl.userInfo.email}}
-                                <br />
-                                <i class="fa fa-phone-square" aria-hidden="true"></i>{{ProfileCtrl.userInfo.phone}}
-                                <br />
-
-                                <button id="box" id="showEditInfobtn" class="btn btn-default" ng-hide="editProfile" ng-click="editProfile=! editProfile">Edit</button>
-                                <br />
+                            <div ng-hide="editProfile" class="col-sm-6 col-md-5">
+                                <div  class="row">
+                                    <h4><i class="fa fa-user-circle-o" aria-hidden="true"></i>{{ProfileCtrl.userInfo.userName}}</h4>
+                                </div>
+                                <div  class="row">
+                                    <h4><i class="fa fa-home"></i>{{ProfileCtrl.userInfo.zipCode}}</h4>
+                                </div>
+                                <div  class="row">
+                                    <h4><i class="fa fa-envelope"></i>{{ProfileCtrl.userInfo.email}}</h4>
+                                </div>
+                                <div  class="row">
+                                    <h4><i class="fa fa-phone-square" aria-hidden="true"></i>{{ProfileCtrl.userInfo.phone}}</h4>
+                                </div>
                             </div>
-                        
+
 
                             <div class="col-sm-6 col-md-4">
                                 <!-- Edit User Information -->
@@ -71,25 +80,26 @@
                                         <div class="input-group">
                                             <input type="text" ng-show="editProfile" ng-model="ProfileCtrl.userInfo.phone">
                                         </div>
-                                        <button class="btn btn-default" ng-show="editProfile" ng-click="ProfileCtrl.editProfile()" id="box">Submit Changes</button>
-                                        <button class="btn btn-default" ng-show="editProfile" ng-click="editProfile=! editProfile" id="box">Go Back</button>
+                                        <button class="btn btn-default" id="profileBtns" g-show="editProfile" ng-click="ProfileCtrl.editProfile()" id="box">Submit Changes</button>
+                                        <button class="btn btn-default" id="profileBtns" ng-show="editProfile" ng-click="editProfile=! editProfile" id="box">Go Back</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-4">
-                                <button id="profileBtns" class="btn btn-default" ng-click="ProfileCtrl.signout()">Sign Out<i class="fa fa-sign-out" aria-hidden="true"></i></button>
-                                 </div>
+                                <button id="profileBtns" class="btn btn-default" ng-hide="editProfile" ng-click="editProfile=! editProfile">Edit</button>
                             </div>
+                        </div>
                     </div>
-                </div>                 
+                </div>
                 <div class="col-xs-12 col-sm-7">
                     <div style="text-align: center;" class="panel" id="box">
-                         <div class="row">
-                        <div class="col-sm-4"><button id="profileBtns" class="btn btn-default" ng-click="ProfileCtrl.yourListings()" ng-show="ProfileCtrl.showListingButton(ProfileCtrl.userInfo.landlord)">View Your Listings<i class="fa fa-eye" aria-hidden="true"></i></button></div>       
-                        <div class="col-sm-4"><button id="profileBtns" class="btn btn-default" ng-click="ProfileCtrl.goMessenger()" >Messenger<i class="fa fa-commenting-o" aria-hidden="true"></i></button></div>
-                        <div class="col-sm-4"><button id="profileBtns" class="btn btn-default" ng-click="ProfileCtrl.goAddListingPage()" ng-show="ProfileCtrl.showListingButton(ProfileCtrl.userInfo.landlord)">Add Listing<i class="fa fa-plus" aria-hidden="true"></i></button></div>
-            </div>
-            </div>
-        </div> <!-- End of Container -->
+                        <div class="row">
+                            <div class="col-sm-4"><button id="profileBtns" class="btn btn-default" ng-click="ProfileCtrl.yourListings()" ng-show="ProfileCtrl.showListingButton(ProfileCtrl.userInfo.landlord)">View Your Listings<i class="fa fa-eye" aria-hidden="true"></i></button></div>
+                            <div class="col-sm-4"><button id="profileBtns" class="btn btn-default" ng-click="ProfileCtrl.goMessenger()">Messenger<i class="fa fa-commenting-o" aria-hidden="true"></i></button></div>
+                            <div class="col-sm-4"><button id="profileBtns" class="btn btn-default" ng-click="ProfileCtrl.goAddListingPage()" ng-show="ProfileCtrl.showListingButton(ProfileCtrl.userInfo.landlord)">Add Listing<i class="fa fa-plus" aria-hidden="true"></i></button></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Container -->
