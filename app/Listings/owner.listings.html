@@ -1,0 +1,110 @@
+<head>
+    <title>Your Owner Listings</title>
+</head>
+<div class="container">
+    <div onload="OwnListCtrl.callListings()" class="well">
+        <h1> Your Listings </h1>
+    </div>
+    <div class="row">
+        <!--first column on page-->
+        <!--Left panel, auto-populates listings already posted by an owner-->
+        <div class="col-xs-12 col-md-4">
+            <div class="well">
+                <div class="list-group">
+                    <button type="button" class="list-group-item" ng-repeat="listing in OwnListCtrl.listingObject" ng-click="OwnListCtrl.oneListing(listing.listingID)">
+                        {{listing.description}}
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--second column on page-->
+        <!--Right panel, populates only after clicking a particlar listing from the left panel-->
+        <div class="col-xs-12 col-md-8">
+            <div class="well">
+                <div class="panel panel-success" </div>
+                    <div class="panel-heading"></div>
+                    <div class="panel-body">
+                        <div ng-hide="editListing">
+                            <div class="row">
+                                <div class="col-xs-5">
+                                    <img class="img-responsive" ng-src="{{OwnListCtrl.oneObject.picture}}">
+                                </div>
+                                <div class="col-xs-7">
+                                    <div>
+                                        <p>Description: {{OwnListCtrl.oneObject.description}}</p>
+                                        <p>Price: {{OwnListCtrl.oneObject.price}}</p>
+                                        <p>Address: {{OwnListCtrl.oneObject.address}}</p>
+                                        <p>City: {{OwnListCtrl.oneObject.city}}</p>
+                                        <p>State: {{OwnListCtrl.oneObject.state}}</p>
+                                        <p>ZipCode: {{OwnListCtrl.oneObject.zipcode}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <!--Edit and Delete buttons, both functional-->
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <button type="button" class="btn btn-primary" ng-hide="editListing" ng-click="editListing=! editListing">Edit</button>
+                                    <button type="button" class="btn btn-danger" ng-hide="editListing" ng-click="OwnListCtrl.delListing(OwnListCtrl.oneObject.listingID)">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--BELOW IS HIDDEN UNLESS EDIT BUTTON (LINE 46) IS CLICKED, new input form to edit selected listing-->
+                        <div ng-show="editListing" class="form">
+                            <div class="form-group">
+                                <label>New Description</label>
+                                <div class="input-group">
+                                    <input type="text" ng-show="editListing" ng-model="OwnListCtrl.oneObject.description"></input>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>New Price</label>
+                                <div class="input-group">
+                                    <input type="number" ng-show="editListing" ng-model="OwnListCtrl.oneObject.price"></input>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>New Address</label>
+                                <div class="input-group">
+                                    <input type="text" ng-show="editListing" ng-model="OwnListCtrl.oneObject.address"></input>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>New City</label>
+                                <div class="input-group">
+                                    <input type="text" ng-show="editListing" ng-model="OwnListCtrl.oneObject.city"></input>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>New State</label>
+                                <div class="input-group">
+                                    <input type="text" ng-show="editListing" ng-model="OwnListCtrl.oneObject.state"></input>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>New ZipCode</label>
+                                <div class="input-group">
+                                    <input type="text" ng-show="editListing" ng-model="OwnListCtrl.oneObject.zipcode"></input>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>New Image</label>
+                                <div class="input-group">
+                                    <button class="btn btn-default " id="box" ng-show="editListing" ng-model="OwnListCtrl.oneObject.picture" ng-click="OwnListCtrl.pickFile()">Upload a photo</button>
+                                    
+                                    <!--<img ng-src="{{OwnListCtrl.oneObject.picture}}">-->
+                                </div>
+                            </div>
+                            <hr />
+                            <!--Submit change calls the PUT method, go back takes the user back to refresh the page and selected listing-->
+                            <button id="updateInfobtn" class="btn btn-default" ng-show="editListing" ng-click="OwnListCtrl.editListings(OwnListCtrl.oneObject.listingID)">Submit Changes</button>
+                            <button id="updateInfobtn" class="btn btn-default" ng-show="editListing" ng-click="editListing=! editListing">Go Back</button>
+                            </div>
+                        </div>
+                    <!--panel body ending-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

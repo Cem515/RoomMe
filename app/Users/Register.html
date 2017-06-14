@@ -1,0 +1,145 @@
+<div ng-show="SignInCtrl.Registration">
+    <div class="row">
+        <div id="registrationInputs" class="col-sm-offset-4 col-sm-4">
+            <div class="container" id="box">
+            <h2>New User Registration</h2>
+            <form ng-submit="SignInCtrl.register(SignInCtrl.nameObject)">
+                <!-- UserName -->
+                <div class="form-group">
+                    <label for="validate-text">User Name</label>
+                    <div class="input-group" data-validate="text">
+                        <input type="text" class="form-control" id="username" placeholder="Create Username" ng-model="SignInCtrl.nameObject.UserName"
+                            required>
+                        <span class="input-group-addon danger"></span>
+                    </div>
+                </div>
+                <!--Email-->
+                <div class="form-group">
+                    <label for="validate-email">Email</label>
+                    <div class="input-group" data-validate="email">
+                        <input type="email" class="form-control" id="email" placeholder="Email" ng-model="SignInCtrl.nameObject.Email" required>
+                        <span class="input-group-addon danger"></span>
+                    </div>
+                </div>
+                <!-- Phone -->
+                <div class="form-group">
+                    <label for="validate-phone">Phone</label>
+                    <div class="input-group" data-validate="phone">
+                        <input type="phone" class="form-control" id="phone" placeholder="(814) 555-1234" ng-model="SignInCtrl.nameObject.Phone" required>
+                        <span class="input-group-addon danger"></span>
+                        <!--<span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>-->
+                        <!-- May not implement -->
+                    </div>
+                </div>
+                <!-- ZipCode -->
+                <div class="form-group">
+                    <label for="validate-number">Zip Code</label>
+                    <div class="input-group" data-validate="number">
+                        <input type="number" class="form-control" id="phone" placeholder="92119" ng-model="SignInCtrl.nameObject.ZipCode" required>
+                        <span class="input-group-addon danger"></span>
+                        <!--<span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>-->
+                        <!-- May not implement -->
+                    </div>
+                </div>
+                <!-- Birth Date -->
+                <div class="form-group">
+                    <label>Birth Date</label>
+                    <div class="input-group">
+                        <input id="date" type="date" ng-model="SignInCtrl.nameObject.birthdate"><br>
+                    </div>
+                </div>
+                <!-- Landlord -->
+                <div class="form-group">
+                    <label for="validate-text">Are You a Landlord?</label>
+                    <div class="input-group">
+                        <input type="radio" name="ownerRenter" ng-model="SignInCtrl.nameObject.Landlord" value="true">Landlord
+                        <br>
+                        <input type="radio" name="ownerRenter" ng-model="SignInCtrl.nameObject.Landlord" value="false">Renter
+                        <br>
+                    </div>
+                </div>
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="validate-text">Create a New Password</label>
+                    <div class="input-group">
+                        <input type="password" class="form-control" id="password" placeholder="Password" ng-model="SignInCtrl.nameObject.Password"
+                            required>
+                        <span class="input-group-addon danger"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary col-xs-12">Submit</button>
+                </div>
+                <!--<button id="fbButton" class="btn btn-primary btn-sm" fb-login type="button">LOG IN WITH FACEBOOK</button>-->
+            </form>
+          </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Sign in page/home page -->
+<div class="col-sm-12">
+    <div ng-show="SignInCtrl.Login">
+        <div class="row" ng-show="SignInCtrl.SignedIn">
+            <div class="col-sm-5">
+                <div class="form-group">
+                    <input type="text" class="form-control" ng-model="SignInCtrl.sObject.username" placeholder="Username" required="" />
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="form-group">
+                    <input type="password" class="form-control" ng-model="SignInCtrl.sObject.password" placeholder="Password" required="" />
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div id="logInBtn" class="form-group">
+                    <button id="logInBtn" class="btn btn-default" ng-click="SignInCtrl.signIn(SignInCtrl.sObject)">Sign In</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- home page heading -->
+        <div>
+            <h1 id="book"> Discover Your Next Adventure </h1>
+            <h3 id="sign"> Sign In or <button ng-click="SignInCtrl.Switch()">{{SignInCtrl.button}}</button> With Us Today to Get Started</h3>
+        </div>
+        <!-- carousel nonsense -->
+        <div class="row-fluid">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="null">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="app\styles\imgs\cabin.jpg" width="100%">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="app\styles\imgs\beachhouse.jpg" width="100%">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="app\styles\imgs\home.jpeg" width="100%">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="app\styles\imgs\caramel.jpg" width="100%">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="app\styles\imgs\woman.jpeg" width="100%">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="app\styles\imgs\beach.jpeg" width="100%">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

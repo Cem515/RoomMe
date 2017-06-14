@@ -1,0 +1,205 @@
+#biggerImg {
+    height: 400px;
+    width: 500px;
+    border-radius: 5%;
+    border: inset grey 2px;
+
+}
+
+#searchInput {
+    border-radius: 5%;
+    border: inset grey 2px;
+}
+#registrationInputs {
+    margin-bottom: 20px;
+}
+#welcomeMessageProfile {
+    font-family: 'Pathway Gothic One', cursive;
+    text-shadow: 2px 2px 5px grey;
+    color:black;
+}
+
+#sendButton {
+border-radius: 50%;
+color: black;
+}
+
+#sendButton:hover {
+    background-color: dimgrey;
+    color: white;
+}
+
+#contactButton {
+    color:black;
+    border-radius: 8px;
+}
+
+#contactButton:hover {
+    background-color: dimgrey;
+    color: white;
+}
+
+#box {
+    box-shadow: 2px 3px 9px;
+    padding-bottom: 5px;
+    font-family: 'Pathway Gothic One', cursive;
+    font-size: 1.3em;
+    padding: 10px;
+    font: bold;
+}
+
+#pastmessagehistory {
+    border: 3px double black;
+}
+
+.topnav {
+    background-color: white;
+    overflow: hidden;
+}
+
+.topnav a {
+   display: inline-block;
+    color: black;
+    margin-left: 50px;
+    padding: 25px 5px;
+    text-decoration: none;
+    font-size: 17px;
+    /*font-family: 'Architects Daughter', cursive;*/
+        font-family: 'Pathway Gothic One', cursive;
+}
+
+#fbButton {
+    padding: 5%;
+    border-radius: 5%;
+    box-shadow: black 5px 5px 5px;
+    margin: 20% 20%;
+}
+
+
+/* Change the color of links on hover */
+
+.topnav a:hover {
+    color: red;
+}
+
+.topnav a.active {
+    color: red;
+}
+
+#MainTitle {
+    float:left; 
+}
+
+#MainTitle:hover {
+    cursor: pointer;
+}
+#myTopnav {
+    background-color: white;
+    padding: 5px 5px;
+}
+
+/* Validation styles for registration */
+
+.input-group-addon.primary {
+    color: rgb(255, 255, 255);
+    background-color: rgb(50, 118, 177);
+    border-color: rgb(40, 94, 142);
+}
+
+.input-group-addon.success {
+    color: rgb(255, 255, 255);
+    background-color: rgb(92, 184, 92);
+    border-color: rgb(76, 174, 76);
+}
+
+.input-group-addon.info {
+    color: rgb(255, 255, 255);
+    background-color: rgb(57, 179, 215);
+    border-color: rgb(38, 154, 188);
+}
+
+.input-group-addon.warning {
+    color: rgb(255, 255, 255);
+    background-color: rgb(240, 173, 78);
+    border-color: rgb(238, 162, 54);
+}
+
+.input-group-addon.danger {
+    color: rgb(255, 255, 255);
+    background-color: rgb(217, 83, 79);
+    border-color: rgb(212, 63, 58);
+}
+
+#profileImg {
+
+    margin-bottom: 20px;
+}
+
+#welcomeMessageProfile {
+    text-align: center;
+}
+
+#topbar {
+    margin-bottom: 20px;
+}
+
+#logInBtn {
+    text-align: center;
+    width: 100%;
+    font: bold;
+    border: solid darkgrey 1px;
+    border-radius: 5%;
+}
+
+.carousel .item {
+  height: 400px;
+
+}
+
+.item img {
+    max-width: 100%;
+    max-height: 100%;
+    align-content: bottom;
+}
+.carousel-inner {
+    border-radius: 1%;
+      margin-bottom: 20px;
+}
+
+#book {
+    text-align: left;
+    font-family: 'Pathway Gothic One';
+    font-size: 50px;
+}
+#sign {
+    text-align: right;
+    font-family: 'Pathway Gothic One';
+    font-size: 30px;
+}
+
+
+.fa {
+     margin: 5px 5px;
+}
+
+#profileBtns {
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    padding: 5%;
+    box-shadow: 2px 3px 5px black;
+}
+
+#messageTitle {
+    text-align: center;
+   font-family: 'Architects Daughter', cursive;
+}
+
+#pastMessageButton {
+    color:black;
+    border-radius: 8px;
+}
+
+#pastMessageButton:hover {
+    background-color: dimgrey;
+    color: white;
+}

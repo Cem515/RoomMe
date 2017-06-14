@@ -1,85 +1,3 @@
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\csc.exe
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\csc.exe.config
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\csc.rsp
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\csi.exe
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\csi.exe.config
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\csi.rsp
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\Microsoft.CodeAnalysis.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\Microsoft.CSharp.Core.targets
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\Microsoft.VisualBasic.Core.targets
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\Microsoft.Win32.Primitives.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\System.AppContext.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\System.Collections.Immutable.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\System.Console.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\System.Diagnostics.Process.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\System.Diagnostics.StackTrace.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\System.IO.Compression.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\System.IO.FileSystem.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\System.IO.FileSystem.Primitives.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\System.IO.Pipes.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\System.Reflection.Metadata.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\System.Security.AccessControl.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\System.Security.Claims.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\System.Security.Cryptography.Encoding.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\System.Security.Cryptography.Primitives.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\System.Security.Principal.Windows.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\System.Text.Encoding.CodePages.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\System.Threading.Thread.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\System.ValueTuple.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\System.Xml.ReaderWriter.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\System.Xml.XmlDocument.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\System.Xml.XPath.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\System.Xml.XPath.XDocument.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\vbc.exe
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\vbc.exe.config
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\vbc.rsp
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\VBCSCompiler.exe
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\roslyn\VBCSCompiler.exe.config
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\RoomMe.dll.config
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\RoomMe.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\RoomMe.pdb
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\EntityFramework.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\EntityFramework.SqlServer.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\Newtonsoft.Json.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\System.Net.Http.Formatting.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\System.Web.Cors.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\System.Web.Http.Cors.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\System.Web.Http.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\System.Web.Http.WebHost.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\EntityFramework.xml
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\EntityFramework.SqlServer.xml
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\Newtonsoft.Json.xml
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\System.Web.Http.Cors.xml
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\System.Net.Http.Formatting.xml
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\System.Web.Http.xml
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\bin\System.Web.Http.WebHost.xml
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\obj\Debug\RoomMe.csprojResolveAssemblyReference.cache
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\obj\Debug\RoomMe.dll
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\obj\Debug\RoomMe.pdb
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.InitialCreate.resources
-c:\users\collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\obj\Debug\RoomMe.csproj.GenerateResource.Cache
-C:\Users\Collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.addedTables.resources
-C:\Users\Collin\documents\visual studio 2017\Projects\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.bookmarks.resources
-C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.csprojResolveAssemblyReference.cache
-C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.InitialCreate.resources
-C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.addedTables.resources
-C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.bookmarks.resources
-C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.csproj.GenerateResource.Cache
-C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.dll
-C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.pdb
 C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\bin\roslyn\csc.exe
 C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\bin\roslyn\csc.exe.config
 C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\bin\roslyn\csc.rsp
@@ -148,4 +66,162 @@ C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\bin\System.Web.Http.Cors.xml
 C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\bin\System.Net.Http.Formatting.xml
 C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\bin\System.Web.Http.xml
 C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\bin\System.Web.Http.WebHost.xml
-C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.changedstring.resources
+C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.dll
+C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.pdb
+C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.fixcasdel.resources
+C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.csproj.GenerateResource.Cache
+C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.csprojResolveAssemblyReference.cache
+C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.changedate.resources
+C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.removeddate.resources
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\csc.exe
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\csc.exe.config
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\csc.rsp
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\csi.exe
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\csi.exe.config
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\csi.rsp
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\System.AppContext.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Console.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\System.IO.Compression.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\System.IO.Pipes.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Security.Claims.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Threading.Thread.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\System.ValueTuple.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Xml.XPath.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\vbc.exe
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\vbc.exe.config
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\vbc.rsp
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\VBCSCompiler.exe
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\RoomMe.dll.config
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\RoomMe.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\RoomMe.pdb
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\EntityFramework.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\EntityFramework.SqlServer.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\Newtonsoft.Json.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\System.Net.Http.Formatting.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\System.Web.Cors.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\System.Web.Http.Cors.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\System.Web.Http.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\System.Web.Http.WebHost.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\EntityFramework.xml
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\EntityFramework.SqlServer.xml
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\Newtonsoft.Json.xml
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\System.Web.Http.Cors.xml
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\System.Net.Http.Formatting.xml
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\System.Web.Http.xml
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\bin\System.Web.Http.WebHost.xml
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.csprojResolveAssemblyReference.cache
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.fixcasdel.resources
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.changedate.resources
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.removeddate.resources
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.csproj.GenerateResource.Cache
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.dll
+C:\Users\colli\OneDrive\Documents\GitHub\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.pdb
+C:\Users\Collin\Projects\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.addedimage.resources
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\csc.exe
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\csc.exe.config
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\csc.rsp
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\csi.exe
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\csi.exe.config
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\csi.rsp
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\System.AppContext.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Console.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\System.IO.Compression.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Security.Claims.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Threading.Thread.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\System.ValueTuple.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\vbc.exe
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\vbc.exe.config
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\vbc.rsp
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\VBCSCompiler.exe
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\RoomMe.dll.config
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\RoomMe.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\RoomMe.pdb
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\EntityFramework.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\EntityFramework.SqlServer.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\Newtonsoft.Json.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\System.Net.Http.Formatting.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\System.Web.Cors.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\System.Web.Http.Cors.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\System.Web.Http.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\System.Web.Http.WebHost.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\EntityFramework.xml
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\EntityFramework.SqlServer.xml
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\Newtonsoft.Json.xml
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\System.Web.Http.Cors.xml
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\System.Net.Http.Formatting.xml
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\System.Web.Http.xml
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\bin\System.Web.Http.WebHost.xml
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.csprojResolveAssemblyReference.cache
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.fixcasdel.resources
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.changedate.resources
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.removeddate.resources
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.Migrations.addedimage.resources
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.csproj.GenerateResource.Cache
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.dll
+C:\Users\Britt\Documents\Dev\RoomMe\RoomMe\RoomMe\obj\Debug\RoomMe.pdb

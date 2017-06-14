@@ -111,6 +111,10 @@ namespace RoomMe.Controllers
         {
             IQueryable<Listing> fl = db.Listings;
 
+            fl = from f in fl
+                 join u in db.Users on f.UserId equals u.UserId
+                 select f;
+
            if(search.City != null)
             {
                 fl = fl.Where(l => l.City == search.City);
@@ -130,7 +134,17 @@ namespace RoomMe.Controllers
             return (fl);
         }
 
-    protected override void Dispose(bool disposing)
+        //UserListing Search
+        [HttpGet]
+        [Route("api/Listings/UserListings")]
+        public IQueryable<Listing> UserListingSearch([FromUri] int userId)
+        {
+            IQueryable<Listing> usl = db.Listings;
+            usl = usl.Where(u => u.UserId == userId);
+            return (usl);
+        }
+
+        protected override void Dispose(bool disposing)
         {
             if (disposing)
             {
